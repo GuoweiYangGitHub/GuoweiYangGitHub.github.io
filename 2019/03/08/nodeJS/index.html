@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://guoweiyanggithub.github.io">
-  <title>js基础1 | 一昂杨丶</title>
+  <title>nodeJS | 一昂杨丶</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是JS语言 javascript是一种运行在客户端 的脚本语言   客户端：即接受服务的一端，与服务端相对应，在前端开发中，通常客户端指的就是浏览器。 脚本语言：也叫解释型语言，特点是**执行一行，解释一行，如果发现报错，代码就停止执行* 。  javascript的三个组成部分：ECMAScript、BOM、DOM  ECMAScript：定义了javascript的语法规范。 BOM：一套">
-<meta name="keywords" content="javascript,了解js">
+  <meta name="description" content="官方介绍 NodeJS官网 NodeJS中文网   Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js">
+<meta name="keywords" content="nodeJS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js基础1">
-<meta property="og:url" content="https://guoweiyanggithub.github.io/2019/03/07/study-js/index.html">
+<meta property="og:title" content="nodeJS">
+<meta property="og:url" content="https://guoweiyanggithub.github.io/2019/03/08/nodeJS/index.html">
 <meta property="og:site_name" content="一昂杨丶">
-<meta property="og:description" content="什么是JS语言 javascript是一种运行在客户端 的脚本语言   客户端：即接受服务的一端，与服务端相对应，在前端开发中，通常客户端指的就是浏览器。 脚本语言：也叫解释型语言，特点是**执行一行，解释一行，如果发现报错，代码就停止执行* 。  javascript的三个组成部分：ECMAScript、BOM、DOM  ECMAScript：定义了javascript的语法规范。 BOM：一套">
+<meta property="og:description" content="官方介绍 NodeJS官网 NodeJS中文网   Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js">
 <meta property="og:locale" content="javascript">
-<meta property="og:updated_time" content="2019-03-08T04:11:35.758Z">
+<meta property="og:updated_time" content="2019-03-08T02:57:05.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js基础1">
-<meta name="twitter:description" content="什么是JS语言 javascript是一种运行在客户端 的脚本语言   客户端：即接受服务的一端，与服务端相对应，在前端开发中，通常客户端指的就是浏览器。 脚本语言：也叫解释型语言，特点是**执行一行，解释一行，如果发现报错，代码就停止执行* 。  javascript的三个组成部分：ECMAScript、BOM、DOM  ECMAScript：定义了javascript的语法规范。 BOM：一套">
+<meta name="twitter:title" content="nodeJS">
+<meta name="twitter:description" content="官方介绍 NodeJS官网 NodeJS中文网   Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js">
   
     <link rel="alternative" href="/atom.xml" title="一昂杨丶" type="application/atom+xml">
   
@@ -159,147 +159,435 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-study-js" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-nodeJS" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js基础1
+      nodeJS
     </h1>
   
 
         
-        <a href="/2019/03/07/study-js/" class="archive-article-date">
-  	<time datetime="2019-03-07T06:13:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-07</time>
+        <a href="/2019/03/08/nodeJS/" class="archive-article-date">
+  	<time datetime="2019-03-08T02:51:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是JS语言"><a href="#什么是JS语言" class="headerlink" title="什么是JS语言"></a>什么是JS语言</h2><blockquote>
-<p>javascript是一种运行在<strong><em>客户端</em></strong> 的<strong><em>脚本语言</em></strong> </p>
-</blockquote>
-<p>客户端：即接受服务的一端，与服务端相对应，在前端开发中，通常客户端指的就是浏览器。</p>
-<p>脚本语言：也叫解释型语言，特点是<strong>**</strong>执行一行，解释一行，如果发现报错，代码就停止执行<strong>*</strong> 。</p>
-<blockquote>
-<p>javascript的三个组成部分：ECMAScript、BOM、DOM</p>
-</blockquote>
-<p>ECMAScript：定义了javascript的语法规范。</p>
-<p>BOM：一套操作浏览器功能的API。</p>
-<p>DOM：一套操作页面元素的API。</p>
-<h2 id="script标签"><a href="#script标签" class="headerlink" title="script标签"></a>script标签</h2><blockquote>
-<p>书写Javascript代码有两种方式，第一种是直接在script标签中书写，第二种是将代码写在js文件中，通过script进行引入。</p>
-</blockquote>
-<p>直接在script中书写javascript代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	alert("今天天气真好呀");</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>通过script标签引入一个JS文件，需要指定src属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"test.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<font color="red">tips：如果script标签指定了src属性，说明是想要引入一个js文件，这个时候不能继续在script标签中写JS代码，即便写了，也不会执行。</font>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span> = <span class="string">"test.js"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  alert("Hello World");   //这段代码不会执行</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>script标签的书写位置，原则上来说，可以在页面中的任意位置书写script标签。</p>
-</blockquote>
-<ol>
-<li><p>写在head标签中，style标签之后。</p>
-</li>
-<li><p>写在body结束标签的前面。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>写在html结束标签的后面，即页面的最后面。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="输入输出语句"><a href="#输入输出语句" class="headerlink" title="输入输出语句"></a>输入输出语句</h2><blockquote>
-<p>在实际开发，基本不能使用3、4、5,因为用户体验不好。</p>
-</blockquote>
-<ol>
-<li>console.log 控制台输出日志</li>
-<li>document.write 往页面中写入内容</li>
-<li>alert 弹框警告</li>
-<li>confirm 确认框</li>
-<li>prompt 输入框</li>
-</ol>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><blockquote>
-<p>不被程序执行的代码。用于程序员标记代码，在后期的修改，以及他人的学习时有所帮助，在JS中，分为单行注释、多行注释以及文档注释</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是单行注释，只能注释一行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	这是多行注释，不能嵌套</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//文档注释在JS中通常用于对函数进行说明</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 计算圆的面积</span></span><br><span class="line"><span class="comment">* @param r&#123;number&#125; 圆的半径</span></span><br><span class="line"><span class="comment">* @returns &#123;number&#125; 根据圆的半径计算出来的面积</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArea</span>(<span class="params">r</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.PI * r * r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注释的作用：</p>
-<pre><code>1. 模块划分，方便代码查找和维护
-2. 用于解释复杂代码的逻辑，方便维护和后期开发。
-</code></pre><p>要求：写代码的时候必须要写注释，但是需要注意注释的合理性。</p>
-<p>【永无bug.js】</p>
-<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><blockquote>
-<p>变量，可以变化的量，变量是在计算机中存储数据的一个标识符。可以把变量看成存储数据的容器。</p>
-</blockquote>
-<p>变量与字面量：</p>
-<p>字面量：10、20、“abc”、true这种从字面上就能看出来类型和值的量叫做字面量。</p>
-<p>变量：可以变化的量。</p>
-<h2 id="变量的声明与赋值"><a href="#变量的声明与赋值" class="headerlink" title="变量的声明与赋值"></a>变量的声明与赋值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>变量可以同时声明并赋值。</span><br><span class="line"><span class="number">2.</span>先声明后赋值</span><br><span class="line"><span class="number">3.</span>不声明，直接赋值</span><br><span class="line"><span class="number">4.</span>既不声明，也不赋值</span><br><span class="line"><span class="number">5.</span>同时声明多个变量</span><br></pre></td></tr></table></figure>
-<p>【测试1.html】</p>
-<h2 id="变量的命名规则与规范"><a href="#变量的命名规则与规范" class="headerlink" title="变量的命名规则与规范"></a>变量的命名规则与规范</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">命名规则（必须遵守）：</span><br><span class="line">1.由字母、数字、下划线、$符号组成，开头不能是数字。</span><br><span class="line">2.不能使用关键字和保留字</span><br><span class="line">3.严格区分大小写</span><br><span class="line"></span><br><span class="line">命名规范（建议遵守）：</span><br><span class="line">1. 命名要有意义</span><br><span class="line">2. 遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。</span><br></pre></td></tr></table></figure>
-<p>【测试2.html】</p>
-<h2 id="变量练习"><a href="#变量练习" class="headerlink" title="变量练习"></a>变量练习</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 交换两个变量的值（掌握）</span><br><span class="line">2. 不使用临时变量，交换两个数值变量的值（了解）</span><br></pre></td></tr></table></figure>
-<p>tips:javascript是一种弱类型语言，不管声明什么类型的变量，都是用var，并且变量的类型是可以变化的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var age = 90;</span><br><span class="line">age = &quot;张三&quot;;</span><br></pre></td></tr></table></figure>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><blockquote>
-<p>基本数据类型包括了：number、string、boolean、undefined、null</p>
-</blockquote>
-<h2 id="如何查看数据类型"><a href="#如何查看数据类型" class="headerlink" title="如何查看数据类型"></a>如何查看数据类型</h2><p>使用typeof关键字查看数据类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">typeof name;</span><br><span class="line">typeof(name);</span><br></pre></td></tr></table></figure>
-<h2 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h2><h3 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 十进制，我们平时使用的就是十进制，进行运算时，八进制和十六进制的值最终都会转换成十进制。</span><br><span class="line">2. 八进制，0开头的数值，数值序列：0-7</span><br><span class="line">3. 十六进制，0x开头的数值，数值序列：0-9A-F</span><br><span class="line"></span><br><span class="line">进制了解即可，基本都是使用十进制，稍微了解一下进制之间的转换。</span><br></pre></td></tr></table></figure>
-<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>科学计数法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var num = 5e+3;</span><br><span class="line">var num1 = 5e-2;</span><br><span class="line">//如何表示0.003和20000？</span><br></pre></td></tr></table></figure>
-<p>浮点数的精度问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0.1 + 0.2 = ?</span><br><span class="line">0.07 * 100 = ?</span><br></pre></td></tr></table></figure>
-<p><strong><em>浮点数在运算的时候会出现精度丢失的问题，因此在做比较运算的时候，尽量不要用小数进行比较。</em></strong></p>
-<h3 id="数值范围"><a href="#数值范围" class="headerlink" title="数值范围"></a>数值范围</h3><blockquote>
-<p>javascript不能表示世界上所有的数，因此在javascript中，数值大小是有一定限制的。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Number.MIN_VALUE  :5e-324</span><br><span class="line">Number.MAX_VALUE  :1.7976931348623157e+308</span><br><span class="line">Infinity   :正无穷</span><br><span class="line">-Infinity  ：负无穷</span><br></pre></td></tr></table></figure>
-<h3 id="数值判断"><a href="#数值判断" class="headerlink" title="数值判断"></a>数值判断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. NaN:表示一个非数值，当无法运算或者运算错误的时候，会得到一个NaN，NaN是number类型，表示一个非数值。</span><br><span class="line">2. NaN不等于NaN</span><br><span class="line">3. isNaN用来判断是否是一个数字，当返回true的时候，表示不是一个数字，返回false表示是一个数字。</span><br></pre></td></tr></table></figure>
-<p>【案例：计算用户的工资.html】</p>
-<h2 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h2><h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><p>字符串的字面量：“abc”  、 ‘abc’  字符串可以是双引号，也可以是单引号引起来。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">思考：如何打印以下字符串。</span><br><span class="line">我是一个&quot;正直&quot;的人 </span><br><span class="line">我很喜欢&quot;传&apos;智&apos;播客&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h3><p>length属性用来获取字符串的长度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;abckjdlkfjd&quot;;</span><br><span class="line">str.length;//字符串的长度</span><br></pre></td></tr></table></figure>
-<h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3><p>拼接字符串使用+号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//思考：</span><br><span class="line">console.log(11 + 11);</span><br><span class="line">console.log(&quot;hello&quot; + &quot; world&quot;);</span><br><span class="line">console.log(&quot;100&quot; + &quot;100&quot;);</span><br><span class="line">console.log(&quot;11&quot; + 11);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>两边只要有一个是字符串，那么+就是字符串拼接功能</li>
-<li>两边如果都是数字，那么就是算术功能。</li>
+        <h2 id="官方介绍"><a href="#官方介绍" class="headerlink" title="官方介绍"></a>官方介绍</h2><ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS官网</a></li>
+<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">NodeJS中文网</a></li>
 </ul>
-<h2 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h2><p>boolean类型只有两个字面量，true和false，区分大小写。</p>
-<p>所有类型的值都可以转化成true或者false</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NaN、&quot;&quot;、undefined、null、false、0  这6个值可以转换成false，其余的都是true。</span><br></pre></td></tr></table></figure>
-<h2 id="undefined类型与null类型"><a href="#undefined类型与null类型" class="headerlink" title="undefined类型与null类型"></a>undefined类型与null类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">undefined表示一个声明了没有赋值的变量</span><br><span class="line">null表示一个空的对象。</span><br><span class="line"></span><br><span class="line">undefined派生自null。</span><br><span class="line">undefined == null  --&gt;true</span><br><span class="line">undefined === null --&gt;false</span><br></pre></td></tr></table></figure>
-<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><p>如何使用谷歌浏览器，快速的查看数据类型？</p>
-<p>字符串的颜色是黑色的，数值类型是蓝色的，布尔类型也是蓝色的，undefined和null是灰色的，这个在调试过程中时非常有用的。</p>
-<h2 id="转换成字符串类型"><a href="#转换成字符串类型" class="headerlink" title="转换成字符串类型"></a>转换成字符串类型</h2><ol>
-<li>toString()</li>
-<li>String()</li>
-<li>在数据的最后面加上空字符串(value+””)</li>
-</ol>
-<h2 id="转换成数值类型"><a href="#转换成数值类型" class="headerlink" title="转换成数值类型"></a>转换成数值类型</h2><ol>
-<li>Number()</li>
-<li>parseInt</li>
-<li>parseFloat</li>
-<li>+num, -0等运算</li>
-</ol>
-<h2 id="转换成布尔类型"><a href="#转换成布尔类型" class="headerlink" title="转换成布尔类型"></a>转换成布尔类型</h2><ol>
-<li>Boolean</li>
-<li>!!</li>
-</ol>
-<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">23</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a += <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;  <span class="built_in">console</span>.log(a + <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;  <span class="built_in">console</span>.log(a - <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;  <span class="built_in">console</span>.log(a * <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;  <span class="built_in">console</span>.log(a / <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;  <span class="built_in">console</span>.log(a % <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">思考：</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + ++a; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + ++a; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + a++; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + a++; <span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
-<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp;:只要有一个值为假，结果就是假。找假值</span><br><span class="line">||:只要有一个值为真，结果就是真。找真值</span><br><span class="line">!:取反</span><br><span class="line"></span><br><span class="line">思考：</span><br><span class="line"><span class="literal">true</span> &amp;&amp; <span class="literal">true</span>;</span><br><span class="line"><span class="literal">false</span> || <span class="literal">false</span>;</span><br><span class="line"><span class="literal">null</span> &amp;&amp; <span class="literal">undefined</span></span><br><span class="line"><span class="literal">null</span> || <span class="literal">undefined</span></span><br><span class="line">“abc” &amp;&amp; <span class="literal">undefined</span></span><br><span class="line">“abc” || <span class="literal">undefined</span></span><br><span class="line"><span class="literal">null</span> || <span class="literal">false</span> || <span class="number">0</span> || <span class="number">1</span> || <span class="literal">null</span></span><br><span class="line">“abc” &amp;&amp; “bcd” &amp;&amp; “def”</span><br></pre></td></tr></table></figure>
-<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. ()  优先级最高</span><br><span class="line">2. 一元运算符  ++   --   !</span><br><span class="line">3. 算数运算符  先*  /  %   后 +   -</span><br><span class="line">4. 关系运算符  &gt;   &gt;=   &lt;   &lt;=</span><br><span class="line">5. 相等运算符   ==   !=    ===    !==</span><br><span class="line">6. 逻辑运算符 先&amp;&amp;   后||</span><br></pre></td></tr></table></figure>
-<p>思考：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//练习1</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="literal">true</span> || <span class="literal">false</span> &amp;&amp; <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">false</span> || <span class="literal">true</span> &amp;&amp; <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> c = <span class="literal">true</span> || <span class="literal">false</span> &amp;&amp; <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//练习2</span></span><br><span class="line"><span class="keyword">var</span> a  = <span class="literal">true</span> &amp;&amp; <span class="literal">false</span> || <span class="literal">false</span> &amp;&amp; <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span> &amp;&amp; <span class="literal">true</span> || <span class="literal">false</span> &amp;&amp; <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//练习3</span></span><br><span class="line">((<span class="number">4</span> &gt;= <span class="number">6</span>) || (<span class="string">"人"</span> != <span class="string">"狗"</span>)) &amp;&amp; !(((<span class="number">12</span> * <span class="number">2</span>) == <span class="number">144</span>) &amp;&amp; <span class="literal">true</span>) </span><br><span class="line"><span class="comment">//练习4</span></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="number">5</span> == num / <span class="number">2</span> &amp;&amp; (<span class="number">2</span> + <span class="number">2</span> * num).toString() === <span class="string">"22"</span>) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="literal">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</span><br><span class="line">Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</span><br><span class="line">Node.js 的包管理器 npm，是全球最大的开源库生态系统。</span><br><span class="line"></span><br><span class="line">runtime 运行时（运行环境）</span><br><span class="line">PHP代码要想运行需要借助于Apache这个服务器（运行时，运行环境）</span><br><span class="line">JavaScript代码想要运行：需要有一个JavaScript的运行时即可</span><br><span class="line">  在web端，浏览器就可以看作JS的运行时</span><br><span class="line">  在Node端，Node就是JS的运行时</span><br></pre></td></tr></table></figure>
+<h3 id="理解Node"><a href="#理解Node" class="headerlink" title="理解Node"></a>理解Node</h3><ul>
+<li><p>Node.js 是一个开发平台，就像PHP开发平台、Java开发平台、.Net开发平台、Apple开发平台一样。</p>
+<ul>
+<li>开发平台：有对应的编程语言、有语言运行时、有能实现特定功能的API</li>
+</ul>
+</li>
+<li><p>编程语言：JavaScript</p>
+</li>
+<li>运行时：Chrome V8 JavaScript引擎</li>
+<li><p>特定功能API：文件操作、网络操作 等</p>
+</li>
+<li><p>问题：在Node中能够操作DOM、BOM吗？？？ 不能！！！</p>
+</li>
+<li>浏览器和Node中公共的部分是：ECMAScript</li>
+</ul>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>非阻塞 异步I/O（input/output）</li>
+<li>事件驱动</li>
+<li>单线程<ul>
+<li><code>一切都在并行执行 —— 除了你的代码（Evetything runs in parallel — except your code.）</code></li>
+</ul>
+</li>
+<li>跨平台</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Node 适合做：</span><br><span class="line">  I/O密集型操作，比如：文件操作</span><br><span class="line">  高并发处理</span><br><span class="line"></span><br><span class="line">Node 不适合做：</span><br><span class="line">  CPU密集型操作：大量长时间的计算</span><br></pre></td></tr></table></figure>
+<h3 id="能做什么"><a href="#能做什么" class="headerlink" title="能做什么"></a>能做什么</h3><ul>
+<li>提供服务端编程能力</li>
+<li>开发 Web应用程序（网站）、控制台程序（命令行程序、CLI程序）、桌面应用程序（GUI）（借助 node-webkit、electron 等框架实现）<ul>
+<li>1 操作数据库</li>
+<li>2 网站后台开发，为前台提供接口</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他参考资料"><a href="#其他参考资料" class="headerlink" title="其他参考资料"></a>其他参考资料</h3><ul>
+<li><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="noopener">JavaScript 标准参考教程（alpha）</a></li>
+<li><a href="http://geek.csdn.net/news/detail/52208" target="_blank" rel="noopener">Node.js背后的V8引擎优化技术</a></li>
+<li><a href="http://cnodejs.org" target="_blank" rel="noopener">CNODE社区</a></li>
+</ul>
+<h2 id="Web开发本质"><a href="#Web开发本质" class="headerlink" title="Web开发本质"></a>Web开发本质</h2><ul>
+<li>1 请求，客户端发起请求</li>
+<li>2 处理，服务器处理请求</li>
+<li>3 响应，服务器将处理结果发送给客户端</li>
+</ul>
+<hr>
+<h2 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h2><ul>
+<li><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载地址</a></li>
+<li>官网术语解释<ul>
+<li>LTS 版本：Long-term Support 版本，长期支持版，即稳定版。</li>
+<li>Current 版本：Latest Features 版本，最新版本，新特性会在该版本中最先加入。</li>
+</ul>
+</li>
+<li>验证是否安装成功：在终端输入 <code>node -v</code>，如果打印出版本号，即安装成功</li>
+</ul>
+<h2 id="nodejs-初体验"><a href="#nodejs-初体验" class="headerlink" title="nodejs 初体验"></a>nodejs 初体验</h2><ul>
+<li>1 helloworld.js 第一个node程序</li>
+<li>2 文件操作 - 读文件</li>
+<li>3 文件操作 - 写文件</li>
+<li>4 http操作 - 开启服务</li>
+</ul>
+<h2 id="NodeJS-你好"><a href="#NodeJS-你好" class="headerlink" title="NodeJS 你好"></a>NodeJS 你好</h2><ul>
+<li>1 创建js文件 <code>helloworld.js</code></li>
+<li>2 写入：<code>console.log(&#39;hello nodejs&#39;)</code></li>
+<li>3 打开命令窗口 <code>cmd</code></li>
+<li>4 执行命令：<code>node helloworld.js</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">说明：</span><br><span class="line">  node命令 实际上调用的是 node.exe 这个可执行文件</span><br><span class="line">  通过 node.exe 读取执行 helloworld.js 文件中的代码，并执行</span><br><span class="line"></span><br><span class="line">通过node运行js代码的过程，类似于：浏览器加载 html页面，并执行script标签中的js代码</span><br></pre></td></tr></table></figure>
+<ul>
+<li>练习：打印三角形</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// process.stdout 标准输出，将内容输出到终端中显示</span></span><br><span class="line"><span class="comment">// 特点：不换行</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt;= i; j++) &#123;</span><br><span class="line">    process.stdout.write(<span class="string">'* '</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  process.stdout.write(<span class="string">'\n'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="NodeJS-文件操作"><a href="#NodeJS-文件操作" class="headerlink" title="NodeJS 文件操作"></a>NodeJS 文件操作</h2><ul>
+<li>两种文件操作：1 异步 2 同步</li>
+<li>说明：推荐使用异步操作</li>
+<li>说明：Node中采用错误优先的处理方式</li>
+<li><p><a href="https://stackoverflow.com/questions/14551608/list-of-encodings-that-node-js-supports" target="_blank" rel="noopener">支持的文件编码</a></p>
+</li>
+<li><p>异步文件读取：</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引包</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// readFile() 读取文件API</span></span><br><span class="line"><span class="comment">// 第一个参数：文件路径</span></span><br><span class="line"><span class="comment">// 第二个参数：回调函数</span></span><br><span class="line">fs.readFile(<span class="string">'./data/test.txt'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// err    错误信息</span></span><br><span class="line">  <span class="comment">// data   文件内容（Buffer 二进制数据流，数组每一项为：16进制数据）</span></span><br><span class="line">  <span class="comment">// data.toString() 将读取到的文件内容，转化为：uft8编码格式</span></span><br><span class="line">  <span class="built_in">console</span>.log(data.toString())</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>异步文件写入：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// 第一个参数：文件路径</span></span><br><span class="line"><span class="comment">// 第二个参数：写入文件的数据</span></span><br><span class="line"><span class="comment">// 第三个参数：回调函数</span></span><br><span class="line">fs.writeFile(<span class="string">'./data/foo.txt'</span>, <span class="string">'写入文件的数据'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 错误处理</span></span><br><span class="line">  <span class="keyword">if</span>(err) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'写入文件失败'</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'写入文件成功'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同步文件读取和同步文件写入：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 同步读取文件内容：</span></span><br><span class="line"><span class="comment">// var data = fs.readFileSync('./data/test.txt', 'utf8')</span></span><br><span class="line"><span class="keyword">var</span> data = fs.readFileSync(<span class="string">'./data/test.txt'</span>).toString()</span><br><span class="line"><span class="built_in">console</span>.log(data)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 同步写入文件内容：</span></span><br><span class="line">fs.writeFileSync(<span class="string">'./data/bar.txt'</span>, <span class="string">'写入内容'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="路径说明"><a href="#路径说明" class="headerlink" title="路径说明"></a>路径说明</h2><ul>
+<li><code>__dirname</code>：正在执行的js文件所在的目录路径</li>
+<li><code>__filename</code>：正在执行的js文件的路径</li>
+</ul>
+<h3 id="path-模块"><a href="#path-模块" class="headerlink" title="path 模块"></a>path 模块</h3><ul>
+<li>说明：强大的路径操作模块</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取文件绝对路径</span></span><br><span class="line">path.join(__dirname, <span class="string">'app.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前目录下的 src目录下的 app.js</span></span><br><span class="line">path.join(__dirname, <span class="string">'src'</span>, <span class="string">'app.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前目录下的 上一级目录的 abc目录</span></span><br><span class="line">path.join(__dirname, <span class="string">'..'</span>, <span class="string">'abc'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="NodeJS-与-错误处理"><a href="#NodeJS-与-错误处理" class="headerlink" title="NodeJS 与 错误处理"></a>NodeJS 与 错误处理</h2><ul>
+<li>说明：通过<code>try-catch</code>语句可以用来捕获代码中的错误，使得程序不会蹦掉</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'捕获到异常：'</span>, err)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无法捕获异步代码异常：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  fs.readFile(<span class="string">'./data/test.txt1'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 代码出现异常，外面的 try-catch 是无法捕获到的！</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="异步API错误处理"><a href="#异步API错误处理" class="headerlink" title="异步API错误处理"></a>异步API错误处理</h3><ul>
+<li>注意：<code>try-catch</code>无法捕获异步操作中的错误</li>
+<li>正确处理方式：<ul>
+<li>1 先处理错误，再进行其他操作（错误优先）</li>
+<li>2 封装异步代码报错，应该逐级向上暴露错误给调用者，由调用者处理错误</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 封装读文件操作，并进行错误处理</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFiles</span>(<span class="params">path, callback</span>) </span>&#123;</span><br><span class="line">  fs.readFile(path, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(err) &#123;</span><br><span class="line">      <span class="comment">// 将错误抛出，由使用者决定错误如何处理</span></span><br><span class="line">      <span class="keyword">return</span> callback(err);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 没有错误的处理方式（模拟内置API）</span></span><br><span class="line">    callback(<span class="literal">null</span>, data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">getFiles(<span class="string">'./a.txt'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="comment">// 进行错误处理</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="构建HTTP服务-请求处理响应"><a href="#构建HTTP服务-请求处理响应" class="headerlink" title="构建HTTP服务 - 请求处理响应"></a>构建HTTP服务 - 请求处理响应</h2><ul>
+<li>目标：构建一个基础服务器</li>
+</ul>
+<h3 id="基本服务器"><a href="#基本服务器" class="headerlink" title="基本服务器"></a>基本服务器</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 导入 http 模块</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 创建服务器</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 添加request事件，当有请求到达服务器后，执行回调函数中的代码</span></span><br><span class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.end(<span class="string">'有请求到达服务器'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4 启动服务器，让服务器监听3000端口</span></span><br><span class="line">server.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'服务器已启动'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="创建HTTP服务器说明"><a href="#创建HTTP服务器说明" class="headerlink" title="创建HTTP服务器说明"></a>创建HTTP服务器说明</h3><ul>
+<li>1 服务器监听某个端口号</li>
+<li>2 <code>request</code>事件：每次接收到一个请求时触发</li>
+<li>3 <code>req</code>表示：请求对象，<code>res</code>表示：响应对象</li>
+<li>4 必须调用<code>res.end()</code>结束响应，浏览器才会收到服务器返回的数据</li>
+</ul>
+<h3 id="response对象API"><a href="#response对象API" class="headerlink" title="response对象API"></a>response对象API</h3><ul>
+<li><p><a href="http://nodejs.cn/api/http.html#http_class_http_serverresponse" target="_blank" rel="noopener">response</a></p>
+</li>
+<li><p><code>res.write(chunk)</code>：用于给浏览器发送响应数据，可以调用多次</p>
+<ul>
+<li>chunk：数据块</li>
+</ul>
+</li>
+<li><code>res.end([data])</code>：结束响应，即：所有响应头和响应主体都已被发送，只能调用一次<ul>
+<li>如果指定了 data，则相当于调用<code>res.write(data)</code> 之后再调用<code>res.end()</code></li>
+</ul>
+</li>
+<li><code>res.setHeader(name, value)</code>：设置一个响应头</li>
+<li><code>res.writeHead()</code>：设置HTTP状态码和响应头</li>
+<li>注意：1 先设置响应头，再返回（<code>write()</code>）数据</li>
+<li>注意：2 <code>setHeader()</code> 必须在 <code>writeHead()</code> 之前调用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置HTTP状态码</span></span><br><span class="line">res.statusCode = <span class="number">200</span></span><br><span class="line"><span class="comment">// 设置http响应状态消息</span></span><br><span class="line">res.statusMessage = <span class="string">'OK'</span></span><br><span class="line"></span><br><span class="line">res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/html'</span>)</span><br><span class="line">res.writeHead(<span class="number">200</span>, &#123;</span><br><span class="line">  <span class="comment">// 中文编码</span></span><br><span class="line">  <span class="string">'Content-Type'</span>: <span class="string">'text/plain; charset=utf-8'</span>,</span><br><span class="line">  <span class="string">'LiangLiang'</span>: <span class="string">'cute'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ul>
+<li><p>应用场景：通过命令打开任意可执行文件</p>
+</li>
+<li><p>默认情况下，如果想要通过命令来启动 可执行文件（.exe） ，只在程序所属目录起作用</p>
+</li>
+<li>通过配置 环境变量，可以使得这个命令在任何目录中都有效</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">找到环境变量：计算机 --右键--&gt; 属性 --&gt; 高级系统设置 --&gt; 高级 --&gt; 环境变量</span><br></pre></td></tr></table></figure>
+<h3 id="环境变量添加的两种方式"><a href="#环境变量添加的两种方式" class="headerlink" title="环境变量添加的两种方式"></a>环境变量添加的两种方式</h3><ul>
+<li><a href="http://elf8848.iteye.com/blog/1582137" target="_blank" rel="noopener">MAC 环境变量</a></li>
+<li>1 直接将可执行程序所在目录配置到PATH中<ul>
+<li><code>F:\devFiles\Git</code></li>
+</ul>
+</li>
+<li>2 新建（用户）环境变量 <code>FEIQ_HOME</code>，使用 <code>%FEIQ_HOME%</code> 配置到PATH中<ul>
+<li>变量名：<code>FEIQ_HOME</code> 变量值：<code>F:\devFiles\Git</code>（不带分号）</li>
+</ul>
+</li>
+</ul>
+<h3 id="输入命令执行过程"><a href="#输入命令执行过程" class="headerlink" title="输入命令执行过程"></a>输入命令执行过程</h3><ul>
+<li>1 首先在当前路径目录中查找和改字符串匹配的可执行文件</li>
+<li>2 进入用户 path 环境变量查找</li>
+<li>3 进入系统 path 环境变量查找</li>
+</ul>
+<hr>
+<h2 id="REPL介绍"><a href="#REPL介绍" class="headerlink" title="REPL介绍"></a>REPL介绍</h2><ul>
+<li><p>REPL 全称: Read-Eval-Print-Loop（交互式解释器）</p>
+<ul>
+<li>R 读取 - 读取用户输入，解析输入的 Javascript数据结构并存储在内存中</li>
+<li>E 执行 - 执行输入的数据结构</li>
+<li>P 打印 - 输出结果</li>
+<li>L 循环 - 循环操作以上步骤直到用户两次按下 <code>ctrl + C</code> 退出</li>
+</ul>
+</li>
+<li><p>在REPL中编写程序（类似于浏览器开发人员工具中的控制台功能）</p>
+</li>
+<li>进入：直接在控制台输入 <code>node</code> 命令进入 REPL 环境</li>
+<li>退出：按两次 <code>ctrl + C</code> 退出REPL界面 或者 输入 <code>.exit</code> 退出</li>
+<li>注意：<strong>进入Node的REPL后，只能写JavaScript代码</strong></li>
+</ul>
+<hr>
+<h3 id="Buffer和字符编码"><a href="#Buffer和字符编码" class="headerlink" title="Buffer和字符编码"></a>Buffer和字符编码</h3><p>Node.js 目前支持的字符编码包括：</p>
+<ul>
+<li><code>ascii</code> 仅支持 7位 ASCII 数据。如果设置去掉高位的话，这种编码方法是非常快的。</li>
+<li><code>utf8</code> 多字节编码的Unicode字符。许多网页和其他文档格式使用 UTF-8 。</li>
+<li><code>utf16le</code> 2或4个字节，小端编码的Unicode字符。支持代理对（U+10000 to U+10FFFF）。</li>
+<li><code>ucs2</code> 是 <code>utf16le</code> 的别名。</li>
+<li><code>base64</code> Base64 字符串编码。当从一个字符串创建一个 buffer 时，按照 RFC 4648, Section 5 里的规定，这种编码也将接受正确的“URL和文件名安全字母”。</li>
+<li><code>binary</code> 一种把 buffer 编码成一字节（latin-1）编码字符串的方式。目前不支持 <code>latin-1</code> 字符串。通过 <code>binary</code> 来代替 <code>latin-1</code> 使用 <code>latin-1</code> 编码。</li>
+<li><code>hex</code> 将每个字节编码为两个十六进制字符。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用:</span></span><br><span class="line"><span class="keyword">var</span> buf = Buffer.from(<span class="string">'hello world'</span>, <span class="string">'ascii'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(buf.toString(<span class="string">'hex'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认情况: buf.toString() 相当于</span></span><br><span class="line">buf.toString(<span class="string">'utf8'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="根据不同请求输出不同响应数据"><a href="#根据不同请求输出不同响应数据" class="headerlink" title="根据不同请求输出不同响应数据"></a>根据不同请求输出不同响应数据</h2><ul>
+<li><a href="http://nodejs.cn/api/http.html#http_message_url" target="_blank" rel="noopener">request.url</a></li>
+<li><code>req.url</code>：获取请求路径<ul>
+<li>例如：请求<code>http://127.0.0.1:3000/index</code> 获取到的是：<code>/index</code></li>
+<li>例如：请求<code>http://127.0.0.1:3000/</code> 获取到的是：<code>/</code></li>
+<li>例如：请求<code>http://127.0.0.1:3000</code> 获取到的是：<code>/</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="服务器响应文件"><a href="#服务器响应文件" class="headerlink" title="服务器响应文件"></a>服务器响应文件</h2><ul>
+<li>注意：浏览器中输入的URL地址，仅仅是一个标识，不与服务器中的目录一致。也就是说：返回什么内容是由服务端的逻辑决定</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> url = req.url</span><br><span class="line">  <span class="keyword">if</span>(url === <span class="string">'/'</span>) &#123;</span><br><span class="line">    fs.readFile(<span class="string">'./index.html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(err) &#123;</span><br><span class="line">        <span class="keyword">return</span> res.end(<span class="string">'您访问的资源不存在~'</span>)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      res.end(data)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="模拟Apache服务器"><a href="#模拟Apache服务器" class="headerlink" title="模拟Apache服务器"></a>模拟Apache服务器</h2><ul>
+<li>根据 <code>req.url</code> 读取不同的页面内容，返回给浏览器</li>
+</ul>
+<h2 id="MIME类型"><a href="#MIME类型" class="headerlink" title="MIME类型"></a>MIME类型</h2><ul>
+<li>MIME(Multipurpose Internet Mail Extensions)多用途Internet邮件扩展类型 是一种表示文档性质和格式的标准化方式</li>
+<li>浏览器通常使用MIME类型（而不是文件扩展名）来确定如何处理文档；因此服务器将正确的MIME类型附加到响应对象的头部是非常重要的</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_Types" target="_blank" rel="noopener">MIME 类型</a></li>
+</ul>
+<h3 id="mime模块"><a href="#mime模块" class="headerlink" title="mime模块"></a>mime模块</h3><ul>
+<li>作用：获取文件的MIME类型</li>
+<li>安装：<code>npm i mime</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mime = <span class="built_in">require</span>(<span class="string">'mime'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取路径对应的MIME类型</span></span><br><span class="line">mime.getType(<span class="string">'txt'</span>)                    <span class="comment">// ⇨ 'text/plain'</span></span><br><span class="line"><span class="comment">// 根据MIME获取到文件后缀名</span></span><br><span class="line">mime.getExtension(<span class="string">'text/plain'</span>)        <span class="comment">// ⇨ 'txt'</span></span><br></pre></td></tr></table></figure>
+<h2 id="url模块"><a href="#url模块" class="headerlink" title="url模块"></a>url模块</h2><ul>
+<li>说明：用于 URL 处理与解析</li>
+<li>注意：通过url拿到的查询参数都是字符串格式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入url模块</span></span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析 URL 字符串并返回一个 URL 对象</span></span><br><span class="line"><span class="comment">// 第一个参数：表示要解析的URL字符串</span></span><br><span class="line"><span class="comment">// 第二个参数：是否将query属性（查询参数）解析为一个对象，如果为：true，则query是一个对象</span></span><br><span class="line"><span class="keyword">var</span> ret = url.parse(<span class="string">'http://localhost:3000/details?id=1&amp;name=jack'</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">console</span>.log(ret.query) <span class="comment">// &#123; id: '1', name: 'jack' &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="querystring模块"><a href="#querystring模块" class="headerlink" title="querystring模块"></a>querystring模块</h2><ul>
+<li>用于解析与格式化 URL 查询字符串</li>
+<li>注意：只在专门处理查询字符串时使用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foo=bar&amp;abc=xyz&amp;abc=123</span></span><br><span class="line"><span class="keyword">var</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将查询参数转化为对象</span></span><br><span class="line"><span class="comment">// 第一个参数: 要解析的 URL 查询字符串</span></span><br><span class="line">querystring.parse(<span class="string">'foo=bar&amp;abc=xyz'</span>) <span class="comment">// &#123; foo: 'bar', abc: 'xyz' &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="服务端重定向"><a href="#服务端重定向" class="headerlink" title="服务端重定向"></a>服务端重定向</h2><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank" rel="noopener">HTTP 状态码说明</a></li>
+<li><a href="http://shuai.be/archives/301-302-redirection/" target="_blank" rel="noopener">301 和 302</a></li>
+<li>说明：服务端可以通过HTTP状态码让浏览器中的页面重定向</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(<span class="number">302</span>, &#123;</span><br><span class="line">  <span class="string">'Location'</span>: <span class="string">'/'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="POST请求参数的处理"><a href="#POST请求参数的处理" class="headerlink" title="POST请求参数的处理"></a>POST请求参数的处理</h2><ul>
+<li>说明：POST请求可以发送大量数据，没有大小限制</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接受POST参数</span></span><br><span class="line"><span class="keyword">var</span> postData = []</span><br><span class="line"></span><br><span class="line"><span class="comment">// data事件：用来接受客户端发送过来的POST请求数据</span></span><br><span class="line">req.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>&#123;</span><br><span class="line">  postData.push(chunk)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// end事件：当POST数据接收完毕时，触发</span></span><br><span class="line">req.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = Buffer.concat(postData)</span><br><span class="line">  <span class="built_in">console</span>.log(result.toString())</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="其他模板引擎"><a href="#其他模板引擎" class="headerlink" title="其他模板引擎"></a>其他模板引擎</h2><ul>
+<li><a href="https://github.com/mde/ejs" target="_blank" rel="noopener">ejs</a></li>
+<li><a href="http://www.css88.com/doc/underscore/" target="_blank" rel="noopener">underscore</a></li>
+<li><a href="https://github.com/pugjs/pug" target="_blank" rel="noopener">jade/pug</a></li>
+<li><p><a href="https://github.com/pugjs/pug" target="_blank" rel="noopener">art-template</a></p>
+</li>
+<li><p>安装：<code>npm i ejs</code></p>
+</li>
+<li>安装：<code>npm i underscore</code></li>
+<li>安装：<code>npm i pug</code></li>
+<li>安装：<code>npm i art-template</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// art-template 示例：</span></span><br><span class="line"><span class="comment">// 1. 使用模板文件</span></span><br><span class="line"><span class="keyword">var</span> html = template(<span class="string">'模板文件路径'</span>, &#123;</span><br><span class="line">  name: <span class="string">'rose'</span>,</span><br><span class="line">  food: <span class="string">'西红柿'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(html)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 使用模板字符串</span></span><br><span class="line"><span class="keyword">var</span> render = template.compile(<span class="string">"hello: &lt;%= name %&gt;"</span>)</span><br><span class="line"><span class="keyword">var</span> ret = render(&#123; <span class="attr">name</span>: <span class="string">'moe'</span> &#125;)</span><br><span class="line"><span class="built_in">console</span>.log(ret)</span><br></pre></td></tr></table></figure>
+<h2 id="node-中的模块化"><a href="#node-中的模块化" class="headerlink" title="node 中的模块化"></a>node 中的模块化</h2><ul>
+<li>一个js文件就是一个模块</li>
+<li>每个模块都是一个独立的作用域</li>
+</ul>
+<h3 id="模块分类"><a href="#模块分类" class="headerlink" title="模块分类"></a>模块分类</h3><ul>
+<li>1 核心模块<ul>
+<li>由 node 本身提供，不需要单独安装（npm），可直接引入使用</li>
+</ul>
+</li>
+<li>2 第三方模块<ul>
+<li>由社区或个人提供，需要通过npm安装后使用</li>
+</ul>
+</li>
+<li>3 自定义模块<ul>
+<li>由我们自己创建，比如：app.js</li>
+</ul>
+</li>
+</ul>
+<h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><ul>
+<li>fs：文件操作模块</li>
+<li>http：网络操作模块</li>
+<li>基本使用：1 先引入  2 再使用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h3><ul>
+<li>第三方模块是由 社区或个人 提供的</li>
+<li>比如：mime模块/art-template/jquery…</li>
+<li>基本使用：1 先通过npm下载 2 再引入 3 最后使用</li>
+</ul>
+<h3 id="用户自定义模块"><a href="#用户自定义模块" class="headerlink" title="用户自定义模块"></a>用户自定义模块</h3><ul>
+<li>由开发人员创建的模块（JS文件）</li>
+<li>基本使用：1 创建模块 2 引入模块</li>
+<li>注意：自定义模块的路径必须以<code>./</code>开头</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载模块</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./a'</span>)     <span class="comment">// 推荐使用，省略.js后缀！</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./a.js'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="模块化规范的使用"><a href="#模块化规范的使用" class="headerlink" title="模块化规范的使用"></a>模块化规范的使用</h3><ul>
+<li>1 加载模块：<code>require(&#39;fs&#39;)</code></li>
+<li>2 导出模块：<code>module.exports</code> 或 <code>exports</code></li>
+</ul>
+<h3 id="module-exports-和-exports-的关系"><a href="#module-exports-和-exports-的关系" class="headerlink" title="module.exports 和 exports 的关系"></a>module.exports 和 exports 的关系</h3><ul>
+<li>模块中默认导出：<code>module.exports</code></li>
+<li><code>exports</code> 是 <code>module.exports</code> 的引用</li>
+<li>注意：给 <code>module.exports</code> 赋值会切断与 <code>exports</code> 之间的联系<ul>
+<li>1 直接添加属性两者皆可</li>
+<li>2 赋值操作时，只能使用 <code>module.exports</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="built_in">module</span>.exports === exports ) <span class="comment">// ==&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价操作</span></span><br><span class="line"><span class="built_in">module</span>.exports.num = <span class="number">123</span></span><br><span class="line">exports.num = <span class="number">123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值操作：不要使用 exports = &#123;&#125;</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三方模块（以mime包为例）"><a href="#第三方模块（以mime包为例）" class="headerlink" title="第三方模块（以mime包为例）"></a>第三方模块（以mime包为例）</h3><ul>
+<li>先基于当前文件模块所属目录找 node_modules 目录</li>
+<li>如果找到，则去该目录中找 mime 目录</li>
+<li>如果找到 mime 目录，则找该目录中的 package.json 文件</li>
+<li>如果找到 package.json 文件，则找该文件中的 main 属性</li>
+<li>如果找到 main 属性，则拿到该属性对应的文件路径</li>
+<li>如果找到 mime 目录之后<ul>
+<li>发现没有 package.json</li>
+<li>或者 有 package.json 没有 main 属性</li>
+<li>或者 有 main 属性，但是指向的路径不存在</li>
+<li>则 node 会默认去看一下 mime 目录中有没有 index.js index.node index.json 文件</li>
+</ul>
+</li>
+<li>如果找不到 index 或者找不到 mime 或者找不到 node_modules</li>
+<li>则进入上一级目录找 node_moudles 查找规则同上</li>
+<li>如果上一级还找不到，继续向上，一直到当前文件所属磁盘根目录</li>
+<li>如果最后到磁盘根目录还找不到，最后报错：<code>can not find module xxx</code></li>
+</ul>
+<h3 id="CommonJS-规范参考文档"><a href="#CommonJS-规范参考文档" class="headerlink" title="CommonJS 规范参考文档"></a>CommonJS 规范参考文档</h3><ul>
+<li><a href="http://nodejs.cn/api/modules.html" target="_blank" rel="noopener">module (模块)</a></li>
+<li><a href="http://javascript.ruanyifeng.com/nodejs/module.html" target="_blank" rel="noopener">CommonJS规范</a></li>
+<li><a href="http://www.jianshu.com/p/09ffac7a3b2c" target="_blank" rel="noopener">浅析JS模块规范：AMD，CMD，CommonJS</a></li>
+</ul>
+<h2 id="npm-Node包管理工具"><a href="#npm-Node包管理工具" class="headerlink" title="npm - Node包管理工具"></a>npm - Node包管理工具</h2><ul>
+<li>node package manager</li>
+<li><a href="https://npmjs.com" target="_blank" rel="noopener">npm官网</a></li>
+</ul>
+<blockquote>
+<p>npm is the package manager for JavaScript and the world’s largest software registry. Discover packages of reusable code — and assemble them in powerful new ways.</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm 是JavaScript的包管理工具，并且是全球最大的软件登记处</span><br><span class="line">发现可重用代码的包 - 并以强有力的新方式进行组装。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>理解：通过<code>npm</code>来快速安装开发中使用的包</li>
+<li>只要安装了node.exe，那么就可以使用npm了</li>
+</ul>
+<h3 id="npm的基本使用"><a href="#npm的基本使用" class="headerlink" title="npm的基本使用"></a>npm的基本使用</h3><ul>
+<li>1 初始化package.json文件：<code>npm init -y</code></li>
+<li>2 安装项目中用到的包：<code>npm install 包名称 --save</code></li>
+</ul>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><ul>
+<li>概述：包（项目）描述文件，用来管理组织一个包（项目），它是一个纯JSON格式的<ul>
+<li>包描述文件：描述自己、描述自己对别人的依赖关系</li>
+</ul>
+</li>
+<li>初始化npm配置文件：<code>npm init</code> 或 <code>npm init -y</code>快速生成</li>
+<li><p>作用：不用拷贝项目依赖项，只需要使用<code>package.json</code>，通过<code>npm i</code>就可以安装项目所有依赖项</p>
+</li>
+<li><p>命令：<code>npm i</code>安装项目所有的依赖项（包括开发依赖）</p>
+</li>
+<li>命令：<code>npm i --production</code>安装项目依赖项（不包括开发依赖）</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li>安装包：<code>npm install 包名称</code>，简写：<code>npm i 包名称</code></li>
+<li>安装指定版本的包：<code>npm install 包名称@版本号</code></li>
+<li>全局安装：<code>npm i -g nodemon</code> （-g 是 –global的简写）</li>
+<li>项目依赖安装：<code>npm i -S jquery</code> （-S 是 –save的简写）<ul>
+<li><code>--save</code>或<code>-S</code>的作用: 往 package.json 中的dependencies里面添加包,但是现在已经不需要了, 只要安装包, 就会自动往 dependencies 写配置项</li>
+<li><code>npm i jquery</code> 相当于: <code>npm i -S jquery</code> 相当于: <code>npm install jquery --save</code></li>
+</ul>
+</li>
+<li>项目开发依赖安装：<code>npm i -D less</code>（仅在开发期间使用，上线的项目中不会用到）<ul>
+<li><code>-D</code>是：<code>--save-dev</code>的简写</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h3><ul>
+<li>查看版本：<code>npm -v</code></li>
+<li>删除包：<code>npm uni 包名称 -S</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">解决包下载错误问题的方式：</span><br><span class="line"></span><br><span class="line">1 将 C:\Users\当前登录用户\AppData\Roaming 目录中的 npm-cache 文件夹删除，然后，再重新下载包，一般就不会有问题了</span><br><span class="line">2 npm cache clean --force</span><br></pre></td></tr></table></figure>
+<h3 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h3><ul>
+<li>全局安装的意义：只是为了可以当做命令行使用而已，即：在任意目录中都可以使用某个命令</li>
+</ul>
+<h3 id="npm的常用命令"><a href="#npm的常用命令" class="headerlink" title="npm的常用命令"></a>npm的常用命令</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 全局安装( 只要安装一次 )</span><br><span class="line">  npm i -g less / npm i less -g</span><br><span class="line"></span><br><span class="line">2 本地安装( 随着项目走, 一个项目安装一次 )</span><br><span class="line">  npm i jquery    表示作为项目依赖安装, 不管开发期间还是线上代码, 都要用到这个包</span><br><span class="line">  npm i -D less   -D 表示这个包只在开发期间使用, 线上的代码是不会用到这个包的</span><br></pre></td></tr></table></figure>
+<h2 id="npm下载加速"><a href="#npm下载加速" class="headerlink" title="npm下载加速"></a>npm下载加速</h2><h3 id="淘宝镜像和cnpm"><a href="#淘宝镜像和cnpm" class="headerlink" title="淘宝镜像和cnpm"></a>淘宝镜像和cnpm</h3><ul>
+<li><a href="http://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a></li>
+<li>安装：<code>npm i cnpm -g --registry=https://registry.npm.taobao.org</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 设置淘宝镜像</span><br><span class="line">npm config set registry https://registry.npm.taobao.org --global</span><br><span class="line">npm config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
+<h2 id="前端渲染和后端渲染"><a href="#前端渲染和后端渲染" class="headerlink" title="前端渲染和后端渲染"></a>前端渲染和后端渲染</h2><ul>
+<li>前端渲染：前台页面ajax请求，获取后端数据，通过拼接字符串或者模板引擎将数据组装为HTML，并展示给用户</li>
+<li>后端渲染：也叫后端直出，由后台拿到数据并且渲染页面，然后，将拼接好的html结构返回给浏览器</li>
+</ul>
+<h3 id="前后端合作开发模式"><a href="#前后端合作开发模式" class="headerlink" title="前后端合作开发模式"></a>前后端合作开发模式</h3><ul>
+<li>1 前后端混合开发<ul>
+<li>套模板：前端写好静态页面，后端将静态页面修改为后端可以使用的模板页面，并渲染页面</li>
+<li>劣势：后端等前端把页面写好（后端依赖于前端）</li>
+</ul>
+</li>
+<li>2 前后端半混合开发<ul>
+<li>前端写好页面，一部分由后端渲染，一部分由前端渲染</li>
+<li>哪部分适合后端渲染？首页（ 首屏加载时间，衡量网站性能的重要标准，网络请求尽可能少 ）</li>
+<li>哪部分适合前端渲染？首页下面的列表页，当滚动到某个位置的时候，才会加载这块内容，所以，这些内容是适合做前端渲染的</li>
+</ul>
+</li>
+<li>3 前后端分离（职责的分离）<ul>
+<li>前端写好页面，并渲染数据，后端只提供数据接口</li>
+<li>也可以使用后端渲染</li>
+<li>mock 假数据</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -334,11 +622,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">了解js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodeJS</a>
         		</li>
       		
 		</ul>
@@ -394,7 +678,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://guoweiyanggithub.github.io/2019/03/07/study-js/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://guoweiyanggithub.github.io/2019/03/08/nodeJS/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -408,18 +692,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/08/js基础二/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/08/mongodb/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js基础二
+          mongodb
         
       </div>
     </a>
   
   
-    <a href="/2019/03/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/03/08/ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ajax</div>
       <i class="icon-circle-right"></i>
     </a>
   
