@@ -604,16 +604,10 @@
 <li>语法：ctx.stroke();</li>
 <li>解释：根据路径绘制线。路径只是草稿，真正绘制线必须执行stroke</li>
 </ul>
-<h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><ul>
-<li>绘制正方形、三角形和梯形<br><img src="/stroke-line-exc-1.png" alt></li>
-</ul>
 <h3 id="fill-填充"><a href="#fill-填充" class="headerlink" title="fill -填充"></a>fill -填充</h3><ul>
 <li>语法：ctx.fill(); </li>
 <li>解释：填充，是将闭合的路径的内容填充具体的颜色, 默认黑色。</li>
-<li><p>如果所有的描点没有构成封闭结构，也会自动构成一个封闭图形</p>
-</li>
-<li><p>练习：<br><img src="/no-zero-exc-1.png" alt></p>
-</li>
+<li>如果所有的描点没有构成封闭结构，也会自动构成一个封闭图形</li>
 </ul>
 <h3 id="线宽"><a href="#线宽" class="headerlink" title="线宽"></a>线宽</h3><ul>
 <li>语法：ctx.lineWidth</li>
@@ -641,33 +635,22 @@
 <li>状态：包含当前与当前绘制相关的属性，如：颜色、线宽等</li>
 <li>新的状态会 “继承” 原先的状态, 虽然旧路径被清除了, 但是状态会保留下来, 线宽, 颜色等还是设置过的状态</li>
 </ul>
-<h3 id="绘制线的练习"><a href="#绘制线的练习" class="headerlink" title="绘制线的练习"></a>绘制线的练习</h3><ul>
-<li>练习1: 绘制坐标网格</li>
-<li><p><img src="/wangge.png" alt="绘制网格"></p>
-</li>
-<li><p>练习2: 绘制坐标系</p>
-</li>
-<li><p><img src="/zuobiaoxi.png" alt="绘制坐标系"></p>
-</li>
-<li><p>练习3: 绘制折线图<br><img src="/zhexiantu.png" alt></p>
-</li>
-</ul>
 <h2 id="其他绘制状态（了解即可）"><a href="#其他绘制状态（了解即可）" class="headerlink" title="其他绘制状态（了解即可）"></a>其他绘制状态（了解即可）</h2><h3 id="绘制线的其他属性"><a href="#绘制线的其他属性" class="headerlink" title="绘制线的其他属性"></a>绘制线的其他属性</h3><ul>
 <li>lineCap     设置线条端点(线头、线冒)样式<ul>
 <li>butt  ：  默认。向线条的每个末端添加平直的边缘。</li>
 <li>round ：  向线条的每个末端添加圆形线帽。</li>
-<li>square：  向线条的每个末端添加正方形线帽。<br><img src="/line-cap.png" alt></li>
+<li>square：  向线条的每个末端添加正方形线帽。</li>
 </ul>
 </li>
 <li>lineJoin    设置拐角类型<ul>
 <li>bevel:   创建斜角。</li>
 <li>round:   创建圆角。</li>
-<li>miter:   默认。创建尖角<br><img src="/line-join.png" alt></li>
+<li>miter:   默认。创建尖角</li>
 </ul>
 </li>
 <li>miterLimit  设置或返回最大斜接长度<ul>
 <li>斜接长度指的是在两条线交汇处内角和外角之间的距离。</li>
-<li>一般用默认值：10就可以了。除非需要特别长的尖角时，使用此属性。<br> <img src="/line-miterlimit.png" alt></li>
+<li>一般用默认值：10就可以了。除非需要特别长的尖角时，使用此属性。</li>
 </ul>
 </li>
 </ul>
@@ -714,7 +697,7 @@
 <p>​</p>
 </li>
 </ul>
-<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><ul>
+<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><ul>
 <li><p>练习：让矩形运动的简单动画</p>
 <p>​</p>
 </li>
@@ -731,7 +714,6 @@
 </ul>
 </li>
 </ul>
-<p><img src="/arc-angle&amp;radian.gif" alt></p>
 <h3 id="弧度和角度"><a href="#弧度和角度" class="headerlink" title="弧度和角度"></a>弧度和角度</h3><ul>
 <li><p>弧度和角度的转换公式： rad = deg /180 * Math.PI;</p>
 </li>
@@ -775,7 +757,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><ul>
+<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h3><ul>
 <li>练习：动画绘制整个圆</li>
 <li>练习：绘制饼型图（三等分）</li>
 <li>练习：绘制普通的饼型图</li>
@@ -824,13 +806,7 @@
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline" target="_blank" rel="noopener">textBaseline的介绍</a></li>
 </ul>
-<p><img src="/textBaseline-demo.png" alt="设置文字为主"><br><img src="/textBaseline.gif" alt></p>
-<h3 id="练习-3"><a href="#练习-3" class="headerlink" title="练习"></a>练习</h3><ul>
-<li><p>练习：绘制带有文字的饼型图</p>
-<p>​</p>
-</li>
-</ul>
-<h2 id="绘制图片（drawImage）（重点）"><a href="#绘制图片（drawImage）（重点）" class="headerlink" title="绘制图片（drawImage）（重点）"></a>绘制图片（drawImage）（重点）</h2><h3 id="绘制图片用法1-基本使用"><a href="#绘制图片用法1-基本使用" class="headerlink" title="绘制图片用法1 -基本使用"></a>绘制图片用法1 -基本使用</h3><ul>
+<h2 id="绘制图片（drawImage"><a href="#绘制图片（drawImage" class="headerlink" title="绘制图片（drawImage)"></a>绘制图片（drawImage)</h2><h3 id="绘制图片用法1-基本使用"><a href="#绘制图片用法1-基本使用" class="headerlink" title="绘制图片用法1 -基本使用"></a>绘制图片用法1 -基本使用</h3><ul>
 <li>context.drawImage(img, x, y);</li>
 <li><p>参数：</p>
 <ul>
@@ -879,7 +855,7 @@
 <p>​</p>
 </li>
 </ul>
-<h3 id="练习-4"><a href="#练习-4" class="headerlink" title="练习"></a>练习</h3><ul>
+<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习"></a>练习</h3><ul>
 <li><p>练习1: 绘制整个图片</p>
 </li>
 <li><p>练习2: 绘制图片的一部分</p>
@@ -924,7 +900,7 @@
 <p>​</p>
 </li>
 </ul>
-<h3 id="练习-5"><a href="#练习-5" class="headerlink" title="练习"></a>练习</h3><ul>
+<h3 id="练习-3"><a href="#练习-3" class="headerlink" title="练习"></a>练习</h3><ul>
 <li><p>在画布左右两侧分别绘制两个圆</p>
 </li>
 <li><p>绘制两个正方形（宽度：100 和 50）</p>
@@ -1722,11 +1698,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><blockquote>
-<p>前言：通俗的讲，能够提供某种服务的机器（计算机）称为服务器</p>
-</blockquote>
-<p><img src="/server.png" alt></p>
-<h2 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h2><blockquote>
+        <h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h2><blockquote>
 <p>使计算机具备提供某种服务能力的应用软件，称为服务器软件，<br>通过安装相应的服务软件，然后进行配置后就可以使计算具备了提供某种服务的能力。</p>
 </blockquote>
 <ol>
@@ -1750,7 +1722,6 @@
 </ol>
 </li>
 </ol>
-<p>服务器的结构<br><img src="/server1.png" alt></p>
 <h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><blockquote>
 <p>具有向服务器<strong>索取服务</strong>能力的终端，叫做客户端。</p>
 </blockquote>
@@ -1759,10 +1730,8 @@
 <li>客户端：安装客户端软件，<strong>索取服务</strong>的计算机</li>
 <li>服务器：安装服务器软件，<strong>提供服务</strong>的计算机</li>
 </ul>
-<h2 id="客户端软件"><a href="#客户端软件" class="headerlink" title="客户端软件"></a>客户端软件</h2><p><img src="/client.png" alt="test image size">{:width=”200px”}</p>
-<p>对于前端工程师而言，主要接触到的客户端软件就是<strong>浏览器</strong>，当然也可能会涉及大一些app开发。</p>
+<h2 id="客户端软件"><a href="#客户端软件" class="headerlink" title="客户端软件"></a>客户端软件</h2><p>对于前端工程师而言，主要接触到的客户端软件就是<strong>浏览器</strong>，当然也可能会涉及大一些app开发。</p>
 <p>以浏览器为宿主环境，结合 HTML、CSS、Javascript等技术，而进行的一系列开发，通常称之为<strong>前端开发</strong>。</p>
-<h2 id="服务器与客户端的关系"><a href="#服务器与客户端的关系" class="headerlink" title="服务器与客户端的关系"></a>服务器与客户端的关系</h2><p><img src="/cs.png" alt></p>
 <h1 id="软件架构"><a href="#软件架构" class="headerlink" title="软件架构"></a>软件架构</h1><blockquote>
 <p>软件架构可以分为BS架构与CS架构</p>
 </blockquote>
@@ -1784,15 +1753,14 @@
 <li>不用兼容操作系统。但是需要兼容浏览器。</li>
 </ul>
 <h1 id="动态网站与静态网站"><a href="#动态网站与静态网站" class="headerlink" title="动态网站与静态网站"></a>动态网站与静态网站</h1><ul>
-<li>静态网站：使用浏览器端语言进行编程，网站由静态代码（HTML.CSS,JS）组成。用户请求服务上已经存在的页面，不需要进行业务逻辑的处理。 <img src="/static.png" alt></li>
-</ul>
-<ul>
-<li>动态网站 ：网页通过服务器的程序动态生成。用户可以和服务器进行交互（可以根据用户输入的不同信息，返回不同的运行结果），可以处理复杂的业务逻辑。<img src="/dong.png" alt></li>
+<li><p>静态网站：使用浏览器端语言进行编程，网站由静态代码（HTML.CSS,JS）组成。用户请求服务上已经存在的页面，不需要进行业务逻辑的处理。</p>
+</li>
+<li><p>动态网站 ：网页通过服务器的程序动态生成。用户可以和服务器进行交互（可以根据用户输入的不同信息，返回不同的运行结果），可以处理复杂的业务逻辑。</p>
+</li>
 </ul>
 <p><strong>总结</strong></p>
 <pre><code>动态网站的 `动`指的是网站`数据的动` 而不是 `视觉上的动`;
-</code></pre><h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//思考：我的电脑如何去 访问京东淘宝网页的？</span></span><br></pre></td></tr></table></figure>
-<h2 id="ip地址"><a href="#ip地址" class="headerlink" title="ip地址"></a>ip地址</h2><p>所谓IP地址就是给每个连接在互联网上的主机分配的一个32位地址。(就像每个人的身份证号码一样)</p>
+</code></pre><h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="ip地址"><a href="#ip地址" class="headerlink" title="ip地址"></a>ip地址</h2><p>所谓IP地址就是给每个连接在互联网上的主机分配的一个32位地址。(就像每个人的身份证号码一样)</p>
 <p>通过ip就可以找到具体的某一台计算机。</p>
 <p>例 <code>192.168.1.110</code></p>
 <p>弊端：没有规律，不方便记忆和推广</p>
@@ -1810,7 +1778,6 @@
 <p>简单的说就是用于记录IP地址和域名之间的对应关系。</p>
 <p>查找优先级 本机hosts文件、DNS服务器</p>
 <p>ipconfig /flushdns 刷新DNS</p>
-<p><img src="/dns.png" alt></p>
 <h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>端口号是计算机与外界通讯交流的出入口，每个端口对应不同的服务。</p>
 <p>现实生活中，银行不同的窗口办理不同的业务。</p>
 <p>查看端口占用情况 netstat -an</p>
@@ -1819,15 +1786,12 @@
 <p>Hosts是一个没有扩展名的系统文件，可以用记事本等工具打开，其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会<strong>首先自动从Hosts文件中寻找对应的IP地址</strong>，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//hosts文件的地址：C:\Windows\System32\drivers\etc</span></span><br><span class="line"><span class="comment">//在浏览器中输入taobao.com的执行过程。</span></span><br></pre></td></tr></table></figure>
-<p><img src="/host.png" alt></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//hosts文件内容</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> localhost</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> localhost</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>  study.com</span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>  www.study.com</span><br></pre></td></tr></table></figure>
 <h1 id="搭建HTTP服务器"><a href="#搭建HTTP服务器" class="headerlink" title="搭建HTTP服务器"></a>搭建HTTP服务器</h1><h2 id="phpStudy介绍"><a href="#phpStudy介绍" class="headerlink" title="phpStudy介绍"></a>phpStudy介绍</h2><blockquote>
 <p>phpStudy是一个PHP调试环境的程序集成包。<br>该程序包集成最新的Apache+PHP+MySQL,安装非常的简单</p>
 </blockquote>
-<p><img src="/phpStudy.png" alt></p>
 <h2 id="phpStudy的安装"><a href="#phpStudy的安装" class="headerlink" title="phpStudy的安装"></a>phpStudy的安装</h2><p>安装phpStudy，解压双击安装(<strong>非中文路径</strong>)，其它默认安装。</p>
 <p><strong>推荐就安装在默认的目录下，一定不能有中文，否则肯定启动不起来。</strong></p>
-<p><img src="/phpStudy02.png" alt>;</p>
 <h2 id="phpStudy的错误解决"><a href="#phpStudy的错误解决" class="headerlink" title="phpStudy的错误解决"></a>phpStudy的错误解决</h2><p>如果phpStudy启动发生错误，参数下列几点。</p>
 <ul>
 <li>一是防火墙拦截，</li>
@@ -1843,13 +1807,10 @@
 <p>为了减少出错安装路径不得有<strong>汉字</strong>，如有防火墙开启，会提示是否信任httpd、mysqld运行，请选择全部允许。 </p>
 <h3 id="关闭IIS服务器"><a href="#关闭IIS服务器" class="headerlink" title="关闭IIS服务器"></a>关闭IIS服务器</h3><p>如果发现服务器启动不成功，很大原因是端口被占用了，因为windows默认会有一个iis服务器，只需要把iis服务器给禁用了即可。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//控制面板--&gt;程序--&gt;程序与功能--&gt;启用或关闭windows功能</span></span><br></pre></td></tr></table></figure>
-<p><img src="/iis.png" alt></p>
 <h3 id="提示缺少vc9-库文件"><a href="#提示缺少vc9-库文件" class="headerlink" title="提示缺少vc9 库文件"></a>提示缺少vc9 库文件</h3><p>在提供的资料库中找到<strong>phpStudy运行库</strong>， 根据自己电脑操作系统的位数安装对应的vc9运行库即可。</p>
-<p><img src="/vc9.png" alt></p>
 <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>如果希望系统自己的服务器能够被别人访问。需要关闭防火墙。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//控制面板---&gt;系统和安全---&gt;Windows 防火墙---&gt;启动或者关闭windows防火墙</span></span><br></pre></td></tr></table></figure>
-<h2 id="phpStudy的配置"><a href="#phpStudy的配置" class="headerlink" title="phpStudy的配置"></a>phpStudy的配置</h2><h3 id="修改网站目录与默认首页"><a href="#修改网站目录与默认首页" class="headerlink" title="修改网站目录与默认首页"></a>修改网站目录与默认首页</h3><p><img src="/index.png" alt></p>
-<ul>
+<h2 id="phpStudy的配置"><a href="#phpStudy的配置" class="headerlink" title="phpStudy的配置"></a>phpStudy的配置</h2><h3 id="修改网站目录与默认首页"><a href="#修改网站目录与默认首页" class="headerlink" title="修改网站目录与默认首页"></a>修改网站目录与默认首页</h3><ul>
 <li>默认首页一般不用修改，业界规范就是index.html作为默认的首页。</li>
 <li>修改网站目录时，网站目录一定不能中文，不然apache启动会失败。</li>
 </ul>
@@ -1991,8 +1952,7 @@
 <li>strchr(字符串，标识字符);          从左向右查找指定的字符，并返回该字符后全部字符</li>
 <li>strrchr(字符串，标识字符);                 从右向左查找指定的字符，并返回该字符后全部字符串</li>
 </ul>
-<h1 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h1><p><img src="/form.png" alt></p>
-<blockquote>
+<h1 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h1><blockquote>
 <p>表单（form）：表单用于收集用户输入信息，并将数据提交给服务器。是一种常见的与服务端数据交互的一种方式</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. action：指定表单的提交地址</span></span><br><span class="line"><span class="comment">//2. method:指定表单的提交方式，get/post，默认get</span></span><br><span class="line"><span class="comment">//3. input的数据想要提交到后台，必须指定name属性，后台通过name属性获取值</span></span><br><span class="line"><span class="comment">//4. 想要提交表单，不能使用input:button 必须使用input:submit</span></span><br></pre></td></tr></table></figure>
@@ -2075,8 +2035,7 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="表单处理-1"><a href="#表单处理-1" class="headerlink" title="表单处理"></a>表单处理</h1><p><img src="/form.png" alt></p>
-<blockquote>
+<h1 id="表单处理-1"><a href="#表单处理-1" class="headerlink" title="表单处理"></a>表单处理</h1><blockquote>
 <p>表单（form）：表单用于收集用户输入信息，并将数据提交给服务器。是一种常见的与服务端数据交互的一种方式</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. action：指定表单的提交地址</span></span><br><span class="line"><span class="comment">//2. method:指定表单的提交方式，get/post，默认get</span></span><br><span class="line"><span class="comment">//3. input的数据想要提交到后台，必须指定name属性，后台通过name属性获取值</span></span><br><span class="line"><span class="comment">//4. 想要提交表单，不能使用input:button 必须使用input:submit</span></span><br></pre></td></tr></table></figure>
@@ -2184,7 +2143,6 @@
 <ul>
 <li>响应 (response)：<code>状态行、响应头、响应主体</code>。</li>
 </ul>
-<p><img src="/http1.png" alt></p>
 <h3 id="请求报文和响应报文"><a href="#请求报文和响应报文" class="headerlink" title="请求报文和响应报文"></a>请求报文和响应报文</h3><p><strong>请求/请求报文</strong></p>
 <pre><code>请求由客户端发起，其规范格式为：请求行、请求头、请求主体。    
 </code></pre><p><strong>响应/响应报文</strong></p>
@@ -2245,8 +2203,7 @@
 <ul>
 <li>非关系型 数据库  数据存储在内存中</li>
 </ul>
-<h3 id="数据库的组织架构："><a href="#数据库的组织架构：" class="headerlink" title="数据库的组织架构："></a><strong>数据库的组织架构：</strong></h3><p> <img src="/database.png" alt></p>
-<ul>
+<h3 id="数据库的组织架构："><a href="#数据库的组织架构：" class="headerlink" title="数据库的组织架构："></a><strong>数据库的组织架构：</strong></h3><ul>
 <li><strong>数据表（table）</strong></li>
 </ul>
 <blockquote>
@@ -2296,9 +2253,8 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 </blockquote>
 <h2 id="数据库操作方式"><a href="#数据库操作方式" class="headerlink" title="数据库操作方式"></a>数据库操作方式</h2><ul>
 <li><p>数据库的相关设置： （打开数据库命令行，修改数据库密码等）</p>
-<p><img src="/mysqlcmd01.png" alt>;</p>
 </li>
-<li><p>命令行演示（了解）<br><img src="/cmd.png" alt></p>
+<li><p>命令行演示</p>
 <ul>
 <li>show databases;</li>
 <li>use database;</li>
@@ -2309,7 +2265,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li><p>图形界面客户端 </p>
 <p>乱码： 编码 —&gt;解码 的格式不一致造成   </p>
 <ul>
-<li>创建连接    <img src="/connect.png" alt></li>
+<li>创建连接</li>
 <li>创建数据库</li>
 <li>删除数据库</li>
 <li>创建表</li>
@@ -2395,11 +2351,8 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <h3 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h3><blockquote>
 <p>注意 创建表时，每个表必须有一个主键</p>
 </blockquote>
-<p><img src="/createtable.png" alt></p>
 <p>保存表结构：</p>
-<p><img src="/savetable.png" alt></p>
 <p>向新建的表中添加数据：</p>
-<p><img src="/addtable.png" alt></p>
 <h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><ul>
 <li><p>SQL基本概述</p>
 <blockquote>
@@ -2553,9 +2506,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <p> 即同一用户请求同一网站的不同页面，服务器无法识别是否是同一用户发起的请求。因此，用户无法进行连续的业务逻辑。</p>
 </blockquote>
 <p>如：登录，在A页面登录，请求B页面，提示登录。</p>
-<p>学生进教学楼： 每次开证明，证明是传智学生  or  带着胸牌</p>
-<pre><code>门卫（没有记忆） 进校门，只有传智的学生可以进入：    ![](/stu.png)
-</code></pre><h3 id="按照数据持久化的位置进行区分"><a href="#按照数据持久化的位置进行区分" class="headerlink" title="按照数据持久化的位置进行区分"></a>按照数据持久化的位置进行区分</h3><ul>
+<h3 id="按照数据持久化的位置进行区分"><a href="#按照数据持久化的位置进行区分" class="headerlink" title="按照数据持久化的位置进行区分"></a>按照数据持久化的位置进行区分</h3><ul>
 <li><strong>cookie</strong>:在浏览器端持久化数据的容器</li>
 <li><strong>session</strong>在服务器端持久化数据的容器</li>
 </ul>
@@ -2567,8 +2518,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li><p>cookie 允许服务器脚本（PHP脚本）在浏览器端存储数据</p>
 </li>
 <li><p><strong>cookie特点</strong>：在cookie中数据设置后，浏览器再次请求服务器指定页面时，会自动携带cookie中的数据到服务器，在服务器中可以获取cookie中的数据；</p>
-<h3 id="浏览器查看cookie数据"><a href="#浏览器查看cookie数据" class="headerlink" title="浏览器查看cookie数据"></a>浏览器查看cookie数据</h3><p><img src="/cookie.png" alt></p>
-</li>
+<h3 id="浏览器查看cookie数据"><a href="#浏览器查看cookie数据" class="headerlink" title="浏览器查看cookie数据"></a>浏览器查看cookie数据</h3></li>
 </ul>
 <h3 id="js操作cookie（了解）"><a href="#js操作cookie（了解）" class="headerlink" title="js操作cookie（了解）"></a>js操作cookie（了解）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置cookie</span></span><br><span class="line">    <span class="built_in">document</span>.cookie = <span class="string">'name=zs'</span>; </span><br><span class="line">    <span class="built_in">document</span>.cookie = <span class="string">'pwd=123'</span>;   </span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取cookie中的值</span></span><br><span class="line">    <span class="keyword">var</span> cookies = <span class="built_in">document</span>.cookie;</span><br><span class="line">    <span class="keyword">var</span> arr = cookies.split(<span class="string">'; '</span>); <span class="comment">//注意这里是 '; ' 有空格的 </span></span><br><span class="line">    <span class="keyword">if</span>(arr)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">var</span> data = arr[i].split(<span class="string">'='</span>);</span><br><span class="line">            <span class="keyword">if</span>(data[<span class="number">0</span>] == <span class="string">'name'</span>)&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(data[<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="jquery-cookie-js插件-操作cookie"><a href="#jquery-cookie-js插件-操作cookie" class="headerlink" title="jquery.cookie.js插件 操作cookie"></a>jquery.cookie.js插件 操作cookie</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//向页面中引入插件js文件，基于jquery的 </span></span><br><span class="line">$.cookie(<span class="string">'weight'</span>,<span class="number">100</span>,&#123;<span class="attr">expires</span>:<span class="number">7</span>&#125;);<span class="comment">//设置   expires 过期时间</span></span><br><span class="line">$.cookie(<span class="string">'name'</span>);<span class="comment">//获取</span></span><br><span class="line">$.cookie(<span class="string">'name'</span>,<span class="literal">null</span>);<span class="comment">//删除	</span></span><br><span class="line">	$.cookie(键,值,&#123;<span class="attr">expires</span>:过期天数&#125;)</span><br><span class="line">$.cookie(键) <span class="comment">//获取</span></span><br></pre></td></tr></table></figure>
@@ -2582,8 +2532,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li>cookie中的数据有效期，不设置即浏览器关闭，会话结束，数据销毁</li>
 <li>cookie存储容量小，约4kb</li>
 </ul>
-<h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><p><img src="/session.png" alt></p>
-<ul>
+<h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><ul>
 <li>在服务器端存储数据的容器</li>
 <li>session容器是一个数组的形式，通过超全局变量$_SESSION 进行取值和设置</li>
 <li>session在使用前，必须先开启session机制</li>
@@ -2627,7 +2576,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 </ul>
 </li>
 </ol>
-<p><img src="/sess-login1.png" alt></p>
 <h1 id="常见数据传输格式"><a href="#常见数据传输格式" class="headerlink" title="常见数据传输格式"></a>常见数据传输格式</h1><h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><blockquote>
 <p>XML是一种标记语言，很类似HTML，其宗旨是用来传输数据，具有自我描述性（固定的格式的数据）。</p>
 </blockquote>
@@ -3378,7 +3326,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <h3 id="Web-API的概念"><a href="#Web-API的概念" class="headerlink" title="Web  API的概念"></a>Web  API的概念</h3><p>浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)</p>
 <p>此处的Web API特指浏览器提供的API(一组方法)</p>
 <h3 id="掌握常见浏览器提供的API的调用方式"><a href="#掌握常见浏览器提供的API的调用方式" class="headerlink" title="掌握常见浏览器提供的API的调用方式"></a>掌握常见浏览器提供的API的调用方式</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API" target="_blank" rel="noopener">MDN-Web API</a></p>
-<h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p><img src="/QQ图片20170810172512-2357176615.png" alt="QQ图片20170810172512"></p>
 <h4 id="ECMAScript-JavaScript的核心"><a href="#ECMAScript-JavaScript的核心" class="headerlink" title="ECMAScript - JavaScript的核心"></a>ECMAScript - JavaScript的核心</h4><p>定义了JavaScript 的语法规范</p>
 <p>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了一种语言的标准与具体实现无关</p>
 <h4 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM - 浏览器对象模型"></a>BOM - 浏览器对象模型</h4><p>一套操作浏览器功能的API</p>
@@ -3386,8 +3333,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <h4 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM - 文档对象模型"></a>DOM - 文档对象模型</h4><p>一套操作页面元素的API</p>
 <p>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</p>
 <h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="DOM的概念"><a href="#DOM的概念" class="headerlink" title="DOM的概念"></a>DOM的概念</h3><p>文档对象模型（Document Object Model，简称DOM），是<a href="https://baike.baidu.com/item/W3C" target="_blank" rel="noopener">W3C</a>组织推荐的处理<a href="https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">可扩展标记语言</a>的标准<a href="https://baike.baidu.com/item/%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">编程接口</a>。它是一种与平台和语言无关的<a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">应用程序接口</a>(API),它可以动态地访问程序和脚本，更新其内容、结构和<a href="https://baike.baidu.com/item/www/109924" target="_blank" rel="noopener">www</a>文档的风格(目前，HTML和XML文档是通过说明部分定义的)。文档可以进一步被处理，处理的结果可以加入到当前的页面。<a href="https://baike.baidu.com/item/DOM/50288" target="_blank" rel="noopener">DOM</a>是一种基于树的<a href="https://baike.baidu.com/item/API/10154" target="_blank" rel="noopener">API</a>文档，它要求在处理过程中整个文档都表示在<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E5%99%A8" target="_blank" rel="noopener">存储器</a>中。</p>
-<p>DOM又称为文档树模型</p>
-<p><img src="/1497154623955.png" alt="1497154623955"></p>
 <ul>
 <li>文档：一个网页可以称为文档</li>
 <li>节点：网页中的所有内容都是节点（标签、属性、文本、注释等）</li>
@@ -3418,15 +3363,9 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li>事件处理程序:事件触发后要执行的代码(函数形式)</li>
 </ul>
 <h3 id="事件的基本使用"><a href="#事件的基本使用" class="headerlink" title="事件的基本使用"></a>事件的基本使用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'代码会在box被点击后执行'</span>);  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ul>
-<li>点击按钮弹出提示框</li>
-<li>点击按钮切换图片</li>
-</ul>
 <h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><h3 id="非表单元素的属性"><a href="#非表单元素的属性" class="headerlink" title="非表单元素的属性"></a>非表单元素的属性</h3><p>href、title、id、src、className</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.getElementById(<span class="string">'link'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(link.href);</span><br><span class="line"><span class="built_in">console</span>.log(link.title);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> pic = <span class="built_in">document</span>.getElementById(<span class="string">'pic'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(pic.src);</span><br></pre></td></tr></table></figure>
-<p>案例:​</p>
-<pre><code>美女相册
-</code></pre><ul>
+<ul>
 <li>innerHTML和innerText</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.innerHTML = <span class="string">'我是文本&lt;p&gt;我会生成为标签&lt;/p&gt;'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(box.innerHTML);</span><br><span class="line">box.innerText = <span class="string">'我是文本&lt;p&gt;我不会生成为标签&lt;/p&gt;'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(box.innerText);</span><br></pre></td></tr></table></figure>
@@ -3442,13 +3381,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li>disabled 禁用属性</li>
 <li>checked 复选框选中属性</li>
 <li>selected 下拉菜单选中属性</li>
-</ul>
-<h3 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h3><ul>
-<li>给文本框赋值，获取文本框的值</li>
-<li>点击按钮禁用文本框</li>
-<li>设置下拉框中的选中项</li>
-<li>搜索文本框</li>
-<li>全选反选</li>
 </ul>
 <h3 id="自定义属性操作"><a href="#自定义属性操作" class="headerlink" title="自定义属性操作"></a>自定义属性操作</h3><ul>
 <li>getAttribute() 获取标签行内属性</li>
@@ -3468,16 +3400,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li>修改标签的className属性相当于直接修改标签的类名<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.className = <span class="string">'show'</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="案例-2"><a href="#案例-2" class="headerlink" title="案例"></a>案例</h3><ul>
-<li>开关灯</li>
-<li>点击按钮改变div的背景颜色</li>
-<li>图片切换二维码案例</li>
-<li>当前输入的文本框高亮显示</li>
-<li>检测用户名是否是3-6位，密码是否是6-8位，如果不满足要求高亮显示文本框</li>
-<li>点击按钮改变div的大小和位置</li>
-<li>列表隔行变色、高亮显示</li>
-<li>tab选项卡切换</li>
-</ul>
 <h2 id="创建元素的三种方式"><a href="#创建元素的三种方式" class="headerlink" title="创建元素的三种方式"></a>创建元素的三种方式</h2><h3 id="document-write"><a href="#document-write" class="headerlink" title="document.write()"></a>document.write()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="string">'新设置的内容&lt;p&gt;标签也可以生成&lt;/p&gt;'</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="innerHTML"><a href="#innerHTML" class="headerlink" title="innerHTML"></a>innerHTML</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.innerHTML = <span class="string">'新内容&lt;p&gt;新标签&lt;/p&gt;'</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="document-createElement"><a href="#document-createElement" class="headerlink" title="document.createElement()"></a>document.createElement()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(div);</span><br></pre></td></tr></table></figure>
@@ -3485,10 +3407,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li>innerHTML方法由于会对字符串进行解析，需要避免在循环内多次使用。</li>
 <li>可以借助字符串或数组的方式进行替换，再设置给innerHTML</li>
 <li>优化后与document.createElement性能相近</li>
-</ul>
-<h3 id="案例-3"><a href="#案例-3" class="headerlink" title="案例"></a>案例</h3><ul>
-<li>动态创建列表，高亮显示</li>
-<li>根据数据动态创建表格</li>
 </ul>
 <h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h3><ul>
 <li>nodeType  节点的类型<ul>
@@ -3503,8 +3421,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 </ul>
 </li>
 </ul>
-<h3 id="节点层级"><a href="#节点层级" class="headerlink" title="节点层级"></a>节点层级</h3><p><img src="/1503541915769.png" alt="1503541915769"> </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.parentNode);</span><br><span class="line"><span class="built_in">console</span>.log(box.childNodes);</span><br><span class="line"><span class="built_in">console</span>.log(box.children);</span><br><span class="line"><span class="built_in">console</span>.log(box.nextSibling);</span><br><span class="line"><span class="built_in">console</span>.log(box.previousSibling);</span><br><span class="line"><span class="built_in">console</span>.log(box.firstChild);</span><br><span class="line"><span class="built_in">console</span>.log(box.lastChild);</span><br></pre></td></tr></table></figure>
+<h3 id="节点层级"><a href="#节点层级" class="headerlink" title="节点层级"></a>节点层级</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.parentNode);</span><br><span class="line"><span class="built_in">console</span>.log(box.childNodes);</span><br><span class="line"><span class="built_in">console</span>.log(box.children);</span><br><span class="line"><span class="built_in">console</span>.log(box.nextSibling);</span><br><span class="line"><span class="built_in">console</span>.log(box.previousSibling);</span><br><span class="line"><span class="built_in">console</span>.log(box.firstChild);</span><br><span class="line"><span class="built_in">console</span>.log(box.lastChild);</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>注意</p>
 <p>childNodes和children的区别，childNodes获取的是子节点，children获取的是子元素(在早期浏览器中会返回注释节点)</p>
@@ -3515,9 +3432,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">节点操作，方法</span><br><span class="line">	appendChild()</span><br><span class="line">	insertBefore()</span><br><span class="line">	removeChild()</span><br><span class="line">	replaceChild()</span><br><span class="line">节点层次，属性</span><br><span class="line">	parentNode</span><br><span class="line">	childNodes</span><br><span class="line">	children</span><br><span class="line">	nextSibling/previousSibling</span><br><span class="line">	firstChild/lastChild</span><br></pre></td></tr></table></figure>
-<p>案例：</p>
-<pre><code>选择水果
-</code></pre><h2 id="事件详解"><a href="#事件详解" class="headerlink" title="事件详解"></a>事件详解</h2><h3 id="注册-移除事件的三种方式"><a href="#注册-移除事件的三种方式" class="headerlink" title="注册/移除事件的三种方式"></a>注册/移除事件的三种方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="comment">//第一种:</span></span><br><span class="line">box.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'点击后执行'</span>);</span><br><span class="line">&#125;;</span><br><span class="line">box.onclick = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二种:</span></span><br><span class="line">box.addEventListener(<span class="string">'click'</span>, eventCode, <span class="literal">false</span>);</span><br><span class="line">box.removeEventListener(<span class="string">'click'</span>, eventCode, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第三种:</span></span><br><span class="line">box.attachEvent(<span class="string">'onclick'</span>, eventCode);</span><br><span class="line">box.detachEvent(<span class="string">'onclick'</span>, eventCode);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventCode</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'点击后执行'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="事件详解"><a href="#事件详解" class="headerlink" title="事件详解"></a>事件详解</h2><h3 id="注册-移除事件的三种方式"><a href="#注册-移除事件的三种方式" class="headerlink" title="注册/移除事件的三种方式"></a>注册/移除事件的三种方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="comment">//第一种:</span></span><br><span class="line">box.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'点击后执行'</span>);</span><br><span class="line">&#125;;</span><br><span class="line">box.onclick = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二种:</span></span><br><span class="line">box.addEventListener(<span class="string">'click'</span>, eventCode, <span class="literal">false</span>);</span><br><span class="line">box.removeEventListener(<span class="string">'click'</span>, eventCode, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第三种:</span></span><br><span class="line">box.attachEvent(<span class="string">'onclick'</span>, eventCode);</span><br><span class="line">box.detachEvent(<span class="string">'onclick'</span>, eventCode);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventCode</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'点击后执行'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="兼容代码"><a href="#兼容代码" class="headerlink" title="兼容代码"></a>兼容代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEventListener</span>(<span class="params">element, type, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (element.addEventListener) &#123;</span><br><span class="line">    element.addEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent)&#123;</span><br><span class="line">    element.attachEvent(<span class="string">'on'</span> + type,fn);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    element[<span class="string">'on'</span> + type] = fn;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEventListener</span>(<span class="params">element, type, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (element.removeEventListener) &#123;</span><br><span class="line">    element.removeEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.detachEvent) &#123;</span><br><span class="line">    element.detachEvent(<span class="string">'on'</span> + type, fn);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    element[<span class="string">'on'</span> + type] = <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="事件的三个阶段"><a href="#事件的三个阶段" class="headerlink" title="事件的三个阶段"></a>事件的三个阶段</h3><ol>
 <li><p>捕获阶段</p>
@@ -3535,7 +3450,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <li>event.target || event.srcElement 用于获取触发事件的元素</li>
 <li>event.preventDefault() 取消默认行为</li>
 </ul>
-<h4 id="案例-4"><a href="#案例-4" class="headerlink" title="案例"></a>案例</h4><ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><ul>
 <li>跟着鼠标飞的天使</li>
 <li>鼠标点哪图片飞到哪里</li>
 <li>获取鼠标在div内的坐标</li>
@@ -3578,8 +3493,6 @@ top 是只读的属性
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，1000毫秒后执行，返回定时器的标示</span></span><br><span class="line"><span class="keyword">var</span> timerId = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearTimeout(timerId);</span><br></pre></td></tr></table></figure>
 <h4 id="setInterval-和clearInterval"><a href="#setInterval-和clearInterval" class="headerlink" title="setInterval()和clearInterval()"></a>setInterval()和clearInterval()</h4><p>定时调用的函数，可以按照给定的时间(单位毫秒)周期调用函数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，每隔1秒调用一次</span></span><br><span class="line"><span class="keyword">var</span> timerId = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="built_in">console</span>.log(date.toLocaleTimeString());</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearInterval(timerId);</span><br></pre></td></tr></table></figure>
-<p>案例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">定时器</span><br><span class="line">简单动画</span><br></pre></td></tr></table></figure>
 <h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><p>location对象是window对象下的一个属性，使用的时候可以省略window对象</p>
 <p>location可以获取或者设置浏览器地址栏的URL</p>
 <h4 id="location有哪些成员？"><a href="#location有哪些成员？" class="headerlink" title="location有哪些成员？"></a>location有哪些成员？</h4><ul>
@@ -3600,7 +3513,6 @@ top 是只读的属性
 <li>URL的组成</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">scheme://host:port/path?query#fragment</span><br><span class="line">http://www.itheima.com:80/a/b/index.html?name=zs&amp;age=18#bottom</span><br><span class="line">scheme:通信协议</span><br><span class="line">	常用的http,ftp,maito等</span><br><span class="line">host:主机</span><br><span class="line">	服务器(计算机)域名系统 (DNS) 主机名或 IP 地址。</span><br><span class="line">port:端口号</span><br><span class="line">	整数，可选，省略时使用方案的默认端口，如http的默认端口为80。</span><br><span class="line">path:路径</span><br><span class="line">	由零或多个&apos;/&apos;符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。</span><br><span class="line">query:查询</span><br><span class="line">	可选，用于给动态网页传递参数，可有多个参数，用&apos;&amp;&apos;符号隔开，每个参数的名和值用&apos;=&apos;符号隔开。例如：name=zs</span><br><span class="line">fragment:信息片断</span><br><span class="line">	字符串，锚点.</span><br></pre></td></tr></table></figure>
-<h4 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h4><p>解析URL中的query，并返回对象的形式</p>
 <h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><ul>
 <li>back()</li>
 <li>forward()</li>
@@ -3614,22 +3526,8 @@ top 是只读的属性
 <li>offsetParent和parentNode的区别?</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetParent);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetLeft);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetTop);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetWidth);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetHeight);</span><br></pre></td></tr></table></figure>
-<p><img src="/1498743216279.png" alt="1498743216279"></p>
 <h3 id="客户区大小"><a href="#客户区大小" class="headerlink" title="客户区大小"></a>客户区大小</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientLeft);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientTop);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientWidth);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientHeight);</span><br></pre></td></tr></table></figure>
-<p><img src="/1504075813134.png" alt="1504075813134"></p>
 <h3 id="滚动偏移"><a href="#滚动偏移" class="headerlink" title="滚动偏移"></a>滚动偏移</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollLeft)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollTop)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollWidth)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollHeight)</span><br></pre></td></tr></table></figure>
-<p><img src="/1498743288621.png" alt="1498743288621"></p>
-<h3 id="案例-5"><a href="#案例-5" class="headerlink" title="案例"></a>案例</h3><ul>
-<li>拖拽案例</li>
-<li>弹出登录窗口</li>
-<li>放大镜案例</li>
-<li>模拟滚动条</li>
-<li>匀速动画函数</li>
-<li>无缝轮播图</li>
-<li>回到顶部  </li>
-</ul>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="元素的类型"><a href="#元素的类型" class="headerlink" title="元素的类型"></a>元素的类型</h3><p><img src="/1497169919418.png" alt="1497169919418"></p>
-
       
 
       
@@ -4321,15 +4219,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">了解js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">DOM与BOM</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">内置对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">了解js</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,18 +16,10 @@
 <meta property="og:site_name" content="一昂杨丶">
 <meta property="og:description" content="React 背景介绍 React 入门实例教程  React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设 Instagram 照片墙 的网站。做出来以后，发现这套东西很好用，就在2013年5月开源了。 什么是React A JAVASCRIPT LIBRARY FOR BUILDING USER INTER">
 <meta property="og:locale" content="javascript">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/JS对象2HTML.png">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/Element-diff-1.png">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/Element-diff-2.png">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/页面组件化.png">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/页面抽象组件.png">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/组件的生命周期.png">
-<meta property="og:image" content="https://guoweiyanggithub.github.io/生命周期明细表格.png">
-<meta property="og:updated_time" content="2019-03-08T07:35:47.194Z">
+<meta property="og:updated_time" content="2019-03-08T08:36:18.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React笔记">
 <meta name="twitter:description" content="React 背景介绍 React 入门实例教程  React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设 Instagram 照片墙 的网站。做出来以后，发现这套东西很好用，就在2013年5月开源了。 什么是React A JAVASCRIPT LIBRARY FOR BUILDING USER INTER">
-<meta name="twitter:image" content="https://guoweiyanggithub.github.io/JS对象2HTML.png">
   
     <link rel="alternative" href="/atom.xml" title="一昂杨丶" type="application/atom+xml">
   
@@ -241,10 +233,7 @@
 <p>React将DOM抽象为虚拟DOM，虚拟DOM其实就是用一个对象来描述DOM，通过对比前后两个对象的差异，最终只把变化的部分重新渲染，提高渲染的效率</p>
 </blockquote>
 <ul>
-<li><p><img src="/JS对象2HTML.png" alt="虚拟DOM"></p>
-</li>
-<li><p><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="noopener">如何实现一个 Virtual DOM 算法</a></p>
-</li>
+<li><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="noopener">如何实现一个 Virtual DOM 算法</a></li>
 <li><a href="https://www.zhihu.com/question/31809713" target="_blank" rel="noopener">理解 Virtual DOM</a></li>
 </ul>
 <h3 id="VituralDOM的处理方式"><a href="#VituralDOM的处理方式" class="headerlink" title="VituralDOM的处理方式"></a>VituralDOM的处理方式</h3><ul>
@@ -297,12 +286,10 @@
 <li>注意：<strong>尽可能的减少数组index作为key，数组中插入元素的等操作时，会使得效率底下</strong></li>
 </ul>
 <h3 id="key-demo"><a href="#key-demo" class="headerlink" title="key demo"></a>key demo</h3><ul>
-<li><img src="/Element-diff-1.png" alt="Element-diff 无key"></li>
 <li><p>执行过程：B != A，则创建并插入 B，删除 A；以此类推，创建并插入 A、D、C，删除 B、C、D</p>
 </li>
-<li><p><img src="/Element-diff-2.png" alt="Element-diff 有key"></p>
+<li><p>执行过程：B、D 不做任何操作，A、C 进行移动操作</p>
 </li>
-<li>执行过程：B、D 不做任何操作，A、C 进行移动操作</li>
 </ul>
 <hr>
 <h2 id="React的基本使用"><a href="#React的基本使用" class="headerlink" title="React的基本使用"></a>React的基本使用</h2><ul>
@@ -347,7 +334,6 @@
 <ul>
 <li>组件是由一个个的HTML元素组成的</li>
 <li>概念上来讲, 组件就像JS中的函数。它们接受用户输入（<code>props</code>），并且<strong>返回</strong>一个React对象，用来描述展示在页面中的内容</li>
-<li><img src="/页面组件化.png" alt="页面组件化"> <img src="/页面抽象组件.png" alt="页面抽象组件"></li>
 </ul>
 <h3 id="React创建组件的两种方式"><a href="#React创建组件的两种方式" class="headerlink" title="React创建组件的两种方式"></a>React创建组件的两种方式</h3><ul>
 <li>1 通过 JS函数 创建（无状态组件）</li>
@@ -428,8 +414,7 @@
 <li>实现继承的方式</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">American</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="comment">// 必须调用super(), super表示父类的构造函数</span></span><br><span class="line">    <span class="keyword">super</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.skin = <span class="string">'white'</span></span><br><span class="line">    <span class="keyword">this</span>.eyeColor = <span class="string">'white'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="react-生命周期"><a href="#react-生命周期" class="headerlink" title="react 生命周期"></a>react 生命周期</h1><h2 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h2><p><img src="/组件的生命周期.png" alt="React中组件的生命周期"></p>
-<ul>
+<h1 id="react-生命周期"><a href="#react-生命周期" class="headerlink" title="react 生命周期"></a>react 生命周期</h1><h2 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h2><ul>
 <li>简单说：<strong>一个组件从开始到最后消亡所经历的各种状态，就是一个组件的生命周期</strong></li>
 </ul>
 <p>组件生命周期函数的定义：从组件被创建，到组件挂载到页面上运行，再到页面关闭组件被卸载，这三个阶段总是伴随着组件各种各样的事件，那么这些事件，统称为组件的生命周期函数！</p>
@@ -444,10 +429,8 @@
 </ul>
 <h3 id="组件生命周期函数总览"><a href="#组件生命周期函数总览" class="headerlink" title="组件生命周期函数总览"></a>组件生命周期函数总览</h3><ul>
 <li>说明：通过 <code>Counter计数器的小案例</code>，理解组件的生命周期函数基本使用</li>
-<li>组件的生命周期包含三个阶段：创建阶段（Mounting）、运行和交互阶段（Updating）、卸载阶段（Unmounting）</li>
-</ul>
-<p><img src="/生命周期明细表格.png" alt="React生命周期表格"></p>
-<ul>
+<li><p>组件的生命周期包含三个阶段：创建阶段（Mounting）、运行和交互阶段（Updating）、卸载阶段（Unmounting）</p>
+</li>
 <li><p>Mounting：</p>
 <blockquote>
 <p>constructor()<br>componentWillMount()<br>render()<br>componentDidMount()</p>
@@ -949,15 +932,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">了解js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">DOM与BOM</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">内置对象</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">了解js</a>
               </li>
              
               <li class="article-tag-list-item">
