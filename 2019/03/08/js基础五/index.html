@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript,web前端,内置对象,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="内置对象 JS内置对象就是指Javascript自带的一些对象，供开发者使用，这些对象提供了一些常用的的功能。 常见的内置对象有Math、String、Array、Date等  内置对象有很多，我们主要是记下这些内置对象的用法即可。但是同学们也不可能一下子记住这么多的方法，因此当同学们忘了某个方法该如何使用的时候，可以通过以下方式查看。  跳转到定义ctrl+左键 火狐开发者网站MDN W3Sch">
+<meta name="keywords" content="javascript,web前端,内置对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础五">
+<meta property="og:url" content="https://guoweiyanggithub.github.io/2019/03/08/js基础五/index.html">
+<meta property="og:site_name" content="一昂杨丶">
+<meta property="og:description" content="内置对象 JS内置对象就是指Javascript自带的一些对象，供开发者使用，这些对象提供了一些常用的的功能。 常见的内置对象有Math、String、Array、Date等  内置对象有很多，我们主要是记下这些内置对象的用法即可。但是同学们也不可能一下子记住这么多的方法，因此当同学们忘了某个方法该如何使用的时候，可以通过以下方式查看。  跳转到定义ctrl+左键 火狐开发者网站MDN W3Sch">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-13T02:46:14.902Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js基础五">
+<meta name="twitter:description" content="内置对象 JS内置对象就是指Javascript自带的一些对象，供开发者使用，这些对象提供了一些常用的的功能。 常见的内置对象有Math、String、Array、Date等  内置对象有很多，我们主要是记下这些内置对象的用法即可。但是同学们也不可能一下子记住这么多的方法，因此当同学们忘了某个方法该如何使用的时候，可以通过以下方式查看。  跳转到定义ctrl+左键 火狐开发者网站MDN W3Sch">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://guoweiyanggithub.github.io/2019/03/08/js基础五/">
+
+
+
+
+
+  <title>js基础五 | 一昂杨丶</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">一昂杨丶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">山中何事？松花酿酒，春水煎茶。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://guoweiyanggithub.github.io/2019/03/08/js基础五/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一昂杨丶">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一昂杨丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js基础五</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T10:00:44+08:00">
+                2019-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/08/js基础五/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/js基础五/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/08/js基础五/" class="leancloud_visitors" data-flag-title="js基础五">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h1><blockquote>
+<p>JS内置对象就是指Javascript自带的一些对象，供开发者使用，这些对象提供了一些常用的的功能。</p>
+<p>常见的内置对象有Math、String、Array、Date等</p>
+</blockquote>
+<p>内置对象有很多，我们主要是记下这些内置对象的用法即可。但是同学们也不可能一下子记住这么多的方法，因此当同学们忘了某个方法该如何使用的时候，可以通过以下方式查看。</p>
+<ul>
+<li>跳转到定义<code>ctrl+左键</code></li>
+<li><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">火狐开发者网站MDN</a></li>
+<li><a href="http://www.w3school.com.cn/jsref/" target="_blank" rel="noopener">W3School网站</a></li>
+<li>离线文档</li>
+<li>笔记</li>
+</ul>
+<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2><blockquote>
+<p>Math对象中封装很多与数学相关的属性和方法。</p>
+</blockquote>
+<ul>
+<li><p>属性PI</p>
+<p><code>Math.PI</code></p>
+</li>
+<li><p>最大值/最小值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Math.max();</span><br><span class="line">Math.min();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取整</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.ceil();<span class="comment">//天花板，向上取整</span></span><br><span class="line"><span class="built_in">Math</span>.floor();<span class="comment">//地板，向下取整</span></span><br><span class="line"><span class="built_in">Math</span>.round();<span class="comment">//四舍五入，如果是.5，则取更大的那个数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>随机数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.random();<span class="comment">//返回一个[0,1)之间的数，能取到0，取不到1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.abs();<span class="comment">//求绝对值</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>次幂和平方</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(num, power);<span class="comment">//求num的power次方</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(num);<span class="comment">//对num开平方</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h2><blockquote>
+<p>Date对象用来处理日期和时间</p>
+</blockquote>
+<ul>
+<li><p>创建一个日期对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();<span class="comment">//使用构造函数创建一个当前时间的对象</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-22"</span>);<span class="comment">//创建一个指定时间的日期对象</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-03-22 00:52:34"</span>);<span class="comment">//创建一个指定时间的日期对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>日期格式化(了解)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">date.toString();<span class="comment">//默认的日期格式</span></span><br><span class="line">date.toLocalString();<span class="comment">//本地风格的日期格式（兼容性）</span></span><br><span class="line">date.toDateString();</span><br><span class="line">date.toLocalDateString();</span><br><span class="line">date.toTimeString();</span><br><span class="line">date.toLocalTimeString();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取日期的指定部分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">getMilliseconds();<span class="comment">//获取毫秒值</span></span><br><span class="line">getSeconds();<span class="comment">//获取秒</span></span><br><span class="line">getMinutes();<span class="comment">//获取分钟</span></span><br><span class="line">getHours();<span class="comment">//获取小时</span></span><br><span class="line">getDay();<span class="comment">//获取星期，0-6    0：星期天</span></span><br><span class="line">getDate();<span class="comment">//获取日，即当月的第几天</span></span><br><span class="line">getMonth();<span class="comment">//返回月份，注意从0开始计算，这个地方坑爹，0-11</span></span><br><span class="line">getFullYear();<span class="comment">//返回4位的年份  如 2016</span></span><br><span class="line">getYear();   <span class="comment">//将返回的实际年份减去1900年。例如：2016年返回116</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//Coordinated Universal Time,协调世界时,又叫世界标准时间。可以理解为0度经线所在有时区。</span></span><br><span class="line">  getUTCYear(); <span class="comment">//返回标准时间对应的年份</span></span><br><span class="line">  getUTCHour();  <span class="comment">//返回标准时间对应的小时</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//思考：</span></span><br><span class="line"><span class="comment">//封装一个函数，返回当前的时间，格式是：yyyy-MM-dd HH:mm:ss</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间戳</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var date = +new Date();//1970年01月01日00时00分00秒起至现在的总毫秒数</span><br><span class="line"> //思考</span><br><span class="line"> //如何统计一段代码的执行时间？</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h2><blockquote>
+<p>数组对象在javascript中非常的常用</p>
+</blockquote>
+<ul>
+<li><p>数组判断</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法：Array.isArray(obj)</span></span><br><span class="line"><span class="comment">//作用：用来判断一个对象是否是一个数组</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> c = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(a));   <span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(b));   <span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(c));   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组转换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法：array.join(separator)</span></span><br><span class="line"><span class="comment">//作用：将数组的值拼接成字符串</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">arr.join();<span class="comment">//不传参数，默认按【,】进行拼接</span></span><br><span class="line">arr.join(<span class="string">"-"</span>);<span class="comment">//按【-】进行拼接</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的增删操作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">array.push();<span class="comment">//从后面添加元素，返回新数组的length</span></span><br><span class="line">array.pop();<span class="comment">//从数组的后面删除元素，返回删除的那个元素</span></span><br><span class="line">array.unshift();<span class="comment">//从数组的前面的添加元素，返回新数组的长度</span></span><br><span class="line">array.shift();<span class="comment">//从数组的最前面删除元素，返回删除的那个元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//练习1</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">"刘备"</span>];</span><br><span class="line"><span class="comment">//添加数据后变成：["赵云","马超","刘备","关羽","张飞"]</span></span><br><span class="line"><span class="comment">//删除数据后变成：["关羽","张飞"]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//练习2</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">"赵云"</span>,<span class="string">"马超"</span>,<span class="string">"刘备"</span>,<span class="string">"关羽"</span>,<span class="string">"张飞"</span>];</span><br><span class="line"><span class="comment">//把数组的最后一个元素变成数组的第0个元素</span></span><br><span class="line"><span class="comment">//把数组的第0个元素变成数组的最后一个元素</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的翻转与排序</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">array.reverse();<span class="comment">//翻转数组</span></span><br><span class="line">array.sort();<span class="comment">//数组的排序，默认按照字母顺序排序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//sort方法可以传递一个函数作为参数，这个参数用来控制数组如何进行排序</span></span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//如果返回值&gt;0,则交换位置</span></span><br><span class="line">  <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//练习：</span></span><br><span class="line"><span class="comment">//将[3, 6, 1, 5, 10, 2,11]从小到大排列</span></span><br><span class="line"><span class="comment">//将字符串数组按照字符长度从小到大排列</span></span><br><span class="line"><span class="comment">//将学生数组按照年龄从小到大排列</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组的拼接与截取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//concat：数组合并，不会影响原来的数组，会返回一个新数组。</span></span><br><span class="line"> <span class="keyword">var</span> newArray = array.concat(array2);</span><br><span class="line"></span><br><span class="line"> <span class="comment">//slice:数组切分，复制数组的一部分到一个新数组，并返回这个数组</span></span><br><span class="line"> <span class="comment">//原来的数组不受影响，包含begin，不包含end</span></span><br><span class="line"> <span class="keyword">var</span> newArray = array.slice(begin, end);</span><br><span class="line"></span><br><span class="line"> <span class="comment">//splice:数组拼接，以新元素来替换旧元素，以此来修改数组的内容，常用语删除数组的某些项</span></span><br><span class="line"> <span class="comment">//start:开始位置  deleteCount:删除的个数  items:替换的内容</span></span><br><span class="line"> array.splice(start, deleteCount, [items]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//练习：</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">46</span>, <span class="number">8</span>];</span><br><span class="line"><span class="comment">//从数组中截取一个新的数组[6,7,8,3],返回新的数组</span></span><br><span class="line"><span class="comment">//删除[6,7,8,3]和替换成[1,1,1]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组查找元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//indexOf方法用来查找数组中某个元素第一次出现的位置，如果找不到，返回-1</span></span><br><span class="line"> array.indexOf(search, [fromIndex]);</span><br><span class="line"></span><br><span class="line"> <span class="comment">//astIndexOf()从后面开始查找数组中元素出现位置,如果找不到，返回-1</span></span><br><span class="line"> array.lastIndexOf(search, [fromIndex]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>操作数组里的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//filter方法返回一个由符合函数要求的元素组成的新数组</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">12</span>,<span class="number">34</span>,<span class="number">56</span>,<span class="number">89</span>,<span class="number">78</span>,<span class="number">23</span>,<span class="number">45</span>,<span class="number">19</span>];</span><br><span class="line"><span class="comment">//调用数组的filter方法，添加过滤方法，符合规则的元素会被存放到新数组里</span></span><br><span class="line"><span class="comment">//element:表示数组里的元素;index:表示索引值;array:表示调用filter方法的数组。</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">element,index,array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> element &gt; <span class="number">30</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(arr);  <span class="comment">//filter方法不会改变原数组里的数据[12,34,56,89,78,23,45,19];</span></span><br><span class="line"><span class="built_in">console</span>.log(newArr);  <span class="comment">//新数组里保存符合要求的元素[34, 56, 89, 78, 45]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//map方法让数组中的每个元素都调用一次提供的函数，将调用的后的结果存放到一个新数组里并返回。</span></span><br><span class="line">newArr = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">element,index,array</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//在数组里的每一个元素的最后面都添加一个字符串"0"</span></span><br><span class="line">  <span class="keyword">return</span> element + <span class="string">"0"</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(newArr);  <span class="comment">//["120", "340", "560", "890", "780", "230", "450", "190"]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);    <span class="comment">//map方法不会改变原数组里的数据 [12,34,56,89,78,23,45,19]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//forEach() 方法对数组的每个元素执行一次提供的函数,且这个函数没有返回值</span></span><br><span class="line"><span class="keyword">var</span> result = arr.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">element, index, array</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//数组里的每一个元素都会被打印</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"第"</span> + index + <span class="string">"个元素是"</span> + element);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result);   <span class="comment">//函数没有返回值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">////some() 方法测试数组中的某些元素是否通过由提供的函数实现的测试.</span></span><br><span class="line">result =  arr.some(<span class="function"><span class="keyword">function</span> (<span class="params">element,index,array</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//数组里否有一些元素大于50.只要有一个元素大于，就返回true</span></span><br><span class="line">  <span class="built_in">console</span>.log(element);<span class="comment">//12,34,56</span></span><br><span class="line">  <span class="keyword">return</span> element &gt; <span class="number">50</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result);  <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//every() 方法测试数组的所有元素是否都通过了指定函数的测试。</span></span><br><span class="line">result =  arr.every(<span class="function"><span class="keyword">function</span> (<span class="params">element,index,array</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//数组里是否每一个元素都大于50.只有在所有的数都大于50时，才返回true</span></span><br><span class="line">  <span class="built_in">console</span>.log(element);  <span class="comment">//12.第0个数字就已经小于50了，就没有再比较的意义了</span></span><br><span class="line">  <span class="keyword">return</span> element &gt; <span class="number">50</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result);   <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清空数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1．array.splice(0,array.leng);//删除数组中所有的元素</span></span><br><span class="line"><span class="comment">//2．array.length = 0;//直接修改数组的长度</span></span><br><span class="line"><span class="comment">//3．array = [];//将数组赋值为一个空数组，推荐</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组综合练习</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"c"</span>, <span class="string">"a"</span>, <span class="string">"z"</span>, <span class="string">"a"</span>, <span class="string">"x"</span>, <span class="string">"a"</span>, <span class="string">"a"</span>, <span class="string">"z"</span>, <span class="string">"c"</span>, <span class="string">"x"</span>, <span class="string">"a"</span>, <span class="string">"x"</span>]</span><br><span class="line"><span class="comment">//1. 找到数组中第一个a出现的位置</span></span><br><span class="line"><span class="comment">//2. 找到数组中最后一个a出现的位置</span></span><br><span class="line"><span class="comment">//3. 找到数组中每一个a出现的位置</span></span><br><span class="line"><span class="comment">//4. 数组去重，返回一个新数组</span></span><br><span class="line"><span class="comment">//5. 获取数组中每个元素出现的次数</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="String对象"><a href="#String对象" class="headerlink" title="String对象"></a>String对象</h2><blockquote>
+<p>字符串可以看成是一个字符数组。因此字符串也有长度，也可以进行遍历。String对象很多方法的名字和和Array的一样。可以少记很多的单词。</p>
+</blockquote>
+<ul>
+<li><p>查找指定字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//indexOf:获取某个字符串第一次出现的位置，如果没有，返回-1</span></span><br><span class="line"><span class="comment">//lastIndexOf:从后面开始查找第一次出现的位置。如果没有，返回-1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>去除空白</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trim();<span class="comment">//去除字符串两边的空格，内部空格不会去除</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>大小写转换</p>
+</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">toUpperCase：全部转换成大写字母</span><br><span class="line">toLowerCase：全部转换成小写字母</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>字符串拼接与截取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字符串拼接</span></span><br><span class="line"><span class="comment">//可以用concat，用法与数组一样，但是字符串拼串我们一般都用+</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//字符串截取的方法有很多，记得越多，越混乱，因此就记好用的就行</span></span><br><span class="line"><span class="comment">//slice ：从start开始，end结束，并且取不到end。</span></span><br><span class="line"><span class="comment">//subString ：从start开始，end结束，并且取不到end</span></span><br><span class="line"><span class="comment">// substr ： ：从start开始，截取length个字符。(推荐)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串切割</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//split:将字符串分割成数组（很常用）</span></span><br><span class="line"><span class="comment">//功能和数组的join正好相反。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"张三,李四,王五"</span>;</span><br><span class="line"><span class="keyword">var</span> arr = str.split(<span class="string">","</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串替换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">replace(searchValue, replaceValue)</span><br><span class="line"><span class="comment">//参数：searchValue:需要替换的值    replaceValue:用来替换的值</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>练习</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 截取字符串"我爱中华人民共和国"，中的"中华"</span></span><br><span class="line"><span class="comment">//2. "abcoefoxyozzopp"查找字符串中所有o出现的位置</span></span><br><span class="line"><span class="comment">//3. 把字符串中所有的o替换成!</span></span><br><span class="line"><span class="comment">//4. 把一个字符串中所有的空格全部去掉</span></span><br><span class="line"><span class="comment">//5. 统计一个字符串中每个字符出现的次数</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h2><blockquote>
+<p><strong>简单数据类型是没有方法的</strong>。为了方便操作基本数据类型，JavaScript还提供了三个特殊的引用类型：String/Number/Boolean。</p>
+</blockquote>
+<p>基本包装类型：把基本类型包装成复杂类型。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = “abc”;</span><br><span class="line"><span class="keyword">var</span> result = str.indexOf(“a”);</span><br><span class="line"><span class="comment">//发生了三件事情</span></span><br><span class="line"><span class="number">1.</span> 把简单类型转换成复杂类型：<span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">String</span>(str);</span><br><span class="line"><span class="number">2.</span> 调用包装类型的indexOf方法：<span class="keyword">var</span> result = s.indexOf(“a”);</span><br><span class="line"><span class="number">3.</span> 销毁刚刚创建的复杂类型（过河拆桥、卸磨杀驴）</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/web前端/" rel="tag"># web前端</a>
+          
+            <a href="/tags/内置对象/" rel="tag"># 内置对象</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/08/js基础四/" rel="next" title="js基础四">
+                <i class="fa fa-chevron-left"></i> js基础四
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/08/js基础-dom与bom/" rel="prev" title="js基础-dom与bom">
+                js基础-dom与bom <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/touxiang.png" alt="一昂杨丶">
+            
+              <p class="site-author-name" itemprop="name">一昂杨丶</p>
+              <p class="site-description motion-element" itemprop="description">山中何事？松花酿酒，春水煎茶。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内置对象"><span class="nav-number">1.</span> <span class="nav-text">内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Math对象"><span class="nav-number">1.1.</span> <span class="nav-text">Math对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date对象"><span class="nav-number">1.2.</span> <span class="nav-text">Date对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array对象"><span class="nav-number">1.3.</span> <span class="nav-text">Array对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String对象"><span class="nav-number">1.4.</span> <span class="nav-text">String对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本包装类型"><span class="nav-number">1.5.</span> <span class="nav-text">基本包装类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">一昂杨丶</span>
+
+  
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va',
+        appKey: 'I8UOBt7crsmds5pLkGEmpeCj',
+        placeholder: '各位道友,请举手发言',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

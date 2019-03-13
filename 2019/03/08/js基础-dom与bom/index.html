@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript,web前端,DOM与BOM,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Web APIWeb API介绍API的概念API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。  任何开发语言都有自己的API API的特征输入和输出(I/O) var max =  Math.max(1, 2, 3);">
+<meta name="keywords" content="javascript,web前端,DOM与BOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础-dom与bom">
+<meta property="og:url" content="https://guoweiyanggithub.github.io/2019/03/08/js基础-dom与bom/index.html">
+<meta property="og:site_name" content="一昂杨丶">
+<meta property="og:description" content="Web APIWeb API介绍API的概念API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。  任何开发语言都有自己的API API的特征输入和输出(I/O) var max =  Math.max(1, 2, 3);">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-13T02:45:57.429Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js基础-dom与bom">
+<meta name="twitter:description" content="Web APIWeb API介绍API的概念API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。  任何开发语言都有自己的API API的特征输入和输出(I/O) var max =  Math.max(1, 2, 3);">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://guoweiyanggithub.github.io/2019/03/08/js基础-dom与bom/">
+
+
+
+
+
+  <title>js基础-dom与bom | 一昂杨丶</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">一昂杨丶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">山中何事？松花酿酒，春水煎茶。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://guoweiyanggithub.github.io/2019/03/08/js基础-dom与bom/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一昂杨丶">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一昂杨丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js基础-dom与bom</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T10:03:27+08:00">
+                2019-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/08/js基础-dom与bom/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/js基础-dom与bom/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/08/js基础-dom与bom/" class="leancloud_visitors" data-flag-title="js基础-dom与bom">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Web-API"><a href="#Web-API" class="headerlink" title="Web API"></a>Web API</h1><h2 id="Web-API介绍"><a href="#Web-API介绍" class="headerlink" title="Web API介绍"></a>Web API介绍</h2><h3 id="API的概念"><a href="#API的概念" class="headerlink" title="API的概念"></a>API的概念</h3><p>API（Application Programming Interface,应用程序编程接口）是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。</p>
+<ul>
+<li>任何开发语言都有自己的API</li>
+<li>API的特征输入和输出(I/O)<ul>
+<li>var max =  Math.max(1, 2, 3);</li>
+</ul>
+</li>
+<li>API的使用方法(console.log(‘adf’))</li>
+</ul>
+<h3 id="Web-API的概念"><a href="#Web-API的概念" class="headerlink" title="Web  API的概念"></a>Web  API的概念</h3><p>浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)</p>
+<p>此处的Web API特指浏览器提供的API(一组方法)</p>
+<h3 id="掌握常见浏览器提供的API的调用方式"><a href="#掌握常见浏览器提供的API的调用方式" class="headerlink" title="掌握常见浏览器提供的API的调用方式"></a>掌握常见浏览器提供的API的调用方式</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API" target="_blank" rel="noopener">MDN-Web API</a></p>
+<h4 id="ECMAScript-JavaScript的核心"><a href="#ECMAScript-JavaScript的核心" class="headerlink" title="ECMAScript - JavaScript的核心"></a>ECMAScript - JavaScript的核心</h4><p>定义了JavaScript 的语法规范</p>
+<p>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了一种语言的标准与具体实现无关</p>
+<h4 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM - 浏览器对象模型"></a>BOM - 浏览器对象模型</h4><p>一套操作浏览器功能的API</p>
+<p>通过BOM可以操作浏览器窗口，比如：弹出框、控制浏览器跳转、获取分辨率等 </p>
+<h4 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM - 文档对象模型"></a>DOM - 文档对象模型</h4><p>一套操作页面元素的API</p>
+<p>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</p>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="DOM的概念"><a href="#DOM的概念" class="headerlink" title="DOM的概念"></a>DOM的概念</h3><p>文档对象模型（Document Object Model，简称DOM），是<a href="https://baike.baidu.com/item/W3C" target="_blank" rel="noopener">W3C</a>组织推荐的处理<a href="https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">可扩展标记语言</a>的标准<a href="https://baike.baidu.com/item/%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">编程接口</a>。它是一种与平台和语言无关的<a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">应用程序接口</a>(API),它可以动态地访问程序和脚本，更新其内容、结构和<a href="https://baike.baidu.com/item/www/109924" target="_blank" rel="noopener">www</a>文档的风格(目前，HTML和XML文档是通过说明部分定义的)。文档可以进一步被处理，处理的结果可以加入到当前的页面。<a href="https://baike.baidu.com/item/DOM/50288" target="_blank" rel="noopener">DOM</a>是一种基于树的<a href="https://baike.baidu.com/item/API/10154" target="_blank" rel="noopener">API</a>文档，它要求在处理过程中整个文档都表示在<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E5%99%A8" target="_blank" rel="noopener">存储器</a>中。</p>
+<ul>
+<li>文档：一个网页可以称为文档</li>
+<li>节点：网页中的所有内容都是节点（标签、属性、文本、注释等）</li>
+<li>元素：网页中的标签</li>
+<li>属性：标签的属性</li>
+</ul>
+<h3 id="DOM经常进行的操作"><a href="#DOM经常进行的操作" class="headerlink" title="DOM经常进行的操作"></a>DOM经常进行的操作</h3><ul>
+<li>获取元素</li>
+<li>对元素进行操作(设置其属性或调用其方法)</li>
+<li>动态创建元素</li>
+<li>事件(什么时机做相应的操作)</li>
+</ul>
+<h2 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素 $"></a>获取页面元素 $</h2><h3 id="为什么要获取页面元素"><a href="#为什么要获取页面元素" class="headerlink" title="为什么要获取页面元素"></a>为什么要获取页面元素</h3><p>例如：我们想要操作页面上的某部分(显示/隐藏，动画)，需要先获取到该部分对应的元素，才进行后续操作</p>
+<h3 id="根据id获取元素"><a href="#根据id获取元素" class="headerlink" title="根据id获取元素*"></a>根据id获取元素*</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'main'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(div);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取到的数据类型 HTMLDivElement，对象都是有类型的</span></span><br></pre></td></tr></table></figure>
+<p>注意：由于id名具有唯一性，部分浏览器支持直接使用id名访问元素，但不是标准方式，不推荐使用。</p>
+<h3 id="根据标签名获取元素"><a href="#根据标签名获取元素" class="headerlink" title="根据标签名获取元素*"></a>根据标签名获取元素*</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; divs.length; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> div = divs[i];</span><br><span class="line">  <span class="built_in">console</span>.log(div);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="根据name获取元素"><a href="#根据name获取元素" class="headerlink" title="根据name获取元素"></a>根据name获取元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> inputs = <span class="built_in">document</span>.getElementsByName(<span class="string">'hobby'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; inputs.length; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> input = inputs[i];</span><br><span class="line">  <span class="built_in">console</span>.log(input);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="根据类名获取元素"><a href="#根据类名获取元素" class="headerlink" title="根据类名获取元素"></a>根据类名获取元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mains = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'main'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; mains.length; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> main = mains[i];</span><br><span class="line">  <span class="built_in">console</span>.log(main);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="根据选择器获取元素"><a href="#根据选择器获取元素" class="headerlink" title="根据选择器获取元素"></a>根据选择器获取元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="built_in">document</span>.querySelector(<span class="string">'#text'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(text);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> boxes = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.box'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; boxes.length; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> box = boxes[i];</span><br><span class="line">  <span class="built_in">console</span>.log(box);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>总结</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">document.getElementById()</span><br><span class="line">document/element.getElementsByTagName()</span><br><span class="line">document.getElementsByName()  兼容问题:不同的浏览器实现不同</span><br><span class="line">document/element.getElementsByClassName() 兼容问题: ie9+</span><br><span class="line">document/element.querySelector() 兼容问题: ie8+</span><br><span class="line">document/element.querySelectorAll() 兼容问题: ie8+</span><br></pre></td></tr></table></figure>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>事件：触发-响应机制</p>
+<h3 id="事件三要素"><a href="#事件三要素" class="headerlink" title="事件三要素"></a>事件三要素</h3><ul>
+<li>事件源:触发(被)事件的元素</li>
+<li>事件名称: click 点击事件</li>
+<li>事件处理程序:事件触发后要执行的代码(函数形式)</li>
+</ul>
+<h3 id="事件的基本使用"><a href="#事件的基本使用" class="headerlink" title="事件的基本使用"></a>事件的基本使用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'代码会在box被点击后执行'</span>);  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h2><h3 id="非表单元素的属性"><a href="#非表单元素的属性" class="headerlink" title="非表单元素的属性"></a>非表单元素的属性</h3><p>href、title、id、src、className</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.getElementById(<span class="string">'link'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(link.href);</span><br><span class="line"><span class="built_in">console</span>.log(link.title);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> pic = <span class="built_in">document</span>.getElementById(<span class="string">'pic'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(pic.src);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>innerHTML和innerText</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.innerHTML = <span class="string">'我是文本&lt;p&gt;我会生成为标签&lt;/p&gt;'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(box.innerHTML);</span><br><span class="line">box.innerText = <span class="string">'我是文本&lt;p&gt;我不会生成为标签&lt;/p&gt;'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(box.innerText);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>innerHTML和innerText的区别:前者可以识别标签,后者不可以</p>
+</li>
+<li><p>innerText的兼容性处理(早期的火狐浏览器不支持innerText,使用textContent替代)</p>
+</li>
+</ul>
+<h3 id="表单元素属性"><a href="#表单元素属性" class="headerlink" title="表单元素属性"></a>表单元素属性</h3><ul>
+<li>value 用于大部分表单元素的内容获取(option除外)</li>
+<li>type 可以获取input标签的类型(输入框或复选框等)</li>
+<li>disabled 禁用属性</li>
+<li>checked 复选框选中属性</li>
+<li>selected 下拉菜单选中属性</li>
+</ul>
+<h3 id="自定义属性操作"><a href="#自定义属性操作" class="headerlink" title="自定义属性操作"></a>自定义属性操作</h3><ul>
+<li>getAttribute() 获取标签行内属性</li>
+<li>setAttribute() 设置标签行内属性</li>
+<li>removeAttribute() 移除标签行内属性</li>
+<li>与element.属性的区别: 上述三个方法用于获取任意的行内属性。</li>
+</ul>
+<h3 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h3><ul>
+<li><p>使用style方式设置的样式显示在标签行内</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.style.width = <span class="string">'100px'</span>;</span><br><span class="line">box.style.height = <span class="string">'100px'</span>;</span><br><span class="line">box.style.backgroundColor = <span class="string">'red'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意</p>
+<p>通过样式属性设置宽高、位置的属性类型是字符串，需要加上px</p>
+</li>
+</ul>
+<h3 id="类名操作"><a href="#类名操作" class="headerlink" title="类名操作"></a>类名操作</h3><ul>
+<li>修改标签的className属性相当于直接修改标签的类名<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.className = <span class="string">'show'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="创建元素的三种方式"><a href="#创建元素的三种方式" class="headerlink" title="创建元素的三种方式"></a>创建元素的三种方式</h2><h3 id="document-write"><a href="#document-write" class="headerlink" title="document.write()"></a>document.write()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="string">'新设置的内容&lt;p&gt;标签也可以生成&lt;/p&gt;'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="innerHTML"><a href="#innerHTML" class="headerlink" title="innerHTML"></a>innerHTML</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.innerHTML = <span class="string">'新内容&lt;p&gt;新标签&lt;/p&gt;'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="document-createElement"><a href="#document-createElement" class="headerlink" title="document.createElement()"></a>document.createElement()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(div);</span><br></pre></td></tr></table></figure>
+<h3 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h3><ul>
+<li>innerHTML方法由于会对字符串进行解析，需要避免在循环内多次使用。</li>
+<li>可以借助字符串或数组的方式进行替换，再设置给innerHTML</li>
+<li>优化后与document.createElement性能相近</li>
+</ul>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h3><ul>
+<li>nodeType  节点的类型<ul>
+<li>1 元素节点</li>
+<li>2 属性节点</li>
+<li>3 文本节点 </li>
+</ul>
+</li>
+<li>nodeName  节点的名称(标签名称)</li>
+<li>nodeValue  节点值<ul>
+<li>元素节点的nodeValue始终是null</li>
+</ul>
+</li>
+</ul>
+<h3 id="节点层级"><a href="#节点层级" class="headerlink" title="节点层级"></a>节点层级</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.parentNode);</span><br><span class="line"><span class="built_in">console</span>.log(box.childNodes);</span><br><span class="line"><span class="built_in">console</span>.log(box.children);</span><br><span class="line"><span class="built_in">console</span>.log(box.nextSibling);</span><br><span class="line"><span class="built_in">console</span>.log(box.previousSibling);</span><br><span class="line"><span class="built_in">console</span>.log(box.firstChild);</span><br><span class="line"><span class="built_in">console</span>.log(box.lastChild);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>注意</p>
+<p>childNodes和children的区别，childNodes获取的是子节点，children获取的是子元素(在早期浏览器中会返回注释节点)</p>
+<p>nextSibling和previousSibling获取的是节点，获取元素对应的属性是nextElementSibling和previousElementSibling获取的是元素</p>
+<pre><code>nextElementSibling和previousElementSibling有兼容性问题，IE9以后才支持
+</code></pre></li>
+<li><p>总结</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">节点操作，方法</span><br><span class="line">	appendChild()</span><br><span class="line">	insertBefore()</span><br><span class="line">	removeChild()</span><br><span class="line">	replaceChild()</span><br><span class="line">节点层次，属性</span><br><span class="line">	parentNode</span><br><span class="line">	childNodes</span><br><span class="line">	children</span><br><span class="line">	nextSibling/previousSibling</span><br><span class="line">	firstChild/lastChild</span><br></pre></td></tr></table></figure>
+<h2 id="事件详解"><a href="#事件详解" class="headerlink" title="事件详解"></a>事件详解</h2><h3 id="注册-移除事件的三种方式"><a href="#注册-移除事件的三种方式" class="headerlink" title="注册/移除事件的三种方式"></a>注册/移除事件的三种方式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="comment">//第一种:</span></span><br><span class="line">box.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'点击后执行'</span>);</span><br><span class="line">&#125;;</span><br><span class="line">box.onclick = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二种:</span></span><br><span class="line">box.addEventListener(<span class="string">'click'</span>, eventCode, <span class="literal">false</span>);</span><br><span class="line">box.removeEventListener(<span class="string">'click'</span>, eventCode, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第三种:</span></span><br><span class="line">box.attachEvent(<span class="string">'onclick'</span>, eventCode);</span><br><span class="line">box.detachEvent(<span class="string">'onclick'</span>, eventCode);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventCode</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'点击后执行'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="兼容代码"><a href="#兼容代码" class="headerlink" title="兼容代码"></a>兼容代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEventListener</span>(<span class="params">element, type, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (element.addEventListener) &#123;</span><br><span class="line">    element.addEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.attachEvent)&#123;</span><br><span class="line">    element.attachEvent(<span class="string">'on'</span> + type,fn);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    element[<span class="string">'on'</span> + type] = fn;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEventListener</span>(<span class="params">element, type, fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (element.removeEventListener) &#123;</span><br><span class="line">    element.removeEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (element.detachEvent) &#123;</span><br><span class="line">    element.detachEvent(<span class="string">'on'</span> + type, fn);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    element[<span class="string">'on'</span> + type] = <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="事件的三个阶段"><a href="#事件的三个阶段" class="headerlink" title="事件的三个阶段"></a>事件的三个阶段</h3><ol>
+<li><p>捕获阶段</p>
+</li>
+<li><p>当前目标阶段</p>
+</li>
+<li><p>冒泡阶段</p>
+<p>事件对象.eventPhase属性 查看事件触发时所处的阶段</p>
+</li>
+</ol>
+<h3 id="事件对象的属性和方法"><a href="#事件对象的属性和方法" class="headerlink" title="事件对象的属性和方法"></a>事件对象的属性和方法</h3><ul>
+<li>event.type 获取事件类型</li>
+<li>clientX/clientY     所有浏览器都支持，鼠标在可视窗口位置</li>
+<li>pageX/pageY       IE8以前不支持，鼠标在当前页面位置</li>
+<li>event.target || event.srcElement 用于获取触发事件的元素</li>
+<li>event.preventDefault() 取消默认行为</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><ul>
+<li>跟着鼠标飞的天使</li>
+<li>鼠标点哪图片飞到哪里</li>
+<li>获取鼠标在div内的坐标</li>
+</ul>
+<h3 id="阻止事件传播的方式"><a href="#阻止事件传播的方式" class="headerlink" title="阻止事件传播的方式"></a>阻止事件传播的方式</h3><ul>
+<li>标准方式 event.stopPropagation();</li>
+<li>IE低版本 event.cancelBubble = true; 标准中已废弃</li>
+</ul>
+<h3 id="常用的鼠标和键盘事件"><a href="#常用的鼠标和键盘事件" class="headerlink" title="常用的鼠标和键盘事件"></a>常用的鼠标和键盘事件</h3><ul>
+<li>onmouseup 鼠标按键放开时触发</li>
+<li>onmousedown 鼠标按键按下触发</li>
+<li>onmousemove 鼠标移动触发</li>
+<li>onkeyup 键盘按键按下触发</li>
+<li>onkeydown 键盘按键抬起触发</li>
+</ul>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><h3 id="BOM的概念"><a href="#BOM的概念" class="headerlink" title="BOM的概念"></a>BOM的概念</h3><p>BOM(Browser Object Model) 是指浏览器对象模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</p>
+<p>我们在浏览器中的一些操作都可以使用BOM的方式进行编程处理，</p>
+<p>比如：刷新浏览器、后退、前进、在浏览器中输入URL等</p>
+<h3 id="BOM的顶级对象window"><a href="#BOM的顶级对象window" class="headerlink" title="BOM的顶级对象window"></a>BOM的顶级对象window</h3><p>window是浏览器的顶级对象，当调用window下的属性和方法时，可以省略window<br>注意：window下一个特殊的属性 window.name</p>
+<h3 id="对话框"><a href="#对话框" class="headerlink" title="对话框"></a>对话框</h3><ul>
+<li>alert()</li>
+<li>prompt()</li>
+<li>confirm()</li>
+</ul>
+<p>name 和top 的特殊性:</p>
+<pre><code>name 和 top 是window 对象本身存在的属性
+
+name 是字符串,给那么赋值为其他类型,也会转换成字符创
+
+top 是只读的属性
+</code></pre><h3 id="页面加载事件"><a href="#页面加载事件" class="headerlink" title="页面加载事件"></a>页面加载事件</h3><ul>
+<li>onload</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当页面加载完成执行</span></span><br><span class="line">  <span class="comment">// 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>onunload</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onunload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当用户退出页面时执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><h4 id="setTimeout-和clearTimeout"><a href="#setTimeout-和clearTimeout" class="headerlink" title="setTimeout()和clearTimeout()"></a>setTimeout()和clearTimeout()</h4><p>在指定的毫秒数到达之后执行指定的函数，只执行一次</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，1000毫秒后执行，返回定时器的标示</span></span><br><span class="line"><span class="keyword">var</span> timerId = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearTimeout(timerId);</span><br></pre></td></tr></table></figure>
+<h4 id="setInterval-和clearInterval"><a href="#setInterval-和clearInterval" class="headerlink" title="setInterval()和clearInterval()"></a>setInterval()和clearInterval()</h4><p>定时调用的函数，可以按照给定的时间(单位毫秒)周期调用函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，每隔1秒调用一次</span></span><br><span class="line"><span class="keyword">var</span> timerId = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="built_in">console</span>.log(date.toLocaleTimeString());</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearInterval(timerId);</span><br></pre></td></tr></table></figure>
+<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><p>location对象是window对象下的一个属性，使用的时候可以省略window对象</p>
+<p>location可以获取或者设置浏览器地址栏的URL</p>
+<h4 id="location有哪些成员？"><a href="#location有哪些成员？" class="headerlink" title="location有哪些成员？"></a>location有哪些成员？</h4><ul>
+<li><p>使用chrome的控制台查看</p>
+</li>
+<li><p>查MDN</p>
+<p><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></p>
+</li>
+<li><p>成员</p>
+<ul>
+<li>assign()/reload()/replace()</li>
+<li>hash/host/hostname/search/href……</li>
+</ul>
+</li>
+</ul>
+<h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>统一资源定位符 (Uniform Resource Locator, URL)</p>
+<ul>
+<li>URL的组成</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">scheme://host:port/path?query#fragment</span><br><span class="line">http://www.itheima.com:80/a/b/index.html?name=zs&amp;age=18#bottom</span><br><span class="line">scheme:通信协议</span><br><span class="line">	常用的http,ftp,maito等</span><br><span class="line">host:主机</span><br><span class="line">	服务器(计算机)域名系统 (DNS) 主机名或 IP 地址。</span><br><span class="line">port:端口号</span><br><span class="line">	整数，可选，省略时使用方案的默认端口，如http的默认端口为80。</span><br><span class="line">path:路径</span><br><span class="line">	由零或多个&apos;/&apos;符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。</span><br><span class="line">query:查询</span><br><span class="line">	可选，用于给动态网页传递参数，可有多个参数，用&apos;&amp;&apos;符号隔开，每个参数的名和值用&apos;=&apos;符号隔开。例如：name=zs</span><br><span class="line">fragment:信息片断</span><br><span class="line">	字符串，锚点.</span><br></pre></td></tr></table></figure>
+<h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><ul>
+<li>back()</li>
+<li>forward()</li>
+<li>go()</li>
+</ul>
+<h3 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h3><ul>
+<li>userAgent</li>
+</ul>
+<h2 id="特效"><a href="#特效" class="headerlink" title="特效"></a>特效</h2><h3 id="偏移量"><a href="#偏移量" class="headerlink" title="偏移量"></a>偏移量</h3><ul>
+<li>offsetParent用于获取定位的父级元素</li>
+<li>offsetParent和parentNode的区别?</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetParent);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetLeft);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetTop);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetWidth);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetHeight);</span><br></pre></td></tr></table></figure>
+<h3 id="客户区大小"><a href="#客户区大小" class="headerlink" title="客户区大小"></a>客户区大小</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientLeft);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientTop);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientWidth);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientHeight);</span><br></pre></td></tr></table></figure>
+<h3 id="滚动偏移"><a href="#滚动偏移" class="headerlink" title="滚动偏移"></a>滚动偏移</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollLeft)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollTop)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollWidth)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollHeight)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+            <a href="/tags/web前端/" rel="tag"># web前端</a>
+          
+            <a href="/tags/DOM与BOM/" rel="tag"># DOM与BOM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/08/js基础五/" rel="next" title="js基础五">
+                <i class="fa fa-chevron-left"></i> js基础五
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/08/js高级/" rel="prev" title="js高级">
+                js高级 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/touxiang.png" alt="一昂杨丶">
+            
+              <p class="site-author-name" itemprop="name">一昂杨丶</p>
+              <p class="site-description motion-element" itemprop="description">山中何事？松花酿酒，春水煎茶。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web-API"><span class="nav-number">1.</span> <span class="nav-text">Web API</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-API介绍"><span class="nav-number">1.1.</span> <span class="nav-text">Web API介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#API的概念"><span class="nav-number">1.1.1.</span> <span class="nav-text">API的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-API的概念"><span class="nav-number">1.1.2.</span> <span class="nav-text">Web  API的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#掌握常见浏览器提供的API的调用方式"><span class="nav-number">1.1.3.</span> <span class="nav-text">掌握常见浏览器提供的API的调用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ECMAScript-JavaScript的核心"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">ECMAScript - JavaScript的核心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BOM-浏览器对象模型"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">BOM - 浏览器对象模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM-文档对象模型"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">DOM - 文档对象模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">1.2.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM的概念"><span class="nav-number">1.2.1.</span> <span class="nav-text">DOM的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM经常进行的操作"><span class="nav-number">1.2.2.</span> <span class="nav-text">DOM经常进行的操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取页面元素"><span class="nav-number">1.3.</span> <span class="nav-text">获取页面元素 $</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要获取页面元素"><span class="nav-number">1.3.1.</span> <span class="nav-text">为什么要获取页面元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据id获取元素"><span class="nav-number">1.3.2.</span> <span class="nav-text">根据id获取元素*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据标签名获取元素"><span class="nav-number">1.3.3.</span> <span class="nav-text">根据标签名获取元素*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据name获取元素"><span class="nav-number">1.3.4.</span> <span class="nav-text">根据name获取元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据类名获取元素"><span class="nav-number">1.3.5.</span> <span class="nav-text">根据类名获取元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据选择器获取元素"><span class="nav-number">1.3.6.</span> <span class="nav-text">根据选择器获取元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">1.4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件三要素"><span class="nav-number">1.4.1.</span> <span class="nav-text">事件三要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件的基本使用"><span class="nav-number">1.4.2.</span> <span class="nav-text">事件的基本使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性操作"><span class="nav-number">1.5.</span> <span class="nav-text">属性操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非表单元素的属性"><span class="nav-number">1.5.1.</span> <span class="nav-text">非表单元素的属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单元素属性"><span class="nav-number">1.5.2.</span> <span class="nav-text">表单元素属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义属性操作"><span class="nav-number">1.5.3.</span> <span class="nav-text">自定义属性操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样式操作"><span class="nav-number">1.5.4.</span> <span class="nav-text">样式操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类名操作"><span class="nav-number">1.5.5.</span> <span class="nav-text">类名操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建元素的三种方式"><span class="nav-number">1.6.</span> <span class="nav-text">创建元素的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#document-write"><span class="nav-number">1.6.1.</span> <span class="nav-text">document.write()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#innerHTML"><span class="nav-number">1.6.2.</span> <span class="nav-text">innerHTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document-createElement"><span class="nav-number">1.6.3.</span> <span class="nav-text">document.createElement()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能问题"><span class="nav-number">1.6.4.</span> <span class="nav-text">性能问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点操作"><span class="nav-number">1.7.</span> <span class="nav-text">节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#节点属性"><span class="nav-number">1.7.1.</span> <span class="nav-text">节点属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点层级"><span class="nav-number">1.7.2.</span> <span class="nav-text">节点层级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件详解"><span class="nav-number">1.8.</span> <span class="nav-text">事件详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册-移除事件的三种方式"><span class="nav-number">1.8.1.</span> <span class="nav-text">注册/移除事件的三种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容代码"><span class="nav-number">1.8.2.</span> <span class="nav-text">兼容代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件的三个阶段"><span class="nav-number">1.8.3.</span> <span class="nav-text">事件的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件对象的属性和方法"><span class="nav-number">1.8.4.</span> <span class="nav-text">事件对象的属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案例"><span class="nav-number">1.8.4.1.</span> <span class="nav-text">案例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻止事件传播的方式"><span class="nav-number">1.8.5.</span> <span class="nav-text">阻止事件传播的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的鼠标和键盘事件"><span class="nav-number">1.8.6.</span> <span class="nav-text">常用的鼠标和键盘事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BOM"><span class="nav-number">1.9.</span> <span class="nav-text">BOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BOM的概念"><span class="nav-number">1.9.1.</span> <span class="nav-text">BOM的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BOM的顶级对象window"><span class="nav-number">1.9.2.</span> <span class="nav-text">BOM的顶级对象window</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对话框"><span class="nav-number">1.9.3.</span> <span class="nav-text">对话框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面加载事件"><span class="nav-number">1.9.4.</span> <span class="nav-text">页面加载事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时器"><span class="nav-number">1.9.5.</span> <span class="nav-text">定时器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#setTimeout-和clearTimeout"><span class="nav-number">1.9.5.1.</span> <span class="nav-text">setTimeout()和clearTimeout()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setInterval-和clearInterval"><span class="nav-number">1.9.5.2.</span> <span class="nav-text">setInterval()和clearInterval()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location对象"><span class="nav-number">1.9.6.</span> <span class="nav-text">location对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#location有哪些成员？"><span class="nav-number">1.9.6.1.</span> <span class="nav-text">location有哪些成员？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL"><span class="nav-number">1.9.6.2.</span> <span class="nav-text">URL</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#history对象"><span class="nav-number">1.9.7.</span> <span class="nav-text">history对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#navigator对象"><span class="nav-number">1.9.8.</span> <span class="nav-text">navigator对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特效"><span class="nav-number">1.10.</span> <span class="nav-text">特效</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#偏移量"><span class="nav-number">1.10.1.</span> <span class="nav-text">偏移量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户区大小"><span class="nav-number">1.10.2.</span> <span class="nav-text">客户区大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滚动偏移"><span class="nav-number">1.10.3.</span> <span class="nav-text">滚动偏移</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">一昂杨丶</span>
+
+  
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va',
+        appKey: 'I8UOBt7crsmds5pLkGEmpeCj',
+        placeholder: '各位道友,请举手发言',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
