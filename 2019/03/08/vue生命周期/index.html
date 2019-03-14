@@ -80,7 +80,7 @@
 <meta property="og:description" content="实例生命周期 所有的 Vue 组件都是 Vue 实例，并且接受相同的选项对象即可 (一些根实例特有的选项除外)。 实例生命周期也叫做：组件生命周期  生命周期介绍 vue生命周期钩子函数 简单说：一个组件（实例）从开始到最后消亡所经历的各种状态，就是一个组件（实例）的生命周期  生命周期钩子函数的定义：从组件被创建，到组件挂载到页面上运行，再到页面关闭组件被卸载，这三个阶段总是伴随着组件各种各样的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://poao7rhkb.bkt.clouddn.com/wallhaven.png">
-<meta property="og:updated_time" content="2019-03-13T08:46:36.246Z">
+<meta property="og:updated_time" content="2019-03-14T01:49:06.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue生命周期">
 <meta name="twitter:description" content="实例生命周期 所有的 Vue 组件都是 Vue 实例，并且接受相同的选项对象即可 (一些根实例特有的选项除外)。 实例生命周期也叫做：组件生命周期  生命周期介绍 vue生命周期钩子函数 简单说：一个组件（实例）从开始到最后消亡所经历的各种状态，就是一个组件（实例）的生命周期  生命周期钩子函数的定义：从组件被创建，到组件挂载到页面上运行，再到页面关闭组件被卸载，这三个阶段总是伴随着组件各种各样的">
@@ -359,7 +359,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://poao7rhkb.bkt.clouddn.com/wallhaven.png" rel="gallery_cjt7yt0s2001ei0uxve0jmxke" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="http://poao7rhkb.bkt.clouddn.com/wallhaven.png" rel="gallery_cjt808t8d001mwsux8iiy2jpf" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://poao7rhkb.bkt.clouddn.com/wallhaven.png" itemprop="contentUrl">
               </a>
             
@@ -495,7 +495,7 @@
 <li>注意：属性的值必须在组件中通过<code>props</code>属性显示指定，否则，不会生效</li>
 <li>说明：传递过来的<code>props</code>属性的用法与<code>data</code>属性的用法相同</li>
 </ul>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><hello msg="120"></hello></span><br><span class="line"><hello my-msg="'abc'"></hello></span><br><span class="line"></span><br><span class="line"><!-- js --></span><br><span class="line"><script></span><br><span class="line">  components: {</span><br><span class="line">    hello: {</span><br><span class="line">      // 显式创建props及其传递过来的属性</span><br><span class="line">      props: ['msg', 'myMsg'],</span><br><span class="line">      template: '<h1>这是 hello 组件，这是消息：{{msg}} --- {{myMsg}}</h1>'</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line"></script></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><hello msg="120"></hello></span><br><span class="line"><hello my-msg="'abc'"></hello></span><br><span class="line"></span><br><span class="line"><!-- js --></span><br><span class="line"><script></span><br><span class="line">  components: {</span><br><span class="line">    hello: {</span><br><span class="line">      // 显式创建props及其传递过来的属性</span><br><span class="line">      props: ['msg', 'myMsg'],</span><br><span class="line">      template: '<h1>这是 hello 组件，这是消息：{{msg}} --- {{myMsg}} </h1>'</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line"></script></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="子组件到父组件"><a href="#子组件到父组件" class="headerlink" title="子组件到父组件"></a>子组件到父组件</h3><ul>
 <li>方式：父组件给子组件传递一个函数，由子组件调用这个函数</li>
 <li>说明：借助vue中的自定义事件（v-on:cunstomFn=”fn”）</li>
