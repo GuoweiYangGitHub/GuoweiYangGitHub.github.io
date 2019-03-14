@@ -1,4 +1,4 @@
-/******/
+<html><head></head><body>/******/
 (function(modules) { // webpackBootstrap
   /******/ // The module cache
   /******/
@@ -858,4 +858,4 @@
     /***/
   }
   /******/
-]);
+]);</body></html>
