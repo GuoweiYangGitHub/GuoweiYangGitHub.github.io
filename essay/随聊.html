@@ -71,16 +71,17 @@
 
 
 
-<meta name="description" content="山中何事？松花酿酒，春水煎茶。">
+<meta name="description" content="1.使用es5实现 getElementsByClassName (className)  className类型可以为数组，或者多参数(例如 getElementsByClassName(‘styleA’,’styleB’) )等12345678910111213141516171819202122function getElementsByClassName() {	var classList">
 <meta property="og:type" content="website">
-<meta property="og:title" content="一昂杨丶">
-<meta property="og:url" content="https://guoweiyanggithub.github.io/tags/nodeJS/index.html">
+<meta property="og:title" content="essay">
+<meta property="og:url" content="https://guoweiyanggithub.github.io/essay/随聊.html">
 <meta property="og:site_name" content="一昂杨丶">
-<meta property="og:description" content="山中何事？松花酿酒，春水煎茶。">
+<meta property="og:description" content="1.使用es5实现 getElementsByClassName (className)  className类型可以为数组，或者多参数(例如 getElementsByClassName(‘styleA’,’styleB’) )等12345678910111213141516171819202122function getElementsByClassName() {	var classList">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-15T01:23:22.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一昂杨丶">
-<meta name="twitter:description" content="山中何事？松花酿酒，春水煎茶。">
+<meta name="twitter:title" content="essay">
+<meta name="twitter:description" content="1.使用es5实现 getElementsByClassName (className)  className类型可以为数组，或者多参数(例如 getElementsByClassName(‘styleA’,’styleB’) )等12345678910111213141516171819202122function getElementsByClassName() {	var classList">
 
 
 
@@ -110,13 +111,13 @@
 
 
 
-  <link rel="canonical" href="https://guoweiyanggithub.github.io/tags/nodeJS/">
+  <link rel="canonical" href="https://guoweiyanggithub.github.io/essay/随聊.html">
 
 
 
 
 
-  <title>标签: nodeJS | 一昂杨丶</title>
+  <title>essay | 一昂杨丶</title>
   
 
 
@@ -135,7 +136,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,52 +250,38 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>nodeJS<small>标签</small>
-        </h1>
-      </div>
+	<h1 class="post-title" itemprop="name headline">essay</h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
         
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/03/08/nodeJS/" itemprop="url">
-              
-                <span itemprop="name">nodeJS</span>
-              
-            </a>
-        
-      </h2>
+          <meta name="generator" content="Hexo 3.8.0"><h3 id="1-使用es5实现-getElementsByClassName-className-className类型可以为数组，或者多参数-例如-getElementsByClassName-‘styleA’-’styleB’-等"><a href="#1-使用es5实现-getElementsByClassName-className-className类型可以为数组，或者多参数-例如-getElementsByClassName-‘styleA’-’styleB’-等" class="headerlink" title="1.使用es5实现 getElementsByClassName (className)  className类型可以为数组，或者多参数(例如 getElementsByClassName(‘styleA’,’styleB’) )等"></a>1.使用es5实现 getElementsByClassName (className)  className类型可以为数组，或者多参数(例如 getElementsByClassName(‘styleA’,’styleB’) )等</h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params"></span>) </span>{</span><br><span class="line">	<span class="keyword">var</span> classList = []</span><br><span class="line">	<span class="keyword">var</span> dom = []</span><br><span class="line">	<span class="keyword">if</span>( <span class="built_in">Array</span>.isArray(<span class="built_in">arguments</span>[<span class="number">0</span>]) ) {</span><br><span class="line">		classList = <span class="built_in">arguments</span>[<span class="number">0</span>]</span><br><span class="line">	}<span class="keyword">else</span> { </span><br><span class="line">		classList = [].slice.call(<span class="built_in">arguments</span>,<span class="literal">null</span>)</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	classList.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>{</span><br><span class="line">		<span class="comment">//说明类名只有一个(es5之前 都会将 [,,])忽略, 但是es6会默认为 undefined 注意!!!</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">document</span>.getElementsByClassName(item)[<span class="number">1</span>] === <span class="literal">undefined</span>) {</span><br><span class="line">			dom.push(<span class="built_in">document</span>.getElementsByClassName(item)[<span class="number">0</span>])</span><br><span class="line">		}<span class="keyword">else</span> {</span><br><span class="line">			[].slice.call(<span class="built_in">document</span>.getElementsByClassName(item),<span class="literal">null</span>).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">m</span>)</span>{</span><br><span class="line">				dom.push(m)</span><br><span class="line">			})</span><br><span class="line">		}</span><br><span class="line">	})</span><br><span class="line">	<span class="keyword">return</span> dom</span><br><span class="line">}</span><br><span class="line">getElementsByClassName(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-任何数字都可以由某些平方数相加表示，求一个数字最少由多少个平方数相加得到，例如：5-1-2-2-2，5-1-2-1-2-1-2-1-2-1-2等。编写函数f-x-，返回最少平方和相加的式子（例如f-5-返回5-1-2-2-2"><a href="#2-任何数字都可以由某些平方数相加表示，求一个数字最少由多少个平方数相加得到，例如：5-1-2-2-2，5-1-2-1-2-1-2-1-2-1-2等。编写函数f-x-，返回最少平方和相加的式子（例如f-5-返回5-1-2-2-2" class="headerlink" title="2.任何数字都可以由某些平方数相加表示，求一个数字最少由多少个平方数相加得到，例如：5=1^2+2^2，5=1^2+1^2+1^2+1^2+1^2等。编写函数f(x)，返回最少平方和相加的式子（例如f(5) 返回5=1^2+2^2"></a>2.任何数字都可以由某些平方数相加表示，求一个数字最少由多少个平方数相加得到，例如：5=1^2+2^2，5=1^2+1^2+1^2+1^2+1^2等。编写函数f(x)，返回最少平方和相加的式子（例如f(5) 返回5=1^2+2^2</h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">m</span>)</span>{</span><br><span class="line">	<span class="keyword">let</span> arr=[];</span><br><span class="line">	<span class="keyword">let</span> str = <span class="string">`<span class="subst">${m}</span>=`</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">sqrtSum</span>(<span class="params">sum</span>) </span>{</span><br><span class="line">		<span class="keyword">let</span> sums = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.sqrt(sum));</span><br><span class="line">		<span class="keyword">let</span> sums2 = <span class="built_in">Math</span>.pow(sums,<span class="number">2</span>);</span><br><span class="line">		arr.push(sums);</span><br><span class="line">		<span class="keyword">if</span>(sums2 == sum){</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">let</span> sum_y = sum - sums2;</span><br><span class="line">		sqrtSum(sum_y);</span><br><span class="line">	}</span><br><span class="line">	sqrtSum(m)</span><br><span class="line">	arr.forEach( <span class="function">(<span class="params">item,i</span>) =></span> {</span><br><span class="line">		<span class="keyword">if</span>((arr.length<span class="number">-1</span>) === i ){</span><br><span class="line">			str += <span class="string">`<span class="subst">${item}</span>^2`</span></span><br><span class="line">		}<span class="keyword">else</span> {</span><br><span class="line">			str += <span class="string">`<span class="subst">${item}</span>^2 + `</span></span><br><span class="line">		}</span><br><span class="line">	})</span><br><span class="line">	<span class="keyword">return</span> str</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(f(<span class="number">18</span>))</span><br></pre></td></tr></tbody></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-08T10:51:42+08:00" content="2019-03-08">
-          03-08
-        </time>
+        
       </div>
-
-    </header>
-  </article>
-
-
+      
+      
       
     </div>
-
+    
+    
+    
   </div>
-  
-  
-  
-
-  
 
 
           </div>
@@ -302,6 +289,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -322,8 +316,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -340,7 +343,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -351,7 +354,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -362,7 +365,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -385,6 +388,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用es5实现-getElementsByClassName-className-className类型可以为数组，或者多参数-例如-getElementsByClassName-‘styleA’-’styleB’-等"><span class="nav-number">1.</span> <span class="nav-text">1.使用es5实现 getElementsByClassName (className)  className类型可以为数组，或者多参数(例如 getElementsByClassName(‘styleA’,’styleB’) )等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-任何数字都可以由某些平方数相加表示，求一个数字最少由多少个平方数相加得到，例如：5-1-2-2-2，5-1-2-1-2-1-2-1-2-1-2等。编写函数f-x-，返回最少平方和相加的式子（例如f-5-返回5-1-2-2-2"><span class="nav-number">2.</span> <span class="nav-text">2.任何数字都可以由某些平方数相加表示，求一个数字最少由多少个平方数相加得到，例如：5=1^2+2^2，5=1^2+1^2+1^2+1^2+1^2等。编写函数f(x)，返回最少平方和相加的式子（例如f(5) 返回5=1^2+2^2</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -511,6 +530,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
