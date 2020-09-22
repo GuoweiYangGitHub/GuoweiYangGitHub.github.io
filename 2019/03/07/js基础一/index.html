@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -350,30 +350,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/07/js基础一/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/07/js基础一/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2019/03/07/js基础一/" class="leancloud_visitors" data-flag-title="js基础1">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数:</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -426,7 +405,7 @@
       
 
       
-        <meta name="generator" content="Hexo 3.8.0"><h2 id="什么是JS语言"><a href="#什么是JS语言" class="headerlink" title="什么是JS语言"></a>什么是JS语言</h2><blockquote>
+        <meta name="generator" content="Hexo 3.9.0"><h2 id="什么是JS语言"><a href="#什么是JS语言" class="headerlink" title="什么是JS语言"></a>什么是JS语言</h2><blockquote>
 <p>javascript是一种运行在<strong><em>客户端</em></strong> 的<strong><em>脚本语言</em></strong> </p>
 </blockquote>
 <p>客户端：即接受服务的一端，与服务端相对应，在前端开发中，通常客户端指的就是浏览器。</p>
@@ -441,12 +420,12 @@
 <p>书写Javascript代码有两种方式，第一种是直接在script标签中书写，第二种是将代码写在js文件中，通过script进行引入。</p>
 </blockquote>
 <p>直接在script中书写javascript代码：</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	alert(<span class="string">"今天天气真好呀"</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span>></span></span><br><span class="line"><span class="javascript">	alert(<span class="string">"今天天气真好呀"</span>);</span></span><br><span class="line"><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
 <p>通过script标签引入一个JS文件，需要指定src属性</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"test.js"</span>></span><span class="undefined"></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"test.js"</span>></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
 <font color="red">tips：如果script标签指定了src属性，说明是想要引入一个js文件，这个时候不能继续在script标签中写JS代码，即便写了，也不会执行。</font>
 
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span> = <span class="string">"test.js"</span>></span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  alert(<span class="string">"Hello World"</span>);   <span class="comment">//这段代码不会执行</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span> = <span class="string">"test.js"</span>></span></span><br><span class="line"><span class="javascript">  alert(<span class="string">"Hello World"</span>);   <span class="comment">//这段代码不会执行</span></span></span><br><span class="line"><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
 <blockquote>
 <p>script标签的书写位置，原则上来说，可以在页面中的任意位置书写script标签。</p>
 </blockquote>
@@ -454,10 +433,10 @@
 <li><p>写在head标签中，style标签之后。</p>
 </li>
 <li><p>写在body结束标签的前面。</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">body</span>></span></span><br><span class="line">  <span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  </span><span class="tag">script</span>></span><br><span class="line"><span class="tag">body</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">body</span>></span></span><br><span class="line">  <span class="tag"><<span class="name">script</span>></span></span><br><span class="line">  <span class="tag">script</span>></span><br><span class="line"><span class="tag">body</span>></span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>写在html结束标签的后面，即页面的最后面。</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">html</span>></span></span><br><span class="line"><span class="tag">html</span>></span><br><span class="line"><span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">html</span>></span></span><br><span class="line"><span class="tag">html</span>></span><br><span class="line"><span class="tag"><<span class="name">script</span>></span></span><br><span class="line"><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
 </li>
 </ol>
 <h2 id="输入输出语句"><a href="#输入输出语句" class="headerlink" title="输入输出语句"></a>输入输出语句</h2><blockquote>
@@ -473,7 +452,7 @@
 <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><blockquote>
 <p>不被程序执行的代码。用于程序员标记代码，在后期的修改，以及他人的学习时有所帮助，在JS中，分为单行注释、多行注释以及文档注释</p>
 </blockquote>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是单行注释，只能注释一行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	这是多行注释，不能嵌套</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//文档注释在JS中通常用于对函数进行说明</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 计算圆的面积</span></span><br><span class="line"><span class="comment">* @param r{number} 圆的半径</span></span><br><span class="line"><span class="comment">* @returns {number} 根据圆的半径计算出来的面积</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArea</span>(<span class="params">r</span>) </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.PI * r * r;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是单行注释，只能注释一行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	这是多行注释，不能嵌套</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//文档注释在JS中通常用于对函数进行说明</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 计算圆的面积</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param </span>r{number} 圆的半径</span></span><br><span class="line"><span class="comment">* <span class="doctag">@returns <span class="type">{number}</span> </span>根据圆的半径计算出来的面积</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArea</span>(<span class="params">r</span>) </span>{</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.PI * r * r;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>注释的作用：</p>
 <pre><code>1. 模块划分，方便代码查找和维护
 2. 用于解释复杂代码的逻辑，方便维护和后期开发。
@@ -645,9 +624,6 @@
 
           
 
-  
-    <div class="comments" id="comments">
-    </div>
   
 
 
@@ -834,7 +810,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2020 一昂杨</span>
 
   
     <br>
@@ -999,28 +975,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
-        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
-        placeholder: '各位道友,请举手发言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
@@ -1350,113 +1304,6 @@
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 
@@ -1470,6 +1317,6 @@
   
 
   <script type="text/javascript" src="/js/src/love.js"></script>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

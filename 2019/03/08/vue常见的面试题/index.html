@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -350,30 +350,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/08/vue常见的面试题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/vue常见的面试题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2019/03/08/vue常见的面试题/" class="leancloud_visitors" data-flag-title="vue常见的面试题">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数:</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -426,7 +405,7 @@
       
 
       
-        <meta name="generator" content="Hexo 3.8.0"><p>####1.Vue组件之间怎么通信<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">父组件-->子组件</span><br><span class="line">方式：父组件给子组件绑定属性，子组件通过props属性来接收传递的数据</span><br><span class="line">注意：属性的值必须在组件中通过props属性指定，属性名必须与父组件中定义的一致。props可以是一个数组或对象</span><br><span class="line">    </span><br><span class="line">子组件-->父组件</span><br><span class="line">方式：在父组件中声明一个接受数据的函数,父组件给子组件绑定事件，子组件通过$emit触发事件，并且可在此时传递参数，</span><br><span class="line">     父组件通过定义好的监听事件接收参数</span><br><span class="line"></span><br><span class="line">兄弟组件之间的通信</span><br><span class="line">方式: 创建一个新Vue的实例，让各个兄弟共用同一个事件机制。（关键点）</span><br><span class="line">      传递数据方，通过事件触发$emit(方法名， 传递的数据)。</span><br><span class="line">      接收数据方，在mounted() 钩子函数(挂载实例) 中 触发事件$on(方法名， callback(接收数据的数据))， </span><br><span class="line">      此时callback函数中的this已经发生了改变， 可以使用箭头函数。</span><br><span class="line">    </span><br><span class="line">对于大型复杂的项目，采用vuex 状态管理更适合</span><br></pre></td></tr></tbody></table></figure><p></p>
+        <meta name="generator" content="Hexo 3.9.0"><p>####1.Vue组件之间怎么通信<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">父组件-->子组件</span><br><span class="line">方式：父组件给子组件绑定属性，子组件通过props属性来接收传递的数据</span><br><span class="line">注意：属性的值必须在组件中通过props属性指定，属性名必须与父组件中定义的一致。props可以是一个数组或对象</span><br><span class="line">    </span><br><span class="line">子组件-->父组件</span><br><span class="line">方式：在父组件中声明一个接受数据的函数,父组件给子组件绑定事件，子组件通过$emit触发事件，并且可在此时传递参数，</span><br><span class="line">     父组件通过定义好的监听事件接收参数</span><br><span class="line"></span><br><span class="line">兄弟组件之间的通信</span><br><span class="line">方式: 创建一个新Vue的实例，让各个兄弟共用同一个事件机制。（关键点）</span><br><span class="line">      传递数据方，通过事件触发$emit(方法名， 传递的数据)。</span><br><span class="line">      接收数据方，在mounted() 钩子函数(挂载实例) 中 触发事件$on(方法名， callback(接收数据的数据))， </span><br><span class="line">      此时callback函数中的this已经发生了改变， 可以使用箭头函数。</span><br><span class="line">    </span><br><span class="line">对于大型复杂的项目，采用vuex 状态管理更适合</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>####2.常见指令<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">v-text:更新DOM对象的 textContent</span><br><span class="line">v-html:更新DOM对象的 innerHTML</span><br><span class="line">v-bind:当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM</span><br><span class="line">v-on:绑定事件</span><br><span class="line">v-for:基于源数据多次渲染元素或模板块</span><br><span class="line">v-if：根据表达式的值的真假条件，销毁或重建元素</span><br><span class="line">v-show：根据表达式之真假值，切换元素的 display CSS 属性</span><br><span class="line">v-pre:跳过这个元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译</span><br><span class="line">v-once:只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>####3.怎么定义组件<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">全局定义：Vue.component(组件名, {template: 模板字符串})</span><br><span class="line">局部定义：components:{组件名: {template: 模板字符串}}</span><br><span class="line">单文件组件：包含template，script，style三部分</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>####4.vue路由是怎么做的<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器URL中的哈希值（# hash）和 component的对应关系，一个哈希值对应一个组件</span><br></pre></td></tr></tbody></table></figure><p></p>
@@ -556,9 +535,6 @@
 
           
 
-  
-    <div class="comments" id="comments">
-    </div>
   
 
 
@@ -745,7 +721,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2020 一昂杨</span>
 
   
     <br>
@@ -910,28 +886,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
-        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
-        placeholder: '各位道友,请举手发言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
@@ -1261,113 +1215,6 @@
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 
@@ -1381,6 +1228,6 @@
   
 
   <script type="text/javascript" src="/js/src/love.js"></script>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -350,30 +350,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/08/phpstudy搭建与使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/phpstudy搭建与使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2019/03/08/phpstudy搭建与使用/" class="leancloud_visitors" data-flag-title="phpstudy搭建与使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数:</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -426,7 +405,7 @@
       
 
       
-        <meta name="generator" content="Hexo 3.8.0"><h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h2><blockquote>
+        <meta name="generator" content="Hexo 3.9.0"><h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h2><blockquote>
 <p>使计算机具备提供某种服务能力的应用软件，称为服务器软件，<br>通过安装相应的服务软件，然后进行配置后就可以使计算具备了提供某种服务的能力。</p>
 </blockquote>
 <ol>
@@ -704,7 +683,7 @@
 </ul>
 <figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//服务器保存图片的思路：</span></span><br><span class="line"><span class="comment">//1-判断 文件不为空 并且 上传文件没有出现错误 的情况下进行保存</span></span><br><span class="line">   <span class="comment">//2-获取临时文件文件路径</span></span><br><span class="line">   <span class="comment">//3-随机生成一个文件名</span></span><br><span class="line">   <span class="comment">//3-进行保存 </span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">//error==0  表示文件上传成功</span></span><br><span class="line">   <span class="keyword">if</span>( !<span class="keyword">empty</span>($_FILES[<span class="string">'myfile'</span>]) && $_FILES[<span class="string">'myfile'</span>][<span class="string">'error'</span>]==<span class="number">0</span> ){</span><br><span class="line">       <span class="comment">//获取临时文件名</span></span><br><span class="line">       $ftmp=$_FILES[<span class="string">'myfile'</span>][<span class="string">'tmp_name'</span>];</span><br><span class="line">       <span class="comment">//文件名字随机生成，但是后缀名不能改变</span></span><br><span class="line">       <span class="comment">//1-获取文件原来的后缀名拓展名</span></span><br><span class="line">       $fname=$_FILES[<span class="string">'myfile'</span>][<span class="string">'name'</span>]; <span class="comment">//aa.png</span></span><br><span class="line">       <span class="comment">//2-截取后缀名</span></span><br><span class="line">       $ext=strrchr($fname,<span class="string">'.'</span>);       </span><br><span class="line">       <span class="comment">//3-生成新的文件名</span></span><br><span class="line">       $newName=time().rand(<span class="number">1000</span>,<span class="number">9999</span>).$ext; </span><br><span class="line">       <span class="comment">//4-保存文件 </span></span><br><span class="line">       move_uploaded_file($ftmp,<span class="string">'./upload/'</span>.$newName);        </span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>推荐表单样式</strong></p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">*{ <span class="attribute">margin</span>: <span class="number">0</span>;  <span class="attribute">padding</span>: <span class="number">0</span>;}</span><br><span class="line"><span class="selector-tag">body</span>{ <span class="attribute">background</span>:<span class="built_in">rgb</span>(135, 171, 230);}</span><br><span class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">h4</span>,<span class="selector-tag">h5</span>,<span class="selector-tag">h6</span>{ <span class="attribute">text-align</span>: center;}</span><br><span class="line"><span class="selector-tag">form</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">50px</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#fff</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='text']</span>,<span class="selector-tag">input</span><span class="selector-attr">[type='select']</span>,<span class="selector-tag">input</span><span class="selector-attr">[type='password']</span>,</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='submit']</span>,<span class="selector-tag">input</span><span class="selector-attr">[type='password']</span>,<span class="selector-tag">input</span><span class="selector-attr">[type='file']</span>,<span class="selector-tag">select</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#aaa</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='submit']</span>{</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">rgb</span>(209, 92, 92);</span><br><span class="line">    <span class="attribute">border</span>:none;</span><br><span class="line">    <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='radio']</span>,<span class="selector-tag">input</span><span class="selector-attr">[type='checkbox']</span>{</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;   <span class="attribute">width</span>:<span class="number">20px</span>;  <span class="attribute">margin</span>:<span class="number">10px</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type='file']</span>{<span class="attribute">border</span>:none; }</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">*{ <span class="attribute">margin</span>: <span class="number">0</span>;  <span class="attribute">padding</span>: <span class="number">0</span>;}</span><br><span class="line"><span class="selector-tag">body</span>{ <span class="attribute">background</span>:<span class="built_in">rgb</span>(<span class="number">135</span>, <span class="number">171</span>, <span class="number">230</span>);}</span><br><span class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>,<span class="selector-tag">h4</span>,<span class="selector-tag">h5</span>,<span class="selector-tag">h6</span>{ <span class="attribute">text-align</span>: center;}</span><br><span class="line"><span class="selector-tag">form</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">50px</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#fff</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'text'</span>]</span>,<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'select'</span>]</span>,<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'password'</span>]</span>,</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'submit'</span>]</span>,<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'password'</span>]</span>,<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'file'</span>]</span>,<span class="selector-tag">select</span>{</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#aaa</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'submit'</span>]</span>{</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">rgb</span>(<span class="number">209</span>, <span class="number">92</span>, <span class="number">92</span>);</span><br><span class="line">    <span class="attribute">border</span>:none;</span><br><span class="line">    <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'radio'</span>]</span>,<span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'checkbox'</span>]</span>{</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;   <span class="attribute">width</span>:<span class="number">20px</span>;  <span class="attribute">margin</span>:<span class="number">10px</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">'file'</span>]</span>{<span class="attribute">border</span>:none; }</span><br></pre></td></tr></tbody></table></figure>
 <h3 id="vscode快捷键"><a href="#vscode快捷键" class="headerlink" title="vscode快捷键"></a>vscode快捷键</h3><ul>
 <li>ctrl+k+w 关闭全部窗口</li>
 <li>Ctrl+Shift+N 打开新窗口</li>
@@ -825,7 +804,7 @@
 <h3 id="数据回显时的默认选中"><a href="#数据回显时的默认选中" class="headerlink" title="数据回显时的默认选中"></a>数据回显时的默认选中</h3><blockquote>
 <p>当表单提交到当前页面时，希望可以看到之前用户选中的项</p>
 </blockquote>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><!--?php </span--><br><span class="line">    //如果传递了城市数据，则获取</span><br><span class="line">    if(isset($_GET['city'])){</span><br><span class="line">        $city=$_GET['city'];</span><br><span class="line">        echo $city; //4</span><br><span class="line">    }  </span><br><span class="line">?></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><meta name="generator" content="Hexo 3.8.0"></span><br><span class="line">    <meta charset="UTF-8">  </span><br><span class="line">    <link rel="stylesheet" href="./form.css"></span><br><span class="line">    <title>Document</title></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <!-- </span><br><span class="line">            action属性如果为空，默认把数据提交到当前页面            </span><br><span class="line">            //数据提交到当前页面后，返回的新页面要选中之前选择的那一项</span><br><span class="line">         --></span><br><span class="line">    <form action method="get"></form></span><br><span class="line">        城市：</span><br><span class="line">        <!-- 根据上面获取的城市的值，设置默认选中项 --></span><br><span class="line">        <select name="city"></select></span><br><span class="line">            <option value="1" <?php echo isset($city)&&$city="=1?" selected":""" ?> >上海市</option></span><br><span class="line">      		    </span><br><span class="line">            <option value="2" <?php echo isset($city)&&$city="=2?" selected":""" ?> >北京市</option></span><br><span class="line">       		    </span><br><span class="line">            <option value="3" <?php echo isset($city)&&$city="=3?" selected":""" ?> >天津市</option></span><br><span class="line">  			    </span><br><span class="line">            <option value="4" <?php echo isset($city)&&$city="=4?" selected":""" ?> >西红柿   		   </option>    </span><br><span class="line">       </span><br><span class="line">       <input type="submit" value="登录"></span><br><span class="line">    </span><br><span class="line"></span></span></pre></td></tr></tbody></table></figure><br><span class="line"></span><br>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta"><!--?php</span--> </span></span><br><span class="line"><span class="php">    <span class="comment">//如果传递了城市数据，则获取</span></span></span><br><span class="line"><span class="php">    <span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'city'</span>])){</span></span><br><span class="line"><span class="php">        $city=$_GET[<span class="string">'city'</span>];</span></span><br><span class="line"><span class="php">        <span class="keyword">echo</span> $city; <span class="comment">//4</span></span></span><br><span class="line"><span class="php">    }  </span></span><br><span class="line"><span class="php"><span class="meta">?></span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">html</span>></span></span><br><span class="line"><span class="tag"><<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>></span></span><br><span class="line"><span class="tag"><<span class="name">head</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>></span>  </span><br><span class="line">    <span class="tag"><<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./form.css"</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">title</span>></span>Document<span class="tag">title</span>></span><br><span class="line"><span class="tag">head</span>></span><br><span class="line"><span class="tag"><<span class="name">body</span>></span></span><br><span class="line">        <span class="comment"><!-- </span></span><br><span class="line"><span class="comment">            action属性如果为空，默认把数据提交到当前页面            </span></span><br><span class="line"><span class="comment">            //数据提交到当前页面后，返回的新页面要选中之前选择的那一项</span></span><br><span class="line"><span class="comment">         --></span></span><br><span class="line">    <span class="tag"><<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"get"</span>></span></span><br><span class="line">        城市：</span><br><span class="line">        <span class="comment"><!-- 根据上面获取的城市的值，设置默认选中项 --></span></span><br><span class="line">        <span class="tag"><<span class="name">select</span> <span class="attr">name</span>=<span class="string">"city"</span>></span></span><br><span class="line">            <option value="1" <?php echo isset($city)&&$city="=1?" selected":""" ?> >上海市</option></span><br><span class="line">      		<span class="tag">option</span>></span>    <br><span class="line">            <option value="2" <?php echo isset($city)&&$city="=2?" selected":""" ?> >北京市</option></span><br><span class="line">       		<span class="tag">option</span>></span>    <br><span class="line">            <option value="3" <?php echo isset($city)&&$city="=3?" selected":""" ?> >天津市</option></span><br><span class="line">  			<span class="tag">option</span>></span>    <br><span class="line">            <option value="4" <?php echo isset($city)&&$city="=4?" selected":""" ?> >西红柿   		   </option>    </span><br><span class="line">       <span class="tag">select</span>></span><br><span class="line">       <span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>></span></span><br><span class="line">    <span class="tag">form</span>></span><br><span class="line"><span class="tag">body</span>></span><br><span class="line"><span class="tag">html</span>></span><br></pre></td></tr></tbody></table></figure>
 <h1 id="学生信息管理系统"><a href="#学生信息管理系统" class="headerlink" title="学生信息管理系统"></a>学生信息管理系统</h1><h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><ul>
 <li><p>学生注册功能添加</p>
 </li>
@@ -1317,7 +1296,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 </ol>
 <p>虽然可以描述和传输复杂数据，但是其解析过于复杂并且体积较大，所以实现开发已经很少使用了。</p>
 <p>其解析方式类似于DOM</p>
-<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><!--?xml version='1.0'  encoding='utf-8' ?--></span></span><br><span class="line"><span class="tag"><<span class="name">root</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">"1"</span> ></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>鹏鹏<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>弯<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>18<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>飙车<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span><<老司机的自我修养>><span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">'2'</span>></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>春哥<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>男<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>38<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>修发动机<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span>C语言从入门到放弃<span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line"><span class="tag">root</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><!--?xml version='1.0'  encoding='utf-8' ?--></span></span><br><span class="line"><span class="tag"><<span class="name">root</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">"1"</span> ></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>鹏鹏<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>弯<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>18<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>飙车<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span><span class="symbol"><</span><span class="symbol"><</span>老司机的自我修养<span class="symbol">></span><span class="symbol">></span><span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">'2'</span>></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>春哥<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>男<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>38<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>修发动机<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span>C语言从入门到放弃<span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line"><span class="tag">root</span>></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><blockquote>
 <p> 即 JavaScript Object Notation，另一种轻量级的文本数据交换格式，独立于语言。</p>
 </blockquote>
@@ -1333,9 +1312,9 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <p>​json_encode() 、json_decode()<br><strong>总结：</strong> JSON体积小、解析方便且高效，在实际开发成为首选。</p>
 </li>
 </ul>
-</div></div></article></div></div></div></div></main></div>
+
       
-    
+    </div>
     
     
     
@@ -1415,34 +1394,31 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
       
       
     </footer>
+  </div>
   
   
   
-  
-  
+  </article>
 
 
 
     <div class="post-spread">
       
     </div>
-  
+  </div>
+
+
+          </div>
+          
 
 
           
-          
-
-
-          
 
   
-    <div class="comments" id="comments">
-    </div>
-  
 
 
 
-        
+        </div>
         
           
   
@@ -1614,8 +1590,8 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 
 
         
-      
-    
+      </div>
+    </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -1624,7 +1600,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2020 一昂杨</span>
 
   
     <br>
@@ -1665,7 +1641,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 
     
 
-  
+  </div>
 
   
 
@@ -1789,28 +1765,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
-        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
-        placeholder: '各位道友,请举手发言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
@@ -2140,113 +2094,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 
@@ -2260,6 +2107,6 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
   
 
   <script type="text/javascript" src="/js/src/love.js"></script>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -350,30 +350,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/08/vue生命周期/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/vue生命周期/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2019/03/08/vue生命周期/" class="leancloud_visitors" data-flag-title="vue生命周期">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数:</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -426,7 +405,7 @@
       
 
       
-        <meta name="generator" content="Hexo 3.8.0"><h2 id="实例生命周期"><a href="#实例生命周期" class="headerlink" title="实例生命周期"></a>实例生命周期</h2><ul>
+        <meta name="generator" content="Hexo 3.9.0"><h2 id="实例生命周期"><a href="#实例生命周期" class="headerlink" title="实例生命周期"></a>实例生命周期</h2><ul>
 <li>所有的 Vue 组件都是 Vue 实例，并且接受相同的选项对象即可 (一些根实例特有的选项除外)。</li>
 <li>实例生命周期也叫做：组件生命周期</li>
 </ul>
@@ -528,7 +507,7 @@
 <li>注意：<strong>先注册组件，再初始化根实例</strong></li>
 <li>注意：组件中的 <code>data</code> 必须是函数</li>
 </ul>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 注册全局组件</span></span><br><span class="line">Vue.component(<span class="string">'my-component'</span>, {</span><br><span class="line">  template: <span class="string">'<p>A custom component!</p>'</span>,</span><br><span class="line">  data() {</span><br><span class="line">    <span class="keyword">return</span> {</span><br><span class="line">      msg: <span class="string">'注意：组件的data必须是一个函数！！！'</span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 使用：以自定义元素的方式</span></span><br><span class="line"><div id="<span" class="string">"example"</div></span>><br><span class="line">  <my-component><span class="xml"><span class="tag">my-component</span>></span></my-component></span><br><span class="line"><span class="xml"><span class="tag">div</span>></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// =====> 渲染结果</span></span><br><span class="line"><div id="<span" class="string">"example"</div></span>><br><span class="line">  <p>A custom component!<span class="xml"><span class="tag">p</span>></span></p></span><br><span class="line"><<span class="regexp">/div></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 注册全局组件</span></span><br><span class="line">Vue.component(<span class="string">'my-component'</span>, {</span><br><span class="line">  template: <span class="string">'<p>A custom component!</p>'</span>,</span><br><span class="line">  data() {</span><br><span class="line">    <span class="keyword">return</span> {</span><br><span class="line">      msg: <span class="string">'注意：组件的data必须是一个函数！！！'</span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 使用：以自定义元素的方式</span></span><br><span class="line"><div id="<span" class="string">"example"</div></span>><br><span class="line">  <my-component><<span class="regexp">/my-component></span></my-component></span><br><span class="line"><span class="regexp">div></span><br><span class="line"></span><br><span class="line"><span class="comment">// =====> 渲染结果</span></span><br><span class="line"><div id="<span" class="string">"example"</div></span>></span><br><span class="line">  <p>A custom component!<<span class="regexp">/p></span></p></span><br><span class="line"><span class="regexp">div></span><br></span></pre></td></tr></tbody></table></figure>
 <ul>
 <li>template属性的值可以是：<ul>
 <li>1 模板字符串</li>
@@ -536,7 +515,7 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!-- 2 模板id 示例 --></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-template"</span> <span class="attr">id</span>=<span class="string">"tpl"</span>></span><span class="undefined"></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>A custom component!<span class="tag">p</span>></span></span><br><span class="line"><span class="undefined"></span><span class="tag">script</span>></span><br><span class="line"></span><br><span class="line">template: '#tpl'</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!-- 2 模板id 示例 --></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-template"</span> <span class="attr">id</span>=<span class="string">"tpl"</span>></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>A custom component!<span class="tag">p</span>></span></span><br><span class="line"><span class="tag">script</span>></span><br><span class="line"></span><br><span class="line">template: '#tpl'</span><br></pre></td></tr></tbody></table></figure>
 <ul>
 <li><code>extend</code>：使用基础 Vue 构造器，创建一个“子类”。参数是一个包含组件选项的对象。</li>
 </ul>
@@ -567,14 +546,14 @@
 <ul>
 <li>示例：组件A —> 组件B</li>
 </ul>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!-- 组件A： --></span></span><br><span class="line"><span class="tag"><<span class="name">com-a</span>></span><span class="tag">com-a</span>></span><br><span class="line"><span class="comment"><!-- 组件B： --></span></span><br><span class="line"><span class="tag"><<span class="name">com-b</span>></span><span class="tag">com-b</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> bus = <span class="keyword">new</span> Vue()</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue({</span></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">    components: {</span></span><br><span class="line"><span class="undefined">      comB: {</span></span><br><span class="line"><span class="xml">        template: '<span class="tag"><<span class="name">p</span>></span>组件A告诉我：{{msg}}<span class="tag">p</span>></span>',</span><br><span class="line"><span class="undefined">        data() {</span></span><br><span class="line"><span class="javascript">          <span class="keyword">return</span> {</span></span><br><span class="line"><span class="javascript">            msg: <span class="string">''</span></span></span><br><span class="line"><span class="undefined">          }</span></span><br><span class="line"><span class="undefined">        },</span></span><br><span class="line"><span class="undefined">        created() {</span></span><br><span class="line"><span class="javascript">          <span class="comment">// 定义事件：</span></span></span><br><span class="line"><span class="javascript">          bus.$on(<span class="string">'tellComB'</span>, (msg) => {</span></span><br><span class="line"><span class="javascript">            <span class="keyword">this</span>.msg = msg</span></span><br><span class="line"><span class="undefined">          })</span></span><br><span class="line"><span class="undefined">        }</span></span><br><span class="line"><span class="undefined">      },</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">      comA: {</span></span><br><span class="line"><span class="xml">        template: '<span class="tag"><<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"emitFn"</span>></span>告诉B<span class="tag">button</span>></span>',</span><br><span class="line"><span class="undefined">        methods: {</span></span><br><span class="line"><span class="undefined">          emitFn() {</span></span><br><span class="line"><span class="javascript">            <span class="comment">// 调用组件B中定义的事件：</span></span></span><br><span class="line"><span class="javascript">            bus.$emit(<span class="string">'tellComB'</span>, <span class="string">'地瓜地瓜我是土豆'</span>)</span></span><br><span class="line"><span class="undefined">          }</span></span><br><span class="line"><span class="undefined">        }</span></span><br><span class="line"><span class="undefined">      }</span></span><br><span class="line"><span class="undefined">    }</span></span><br><span class="line"><span class="undefined">  })</span></span><br><span class="line"><span class="undefined"></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!-- 组件A： --></span></span><br><span class="line"><span class="tag"><<span class="name">com-a</span>></span><span class="tag">com-a</span>></span><br><span class="line"><span class="comment"><!-- 组件B： --></span></span><br><span class="line"><span class="tag"><<span class="name">com-b</span>></span><span class="tag">com-b</span>></span><br><span class="line"></span><br><span class="line"><span class="tag"><<span class="name">script</span>></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> bus = <span class="keyword">new</span> Vue()</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue({</span></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    components: {</span><br><span class="line">      comB: {</span><br><span class="line"><span class="xml">        template: '<span class="tag"><<span class="name">p</span>></span>组件A告诉我：{{msg}}<span class="tag">p</span>></span>',</span><br><span class="line">        data() {</span><br><span class="line"><span class="javascript">          <span class="keyword">return</span> {</span></span><br><span class="line"><span class="javascript">            msg: <span class="string">''</span></span></span><br><span class="line">          }</span><br><span class="line">        },</span><br><span class="line">        created() {</span><br><span class="line"><span class="javascript">          <span class="comment">// 定义事件：</span></span></span><br><span class="line"><span class="javascript">          bus.$on(<span class="string">'tellComB'</span>, (msg) => {</span></span><br><span class="line"><span class="javascript">            <span class="keyword">this</span>.msg = msg</span></span><br><span class="line">          })</span><br><span class="line">        }</span><br><span class="line">      },</span><br><span class="line"></span><br><span class="line">      comA: {</span><br><span class="line"><span class="xml">        template: '<span class="tag"><<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"emitFn"</span>></span>告诉B<span class="tag">button</span>></span>',</span><br><span class="line">        methods: {</span><br><span class="line">          emitFn() {</span><br><span class="line"><span class="javascript">            <span class="comment">// 调用组件B中定义的事件：</span></span></span><br><span class="line"><span class="javascript">            bus.$emit(<span class="string">'tellComB'</span>, <span class="string">'地瓜地瓜我是土豆'</span>)</span></span><br><span class="line">          }</span><br><span class="line">        }</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  })</span><br><span class="line"><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="获取组件（或元素）-refs"><a href="#获取组件（或元素）-refs" class="headerlink" title="获取组件（或元素） - refs"></a>获取组件（或元素） - refs</h3><ul>
 <li>说明：<code>vm.$refs</code> 一个对象，持有已注册过 ref 的所有子组件（或HTML元素）</li>
 <li>使用：在 HTML元素 中，添加<code>ref</code>属性，然后在JS中通过<code>vm.$refs.属性</code>来获取</li>
 <li>注意：如果获取的是一个子组件，那么通过ref就能获取到子组件中的data和methods</li>
 <li>在使用第三方的组件，可能会用到这个功能</li>
 </ul>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">ref</span>=<span class="string">"dv"</span>></span><span class="tag">div</span>></span><br><span class="line"></span><br><span class="line"><span class="comment"><!-- js --></span></span><br><span class="line"><span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  vm.$refs.dv</span></span><br><span class="line"><span class="undefined"></span><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">div</span> <span class="attr">ref</span>=<span class="string">"dv"</span>></span><span class="tag">div</span>></span><br><span class="line"></span><br><span class="line"><span class="comment"><!-- js --></span></span><br><span class="line"><span class="tag"><<span class="name">script</span>></span></span><br><span class="line">  vm.$refs.dv</span><br><span class="line"><span class="tag">script</span>></span><br></pre></td></tr></tbody></table></figure>
 
       
     </div>
@@ -681,9 +660,6 @@
 
           
 
-  
-    <div class="comments" id="comments">
-    </div>
   
 
 
@@ -870,7 +846,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2020 一昂杨</span>
 
   
     <br>
@@ -1035,28 +1011,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
-        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
-        placeholder: '各位道友,请举手发言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
@@ -1386,113 +1340,6 @@
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 
@@ -1506,6 +1353,6 @@
   
 
   <script type="text/javascript" src="/js/src/love.js"></script>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

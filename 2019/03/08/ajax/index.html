@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -350,30 +350,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/08/ajax/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/ajax/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2019/03/08/ajax/" class="leancloud_visitors" data-flag-title="ajax">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数:</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -426,7 +405,7 @@
       
 
       
-        <meta name="generator" content="Hexo 3.8.0"><p><strong>前后端分离</strong></p>
+        <meta name="generator" content="Hexo 3.9.0"><p><strong>前后端分离</strong></p>
 <pre><code>我们使用php动态渲染页面时，有很多比较麻烦的地方。
 </code></pre><ul>
 <li><p>在前端写好页面以后，需要后台进行修改，意味这后端程序员也需要懂前端的知识，其实渲染的工作应该交给前端来做。</p>
@@ -452,7 +431,7 @@
 </ol>
 <p>虽然可以描述和传输复杂数据，但是其解析过于复杂并且体积较大，所以实现开发已经很少使用了。</p>
 <p>其解析方式类似于DOM</p>
-<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><!--?xml version='1.0'  encoding='utf-8' ?--></span></span><br><span class="line"><span class="tag"><<span class="name">root</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">"1"</span> ></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>鹏鹏<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>弯<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>1<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>飙车<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span><<老司机的自我修养>><span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">'2'</span>></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>春哥<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>男<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>38<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>修发动机<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span>C语言从入门到放弃<span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line"><span class="tag">root</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><!--?xml version='1.0'  encoding='utf-8' ?--></span></span><br><span class="line"><span class="tag"><<span class="name">root</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">"1"</span> ></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>鹏鹏<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>弯<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>1<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>飙车<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span><span class="symbol"><</span><span class="symbol"><</span>老司机的自我修养<span class="symbol">></span><span class="symbol">></span><span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line">    <span class="tag"><<span class="name">person</span> <span class="attr">num</span>=<span class="string">'2'</span>></span></span><br><span class="line">        <span class="tag"><<span class="name">name</span>></span>春哥<span class="tag">name</span>></span><br><span class="line">        <span class="tag"><<span class="name">sex</span>></span>男<span class="tag">sex</span>></span><br><span class="line">        <span class="tag"><<span class="name">age</span>></span>38<span class="tag">age</span>></span><br><span class="line">        <span class="tag"><<span class="name">hobby</span>></span>修发动机<span class="tag">hobby</span>></span><br><span class="line">        <span class="tag"><<span class="name">album</span>></span>C语言从入门到放弃<span class="tag">album</span>></span>        <br><span class="line">    <span class="tag">person</span>></span><br><span class="line"><span class="tag">root</span>></span><br></pre></td></tr></tbody></table></figure>
 <h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><blockquote>
 <p> 即 JavaScript Object Notation，另一种轻量级的文本数据交换格式，独立于语言。</p>
 </blockquote>
@@ -660,9 +639,9 @@
 <h2 id="artTemplate的使用"><a href="#artTemplate的使用" class="headerlink" title="artTemplate的使用"></a>artTemplate的使用</h2><p><a href="https://github.com/aui/art-template" target="_blank" rel="noopener">github地址</a></p>
 <p><a href="https://aui.github.io/art-template/docs/" target="_blank" rel="noopener">中文api地址</a></p>
 <h3 id="artTemplate入门"><a href="#artTemplate入门" class="headerlink" title="artTemplate入门"></a>artTemplate入门</h3><p><strong>1.引入模板引擎的js文件</strong> </p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><script src="<span" class="string">"template-web.js"</span>><span class="xml"><span class="tag"></<span class="name">script</span>></span></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><script src="<span" class="string">"template-web.js"</span>><<span class="regexp">/script></span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>2.准备模板</strong> </p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!--</span></span><br><span class="line"><span class="comment">  指定了type为text/template后，这一段script标签并不会解析，也不会显示。</span></span><br><span class="line"><span class="comment">--></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"tmp"</span>></span><span class="undefined"></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>姓名：{{ username }}<span class="tag"></<span class="name">p</span>></span>  </span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>年龄：{{ age }}<span class="tag"></<span class="name">p</span>></span></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>技能：{{ skill }}<span class="tag"></<span class="name">p</span>></span></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>描述：{{desc }}<span class="tag"></<span class="name">p</span>></span></span></span><br><span class="line"><span class="undefined"></span><span class="tag"></<span class="name">script</span>></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!--</span></span><br><span class="line"><span class="comment">  指定了type为text/template后，这一段script标签并不会解析，也不会显示。</span></span><br><span class="line"><span class="comment">--></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"tmp"</span>></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>姓名：{{ username }}<span class="tag"></<span class="name">p</span>></span>  </span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>年龄：{{ age }}<span class="tag"></<span class="name">p</span>></span></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>技能：{{ skill }}<span class="tag"></<span class="name">p</span>></span></span></span><br><span class="line"><span class="xml">  <span class="tag"><<span class="name">p</span>></span>描述：{{desc }}<span class="tag"></<span class="name">p</span>></span></span></span><br><span class="line"><span class="tag"></<span class="name">script</span>></span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>3.准备数据</strong></p>
 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//3. 准备数据,数据是后台获取的，可以随时变化</span></span><br><span class="line"><span class="keyword">var</span> json = {</span><br><span class="line">  userName:<span class="string">"隔壁老王"</span>,</span><br><span class="line">  age:<span class="number">18</span>,</span><br><span class="line">  skill:<span class="string">"查水表"</span>,</span><br><span class="line">  desc:<span class="string">"年轻气壮"</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>4.将模板与数据进行绑定</strong></p>
@@ -700,7 +679,7 @@
 <p>JSONP(JSON with Padding)、可用于解决主流浏览器的跨域数据访问的问题。原理：服务端返回一个预先定义好的javascript函数的调用，并且将服务器的数据以该函数参数的形式传递过来，这个方法需要前后端配合。</p>
 </blockquote>
 <p><code>script</code> 标签是不受同源策略的限制的，它可以载入任意地方的 JavaScript 文件，而并不要求同源。类似的还有<code>img</code>和<code>link</code>标签</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!--不受同源策略的标签--></span></span><br><span class="line"><span class="tag"><<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.api.com/1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>></span></span><br><span class="line"><span class="tag"><<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"http://www.api.com/1.css"</span>></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://www.api.com/1.js"</span>></span><span class="undefined"></span><span class="tag"></<span class="name">script</span>></span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!--不受同源策略的标签--></span></span><br><span class="line"><span class="tag"><<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.api.com/1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>></span></span><br><span class="line"><span class="tag"><<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"http://www.api.com/1.css"</span>></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://www.api.com/1.js"</span>></span><span class="tag"></<span class="name">script</span>></span></span><br></pre></td></tr></tbody></table></figure>
 <h4 id="jsonp演化过程"><a href="#jsonp演化过程" class="headerlink" title="jsonp演化过程"></a>jsonp演化过程</h4><p>jsonp原理大家知道即可，不用太过于去纠结这个原理，因此jquery已经帮我们封装好了，我们使用起来非常的方便。</p>
 <h3 id="jquery对于jsonp的封装"><a href="#jquery对于jsonp的封装" class="headerlink" title="jquery对于jsonp的封装"></a>jquery对于jsonp的封装</h3><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用起来相当的简单，跟普通的get请求没有任何的区别，只需要把dataType固定成jsonp即可。</span></span><br><span class="line">$.ajax({</span><br><span class="line">  type:<span class="string">"get"</span>,</span><br><span class="line">  url:<span class="string">"http://www.api.com/testjs.php"</span>,</span><br><span class="line">  dataType:<span class="string">"jsonp"</span>,</span><br><span class="line">  data:{</span><br><span class="line">    uname:<span class="string">"hucc"</span>,</span><br><span class="line">    upass:<span class="string">"123456"</span></span><br><span class="line">  },</span><br><span class="line">  success:<span class="function"><span class="keyword">function</span> (<span class="params">info</span>) </span>{</span><br><span class="line">    <span class="built_in">console</span>.log(info);</span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
 <p>【案例：查询天气.html】</p>
@@ -860,9 +839,6 @@
 
           
 
-  
-    <div class="comments" id="comments">
-    </div>
   
 
 
@@ -1051,7 +1027,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2020 一昂杨</span>
 
   
     <br>
@@ -1216,28 +1192,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
-        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
-        placeholder: '各位道友,请举手发言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
@@ -1567,113 +1521,6 @@
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 
@@ -1687,6 +1534,6 @@
   
 
   <script type="text/javascript" src="/js/src/love.js"></script>
-</article></div></div></div></div></main></div>
+</article></div></div></div></div></main></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

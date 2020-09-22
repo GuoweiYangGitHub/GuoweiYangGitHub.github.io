@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -350,30 +350,9 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/08/手机端常用知识/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/手机端常用知识/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
-          
-             <span id="/2019/03/08/手机端常用知识/" class="leancloud_visitors" data-flag-title="手机端常用知识">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数:</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
           
 
           
@@ -426,7 +405,7 @@
       
 
       
-        <meta name="generator" content="Hexo 3.8.0"><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">谷歌浏览器 苹果浏览器、 UC浏览器 QQ浏览器 欧朋浏览器 百度手机浏览器  <span class="number">360</span>安全浏览器  搜狗浏览器  猎豹浏览器等</span><br><span class="line">国内的手机浏览器都是根据webkit内核修改过来的，国内没有自主研发的内核，国内的操作系统也是基于Android系统修改的。</span><br><span class="line"></span><br><span class="line">因此在移动端，css3属性只需要加webkit前缀即可。</span><br></pre></td></tr></tbody></table></figure>
+        <meta name="generator" content="Hexo 3.9.0"><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">谷歌浏览器 苹果浏览器、 UC浏览器 QQ浏览器 欧朋浏览器 百度手机浏览器  <span class="number">360</span>安全浏览器  搜狗浏览器  猎豹浏览器等</span><br><span class="line">国内的手机浏览器都是根据webkit内核修改过来的，国内没有自主研发的内核，国内的操作系统也是基于Android系统修改的。</span><br><span class="line"></span><br><span class="line">因此在移动端，css3属性只需要加webkit前缀即可。</span><br></pre></td></tr></tbody></table></figure>
 <p>移动端设备尺寸不一样(尺寸非常多，碎片化很严重)</p>
 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Android： <span class="number">320</span>*<span class="number">480</span> <span class="number">480</span>*<span class="number">800</span>  <span class="number">540</span>*<span class="number">960</span> <span class="number">720</span>*<span class="number">1280</span> <span class="number">1080</span>*<span class="number">1920</span> <span class="number">2</span>k屏 <span class="number">4</span>k屏</span><br><span class="line">iphpne：  <span class="number">640</span>*<span class="number">960</span> <span class="number">640</span>*<span class="number">1136</span> <span class="number">750</span>*<span class="number">1334</span> <span class="number">1242</span>*<span class="number">2208</span></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="移动端开发分类"><a href="#移动端开发分类" class="headerlink" title="移动端开发分类"></a>移动端开发分类</h2><ul>
@@ -648,7 +627,7 @@
 <figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><!--</span></span><br><span class="line"><span class="comment">需求：</span></span><br><span class="line"><span class="comment">    大屏设备(>1200px)   版心：1170px   背景色：红色</span></span><br><span class="line"><span class="comment">    中屏设备(992-1200)  版心：970px    背景色：蓝色</span></span><br><span class="line"><span class="comment">    小屏设备(768-992)   版心：750px    背景色：黄色</span></span><br><span class="line"><span class="comment">    超小屏设备(<768px)  版心：100%     背景色：绿色</span></span><br><span class="line"><span class="comment">--></span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>响应式开发的原理：使用媒体查询实现不同终端的布局和样式的切换。</strong></p>
 <p>媒体查询语法：</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*查询屏幕*/</span></span><br><span class="line">@<span class="keyword">media</span> screen and 条件 {</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*条件的写法*/</span></span><br><span class="line"><span class="comment">/*min-width:只要屏幕宽度超过这个值的设备样式就能生效*/</span></span><br><span class="line"><span class="comment">/*max-width:只要屏幕宽度小于这个值的设备样式就能生效*/</span></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">1200px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1170px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">992px</span>) and (max-width: <span class="number">1200px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">970px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">768px</span>) and (max-width: <span class="number">992px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">750px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">768px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*查询屏幕*/</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> 条件 {</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*条件的写法*/</span></span><br><span class="line"><span class="comment">/*min-width:只要屏幕宽度超过这个值的设备样式就能生效*/</span></span><br><span class="line"><span class="comment">/*max-width:只要屏幕宽度小于这个值的设备样式就能生效*/</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">1200px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1170px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">992px</span>) <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">1200px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">970px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span> <span class="number">768px</span>) <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">992px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">750px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span> <span class="number">768px</span>) {</span><br><span class="line">  <span class="selector-class">.container</span> {</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>弊端：现在只有一个div，要做一套响应式布局，就需要如此多的代码，非常的麻烦，因此我们会更多的借助一些响应式的框架，比如bootstrap。</strong></p>
 <h1 id="bootstrap框架"><a href="#bootstrap框架" class="headerlink" title="bootstrap框架"></a>bootstrap框架</h1><blockquote>
 <p>Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。</p>
@@ -683,7 +662,7 @@
 <li>4.x.x 测试阶段</li>
 </ul>
 <h2 id="基本模板"><a href="#基本模板" class="headerlink" title="基本模板"></a>基本模板</h2><p>目录结构说明</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="comment"><!--使用HTML5文档，使用中文简体--></span></span><br><span class="line"><span class="tag"><<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>></span></span><br><span class="line"><span class="tag"><<span class="name">head</span>></span></span><br><span class="line">  <span class="comment"><!--meta1. 使用utf-8编码--></span></span><br><span class="line">  <span class="tag"><<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>></span></span><br><span class="line">  <span class="comment"><!--meta2. 当前页面在在IE浏览器访问时，使用最新的ie浏览器内核进行渲染--></span></span><br><span class="line">  <span class="tag"><<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>></span></span><br><span class="line">  <span class="comment"><!--meta3. 视口设置--></span></span><br><span class="line">  <span class="tag"><<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, user-scalable=no"</span>></span></span><br><span class="line">  <span class="comment"><!-- 上述3个meta标签*必须*放在最前面，任何其他内容都必须跟随其后！ --></span></span><br><span class="line">  <span class="tag"><<span class="name">title</span>></span>bootstrap基本模板<span class="tag">title</span>></span><br><span class="line">  </span><br><span class="line">  <span class="comment"><!--引入bootstrap的核心样式文件--></span></span><br><span class="line">  <span class="tag"><<span class="name">link</span> <span class="attr">href</span>=<span class="string">"lib/bootstrap/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>></span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"><!-- html5shiv是用来解决IE8以下浏览器不支持HTML5语义化标签的问题 --></span></span><br><span class="line">  <span class="comment"><!--respond是用来解决IE8以下浏览器不支持媒体查询的问题，注意：respond不支持file协议打开--></span></span><br><span class="line">  <span class="comment"><!--条件注释：IE浏览器专属--></span></span><br><span class="line">  <span class="comment"><!--[if lt IE 9]></span></span><br><span class="line"><span class="comment">  <script src="lib/html5shiv/html5shiv.min.js"></script></span></span><br><span class="line"><span class="comment">  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script></span></span><br><span class="line"><span class="comment">  <![endif]--></span></span><br><span class="line"><span class="tag">head</span>></span><br><span class="line"><span class="tag"><<span class="name">body</span>></span></span><br><span class="line"><span class="tag"><<span class="name">h1</span>></span>你好，世界！<span class="tag">h1</span>></span><br><span class="line"></span><br><span class="line"><span class="comment"><!--bootstrap依赖与jquery，因此需要在bootstrap之前引入jquery文件--></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"lib/jquery/jquery-1.12.4.js"</span>></span><span class="undefined"></span><span class="tag">script</span>></span><br><span class="line"><span class="comment"><!--引入bootstrap的核心js文件--></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"lib/bootstrap/js/bootstrap.min.js"</span>></span><span class="undefined"></span><span class="tag">script</span>></span><br><span class="line"><span class="tag">body</span>></span><br><span class="line"><span class="tag">html</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">html</span>></span><br><span class="line"><span class="comment"><!--使用HTML5文档，使用中文简体--></span></span><br><span class="line"><span class="tag"><<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>></span></span><br><span class="line"><span class="tag"><<span class="name">head</span>></span></span><br><span class="line">  <span class="comment"><!--meta1. 使用utf-8编码--></span></span><br><span class="line">  <span class="tag"><<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>></span></span><br><span class="line">  <span class="comment"><!--meta2. 当前页面在在IE浏览器访问时，使用最新的ie浏览器内核进行渲染--></span></span><br><span class="line">  <span class="tag"><<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>></span></span><br><span class="line">  <span class="comment"><!--meta3. 视口设置--></span></span><br><span class="line">  <span class="tag"><<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, user-scalable=no"</span>></span></span><br><span class="line">  <span class="comment"><!-- 上述3个meta标签*必须*放在最前面，任何其他内容都必须跟随其后！ --></span></span><br><span class="line">  <span class="tag"><<span class="name">title</span>></span>bootstrap基本模板<span class="tag">title</span>></span><br><span class="line">  </span><br><span class="line">  <span class="comment"><!--引入bootstrap的核心样式文件--></span></span><br><span class="line">  <span class="tag"><<span class="name">link</span> <span class="attr">href</span>=<span class="string">"lib/bootstrap/css/bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>></span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"><!-- html5shiv是用来解决IE8以下浏览器不支持HTML5语义化标签的问题 --></span></span><br><span class="line">  <span class="comment"><!--respond是用来解决IE8以下浏览器不支持媒体查询的问题，注意：respond不支持file协议打开--></span></span><br><span class="line">  <span class="comment"><!--条件注释：IE浏览器专属--></span></span><br><span class="line">  <span class="comment"><!--[if lt IE 9]></span></span><br><span class="line"><span class="comment">  <script src="lib/html5shiv/html5shiv.min.js"></script></span></span><br><span class="line"><span class="comment">  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script></span></span><br><span class="line"><span class="comment">  <![endif]--></span></span><br><span class="line"><span class="tag">head</span>></span><br><span class="line"><span class="tag"><<span class="name">body</span>></span></span><br><span class="line"><span class="tag"><<span class="name">h1</span>></span>你好，世界！<span class="tag">h1</span>></span><br><span class="line"></span><br><span class="line"><span class="comment"><!--bootstrap依赖与jquery，因此需要在bootstrap之前引入jquery文件--></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"lib/jquery/jquery-1.12.4.js"</span>></span><span class="tag">script</span>></span><br><span class="line"><span class="comment"><!--引入bootstrap的核心js文件--></span></span><br><span class="line"><span class="tag"><<span class="name">script</span> <span class="attr">src</span>=<span class="string">"lib/bootstrap/js/bootstrap.min.js"</span>></span><span class="tag">script</span>></span><br><span class="line"><span class="tag">body</span>></span><br><span class="line"><span class="tag">html</span>></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h2><h3 id="normalize-css"><a href="#normalize-css" class="headerlink" title="normalize.css"></a>normalize.css</h3><blockquote>
 <p>Normalize.css是一种CSS reset的替代方案。经过@necolas和@jon_neal花了几百个小时来努力研究不同浏览器的默认样式的差异，这个项目终于变成了现在这样。</p>
 </blockquote>
@@ -864,9 +843,6 @@
 
           
 
-  
-    <div class="comments" id="comments">
-    </div>
   
 
 
@@ -1053,7 +1029,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2020 一昂杨</span>
 
   
     <br>
@@ -1218,28 +1194,6 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
-        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
-        placeholder: '各位道友,请举手发言',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
 
 
 
@@ -1569,113 +1523,6 @@
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 
@@ -1689,6 +1536,6 @@
   
 
   <script type="text/javascript" src="/js/src/love.js"></script>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
