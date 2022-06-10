@@ -825,7 +825,7 @@
 <h3 id="数据回显时的默认选中"><a href="#数据回显时的默认选中" class="headerlink" title="数据回显时的默认选中"></a>数据回显时的默认选中</h3><blockquote>
 <p>当表单提交到当前页面时，希望可以看到之前用户选中的项</p>
 </blockquote>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta"><!--?php</span--> </span></span><br><span class="line"><span class="php">    <span class="comment">//如果传递了城市数据，则获取</span></span></span><br><span class="line"><span class="php">    <span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'city'</span>])){</span></span><br><span class="line"><span class="php">        $city=$_GET[<span class="string">'city'</span>];</span></span><br><span class="line"><span class="php">        <span class="keyword">echo</span> $city; <span class="comment">//4</span></span></span><br><span class="line"><span class="php">    }  </span></span><br><span class="line"><span class="php"><span class="meta">?></span></span></span><br><span class="line"></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="tag"><<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>></span></span><br><span class="line"><span class="tag"><<span class="name">head</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>></span>  </span><br><span class="line">    <span class="tag"><<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./form.css"</span>></span></span><br><span class="line">    <span class="tag"><<span class="name">title</span>></span>Document<span class="tag">title</span>></span></span><br><span class="line"><span class="tag">head</span>></span><br><span class="line"><span class="tag"><<span class="name">body</span>></span></span><br><span class="line">        <span class="comment"><!-- </span></span><br><span class="line"><span class="comment">            action属性如果为空，默认把数据提交到当前页面            </span></span><br><span class="line"><span class="comment">            //数据提交到当前页面后，返回的新页面要选中之前选择的那一项</span></span><br><span class="line"><span class="comment">         --></span></span><br><span class="line">    <span class="tag"><<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"get"</span>></span></span><br><span class="line">        城市：</span><br><span class="line">        <span class="comment"><!-- 根据上面获取的城市的值，设置默认选中项 --></span></span><br><span class="line">        <span class="tag"><<span class="name">select</span> <span class="attr">name</span>=<span class="string">"city"</span>></span></span><br><span class="line">            <option value="1" <?php echo isset($city)&&$city="=1?" selected":""" ?> >上海市</option></span><br><span class="line">      		<span class="tag">option</span>></span>    <br><span class="line">            <option value="2" <?php echo isset($city)&&$city="=2?" selected":""" ?> >北京市</option></span><br><span class="line">       		<span class="tag">option</span>></span>    <br><span class="line">            <option value="3" <?php echo isset($city)&&$city="=3?" selected":""" ?> >天津市</option></span><br><span class="line">  			<span class="tag">option</span>></span>    <br><span class="line">            <option value="4" <?php echo isset($city)&&$city="=4?" selected":""" ?> >西红柿   		   </option>    </span><br><span class="line">       <span class="tag">select</span>></span><br><span class="line">       <span class="tag"><<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>></span></span><br><span class="line">    <span class="tag">form</span>></span><br><span class="line"><span class="tag">body</span>></span><br><span class="line"><span class="tag">html</span>></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><!--?php </span--><br><span class="line">    //如果传递了城市数据，则获取</span><br><span class="line">    if(isset($_GET['city'])){</span><br><span class="line">        $city=$_GET['city'];</span><br><span class="line">        echo $city; //4</span><br><span class="line">    }  </span><br><span class="line">?></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><meta name="generator" content="Hexo 3.8.0"></span><br><span class="line">    <meta charset="UTF-8">  </span><br><span class="line">    <link rel="stylesheet" href="./form.css"></span><br><span class="line">    <title>Document</title></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <!-- </span><br><span class="line">            action属性如果为空，默认把数据提交到当前页面            </span><br><span class="line">            //数据提交到当前页面后，返回的新页面要选中之前选择的那一项</span><br><span class="line">         --></span><br><span class="line">    <form action method="get"></form></span><br><span class="line">        城市：</span><br><span class="line">        <!-- 根据上面获取的城市的值，设置默认选中项 --></span><br><span class="line">        <select name="city"></select></span><br><span class="line">            <option value="1" <?php echo isset($city)&&$city="=1?" selected":""" ?> >上海市</option></span><br><span class="line">      		    </span><br><span class="line">            <option value="2" <?php echo isset($city)&&$city="=2?" selected":""" ?> >北京市</option></span><br><span class="line">       		    </span><br><span class="line">            <option value="3" <?php echo isset($city)&&$city="=3?" selected":""" ?> >天津市</option></span><br><span class="line">  			    </span><br><span class="line">            <option value="4" <?php echo isset($city)&&$city="=4?" selected":""" ?> >西红柿   		   </option>    </span><br><span class="line">       </span><br><span class="line">       <input type="submit" value="登录"></span><br><span class="line">    </span><br><span class="line"></span></span></pre></td></tr></tbody></table></figure><br><span class="line"></span><br>
 <h1 id="学生信息管理系统"><a href="#学生信息管理系统" class="headerlink" title="学生信息管理系统"></a>学生信息管理系统</h1><h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><ul>
 <li><p>学生注册功能添加</p>
 </li>
@@ -1333,9 +1333,9 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 <p>​json_encode() 、json_decode()<br><strong>总结：</strong> JSON体积小、解析方便且高效，在实际开发成为首选。</p>
 </li>
 </ul>
-
+</div></div></article></div></div></div></div></main></div>
       
-    </div>
+    
     
     
     
@@ -1415,21 +1415,21 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
       
       
     </footer>
-  </div>
   
   
   
-  </article>
+  
+  
 
 
 
     <div class="post-spread">
       
     </div>
-  </div>
+  
 
 
-          </div>
+          
           
 
 
@@ -1442,7 +1442,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 
 
 
-        </div>
+        
         
           
   
@@ -1614,8 +1614,8 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 
 
         
-      </div>
-    </main>
+      
+    
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -1668,7 +1668,7 @@ SQL语句，相当于客户端发送的命令（与数据库服务器进行交�
 
     
 
-  </div>
+  
 
   
 
