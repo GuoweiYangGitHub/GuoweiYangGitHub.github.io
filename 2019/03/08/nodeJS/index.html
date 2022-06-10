@@ -1,0 +1,1768 @@
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="nodeJS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="官方介绍 NodeJS官网 NodeJS中文网   Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js">
+<meta name="keywords" content="nodeJS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodeJS">
+<meta property="og:url" content="https://guoweiyanggithub.github.io/2019/03/08/nodeJS/index.html">
+<meta property="og:site_name" content="一昂杨丶">
+<meta property="og:description" content="官方介绍 NodeJS官网 NodeJS中文网   Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-14T07:08:14.546Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodeJS">
+<meta name="twitter:description" content="官方介绍 NodeJS官网 NodeJS中文网   Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://guoweiyanggithub.github.io/2019/03/08/nodeJS/">
+
+
+
+
+
+  <title>nodeJS | 一昂杨丶</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/GuoweiYangGitHub" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">一昂杨丶</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">山中何事？松花酿酒，春水煎茶。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://guoweiyanggithub.github.io/2019/03/08/nodeJS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="一昂杨丶">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一昂杨丶">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">nodeJS</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-08T10:51:42+08:00">
+                2019-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/nodeJS/" itemprop="url" rel="index">
+                    <span itemprop="name">nodeJS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/08/nodeJS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/08/nodeJS/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/08/nodeJS/" class="leancloud_visitors" data-flag-title="nodeJS">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数:</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计:</span>
+                
+                <span title="字数统计">
+                  3.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <meta name="generator" content="Hexo 3.8.0"><h2 id="官方介绍"><a href="#官方介绍" class="headerlink" title="官方介绍"></a>官方介绍</h2><ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS官网</a></li>
+<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">NodeJS中文网</a></li>
+</ul>
+<blockquote>
+<p>Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+</blockquote>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</span><br><span class="line">Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</span><br><span class="line">Node.js 的包管理器 npm，是全球最大的开源库生态系统。</span><br><span class="line"></span><br><span class="line">runtime 运行时（运行环境）</span><br><span class="line">PHP代码要想运行需要借助于Apache这个服务器（运行时，运行环境）</span><br><span class="line">JavaScript代码想要运行：需要有一个JavaScript的运行时即可</span><br><span class="line">  在web端，浏览器就可以看作JS的运行时</span><br><span class="line">  在Node端，Node就是JS的运行时</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="理解Node"><a href="#理解Node" class="headerlink" title="理解Node"></a>理解Node</h3><ul>
+<li><p>Node.js 是一个开发平台，就像PHP开发平台、Java开发平台、.Net开发平台、Apple开发平台一样。</p>
+<ul>
+<li>开发平台：有对应的编程语言、有语言运行时、有能实现特定功能的API</li>
+</ul>
+</li>
+<li><p>编程语言：JavaScript</p>
+</li>
+<li>运行时：Chrome V8 JavaScript引擎</li>
+<li><p>特定功能API：文件操作、网络操作 等</p>
+</li>
+<li><p>问题：在Node中能够操作DOM、BOM吗？？？ 不能！！！</p>
+</li>
+<li>浏览器和Node中公共的部分是：ECMAScript</li>
+</ul>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>非阻塞 异步I/O（input/output）</li>
+<li>事件驱动</li>
+<li>单线程<ul>
+<li><code>一切都在并行执行 —— 除了你的代码（Evetything runs in parallel — except your code.）</code></li>
+</ul>
+</li>
+<li>跨平台</li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Node 适合做：</span><br><span class="line">  I/O密集型操作，比如：文件操作</span><br><span class="line">  高并发处理</span><br><span class="line"></span><br><span class="line">Node 不适合做：</span><br><span class="line">  CPU密集型操作：大量长时间的计算</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="能做什么"><a href="#能做什么" class="headerlink" title="能做什么"></a>能做什么</h3><ul>
+<li>提供服务端编程能力</li>
+<li>开发 Web应用程序（网站）、控制台程序（命令行程序、CLI程序）、桌面应用程序（GUI）（借助 node-webkit、electron 等框架实现）<ul>
+<li>1 操作数据库</li>
+<li>2 网站后台开发，为前台提供接口</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他参考资料"><a href="#其他参考资料" class="headerlink" title="其他参考资料"></a>其他参考资料</h3><ul>
+<li><a href="http://javascript.ruanyifeng.com/" target="_blank" rel="noopener">JavaScript 标准参考教程（alpha）</a></li>
+<li><a href="http://geek.csdn.net/news/detail/52208" target="_blank" rel="noopener">Node.js背后的V8引擎优化技术</a></li>
+<li><a href="http://cnodejs.org" target="_blank" rel="noopener">CNODE社区</a></li>
+</ul>
+<h2 id="Web开发本质"><a href="#Web开发本质" class="headerlink" title="Web开发本质"></a>Web开发本质</h2><ul>
+<li>1 请求，客户端发起请求</li>
+<li>2 处理，服务器处理请求</li>
+<li>3 响应，服务器将处理结果发送给客户端</li>
+</ul>
+<hr>
+<h2 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h2><ul>
+<li><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载地址</a></li>
+<li>官网术语解释<ul>
+<li>LTS 版本：Long-term Support 版本，长期支持版，即稳定版。</li>
+<li>Current 版本：Latest Features 版本，最新版本，新特性会在该版本中最先加入。</li>
+</ul>
+</li>
+<li>验证是否安装成功：在终端输入 <code>node -v</code>，如果打印出版本号，即安装成功</li>
+</ul>
+<h2 id="nodejs-初体验"><a href="#nodejs-初体验" class="headerlink" title="nodejs 初体验"></a>nodejs 初体验</h2><ul>
+<li>1 helloworld.js 第一个node程序</li>
+<li>2 文件操作 - 读文件</li>
+<li>3 文件操作 - 写文件</li>
+<li>4 http操作 - 开启服务</li>
+</ul>
+<h2 id="NodeJS-你好"><a href="#NodeJS-你好" class="headerlink" title="NodeJS 你好"></a>NodeJS 你好</h2><ul>
+<li>1 创建js文件 <code>helloworld.js</code></li>
+<li>2 写入：<code>console.log('hello nodejs')</code></li>
+<li>3 打开命令窗口 <code>cmd</code></li>
+<li>4 执行命令：<code>node helloworld.js</code></li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">说明：</span><br><span class="line">  node命令 实际上调用的是 node.exe 这个可执行文件</span><br><span class="line">  通过 node.exe 读取执行 helloworld.js 文件中的代码，并执行</span><br><span class="line"></span><br><span class="line">通过node运行js代码的过程，类似于：浏览器加载 html页面，并执行script标签中的js代码</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>练习：打印三角形</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// process.stdout 标准输出，将内容输出到终端中显示</span></span><br><span class="line"><span class="comment">// 特点：不换行</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i < <span class="number">10</span>; i++) {</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j <= i; j++) {< span><br><span class="line">    process.stdout.write(<span class="string">'* '</span>)</span><br><span class="line">  }</span><br><span class="line">  process.stdout.write(<span class="string">'\n'</span>)</span><br><span class="line">}</span><br><!--=--></span></pre></td></tr></tbody></table></figure>
+<h2 id="NodeJS-文件操作"><a href="#NodeJS-文件操作" class="headerlink" title="NodeJS 文件操作"></a>NodeJS 文件操作</h2><ul>
+<li>两种文件操作：1 异步 2 同步</li>
+<li>说明：推荐使用异步操作</li>
+<li>说明：Node中采用错误优先的处理方式</li>
+<li><p><a href="https://stackoverflow.com/questions/14551608/list-of-encodings-that-node-js-supports" target="_blank" rel="noopener">支持的文件编码</a></p>
+</li>
+<li><p>异步文件读取：</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引包</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// readFile() 读取文件API</span></span><br><span class="line"><span class="comment">// 第一个参数：文件路径</span></span><br><span class="line"><span class="comment">// 第二个参数：回调函数</span></span><br><span class="line">fs.readFile(<span class="string">'./data/test.txt'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>{</span><br><span class="line">  <span class="comment">// err    错误信息</span></span><br><span class="line">  <span class="comment">// data   文件内容（Buffer 二进制数据流，数组每一项为：16进制数据）</span></span><br><span class="line">  <span class="comment">// data.toString() 将读取到的文件内容，转化为：uft8编码格式</span></span><br><span class="line">  <span class="built_in">console</span>.log(data.toString())</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>异步文件写入：</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="comment">// 第一个参数：文件路径</span></span><br><span class="line"><span class="comment">// 第二个参数：写入文件的数据</span></span><br><span class="line"><span class="comment">// 第三个参数：回调函数</span></span><br><span class="line">fs.writeFile(<span class="string">'./data/foo.txt'</span>, <span class="string">'写入文件的数据'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>{</span><br><span class="line">  <span class="comment">// 错误处理</span></span><br><span class="line">  <span class="keyword">if</span>(err) {</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'写入文件失败'</span>)</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'写入文件成功'</span>)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>同步文件读取和同步文件写入：</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 同步读取文件内容：</span></span><br><span class="line"><span class="comment">// var data = fs.readFileSync('./data/test.txt', 'utf8')</span></span><br><span class="line"><span class="keyword">var</span> data = fs.readFileSync(<span class="string">'./data/test.txt'</span>).toString()</span><br><span class="line"><span class="built_in">console</span>.log(data)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 同步写入文件内容：</span></span><br><span class="line">fs.writeFileSync(<span class="string">'./data/bar.txt'</span>, <span class="string">'写入内容'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="路径说明"><a href="#路径说明" class="headerlink" title="路径说明"></a>路径说明</h2><ul>
+<li><code>__dirname</code>：正在执行的js文件所在的目录路径</li>
+<li><code>__filename</code>：正在执行的js文件的路径</li>
+</ul>
+<h3 id="path-模块"><a href="#path-模块" class="headerlink" title="path 模块"></a>path 模块</h3><ul>
+<li>说明：强大的路径操作模块</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取文件绝对路径</span></span><br><span class="line">path.join(__dirname, <span class="string">'app.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前目录下的 src目录下的 app.js</span></span><br><span class="line">path.join(__dirname, <span class="string">'src'</span>, <span class="string">'app.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前目录下的 上一级目录的 abc目录</span></span><br><span class="line">path.join(__dirname, <span class="string">'..'</span>, <span class="string">'abc'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="NodeJS-与-错误处理"><a href="#NodeJS-与-错误处理" class="headerlink" title="NodeJS 与 错误处理"></a>NodeJS 与 错误处理</h2><ul>
+<li>说明：通过<code>try-catch</code>语句可以用来捕获代码中的错误，使得程序不会蹦掉</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">} <span class="keyword">catch</span> (err) {</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'捕获到异常：'</span>, err)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无法捕获异步代码异常：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> {</span><br><span class="line">  fs.readFile(<span class="string">'./data/test.txt1'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>{</span><br><span class="line">    <span class="comment">// 代码出现异常，外面的 try-catch 是无法捕获到的！</span></span><br><span class="line">  });</span><br><span class="line">} <span class="keyword">catch</span> (e) {</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="异步API错误处理"><a href="#异步API错误处理" class="headerlink" title="异步API错误处理"></a>异步API错误处理</h3><ul>
+<li>注意：<code>try-catch</code>无法捕获异步操作中的错误</li>
+<li>正确处理方式：<ul>
+<li>1 先处理错误，再进行其他操作（错误优先）</li>
+<li>2 封装异步代码报错，应该逐级向上暴露错误给调用者，由调用者处理错误</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 封装读文件操作，并进行错误处理</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFiles</span>(<span class="params">path, callback</span>) </span>{</span><br><span class="line">  fs.readFile(path, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>{</span><br><span class="line">    <span class="keyword">if</span>(err) {</span><br><span class="line">      <span class="comment">// 将错误抛出，由使用者决定错误如何处理</span></span><br><span class="line">      <span class="keyword">return</span> callback(err);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 没有错误的处理方式（模拟内置API）</span></span><br><span class="line">    callback(<span class="literal">null</span>, data);</span><br><span class="line">  });</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">getFiles(<span class="string">'./a.txt'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>{</span><br><span class="line">  <span class="keyword">if</span> (err) {</span><br><span class="line">    <span class="comment">// 进行错误处理</span></span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="构建HTTP服务-请求处理响应"><a href="#构建HTTP服务-请求处理响应" class="headerlink" title="构建HTTP服务 - 请求处理响应"></a>构建HTTP服务 - 请求处理响应</h2><ul>
+<li>目标：构建一个基础服务器</li>
+</ul>
+<h3 id="基本服务器"><a href="#基本服务器" class="headerlink" title="基本服务器"></a>基本服务器</h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1 导入 http 模块</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2 创建服务器</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 添加request事件，当有请求到达服务器后，执行回调函数中的代码</span></span><br><span class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>{</span><br><span class="line">  res.end(<span class="string">'有请求到达服务器'</span>)</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4 启动服务器，让服务器监听3000端口</span></span><br><span class="line">server.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'服务器已启动'</span>)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="创建HTTP服务器说明"><a href="#创建HTTP服务器说明" class="headerlink" title="创建HTTP服务器说明"></a>创建HTTP服务器说明</h3><ul>
+<li>1 服务器监听某个端口号</li>
+<li>2 <code>request</code>事件：每次接收到一个请求时触发</li>
+<li>3 <code>req</code>表示：请求对象，<code>res</code>表示：响应对象</li>
+<li>4 必须调用<code>res.end()</code>结束响应，浏览器才会收到服务器返回的数据</li>
+</ul>
+<h3 id="response对象API"><a href="#response对象API" class="headerlink" title="response对象API"></a>response对象API</h3><ul>
+<li><p><a href="http://nodejs.cn/api/http.html#http_class_http_serverresponse" target="_blank" rel="noopener">response</a></p>
+</li>
+<li><p><code>res.write(chunk)</code>：用于给浏览器发送响应数据，可以调用多次</p>
+<ul>
+<li>chunk：数据块</li>
+</ul>
+</li>
+<li><code>res.end([data])</code>：结束响应，即：所有响应头和响应主体都已被发送，只能调用一次<ul>
+<li>如果指定了 data，则相当于调用<code>res.write(data)</code> 之后再调用<code>res.end()</code></li>
+</ul>
+</li>
+<li><code>res.setHeader(name, value)</code>：设置一个响应头</li>
+<li><code>res.writeHead()</code>：设置HTTP状态码和响应头</li>
+<li>注意：1 先设置响应头，再返回（<code>write()</code>）数据</li>
+<li>注意：2 <code>setHeader()</code> 必须在 <code>writeHead()</code> 之前调用</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置HTTP状态码</span></span><br><span class="line">res.statusCode = <span class="number">200</span></span><br><span class="line"><span class="comment">// 设置http响应状态消息</span></span><br><span class="line">res.statusMessage = <span class="string">'OK'</span></span><br><span class="line"></span><br><span class="line">res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/html'</span>)</span><br><span class="line">res.writeHead(<span class="number">200</span>, {</span><br><span class="line">  <span class="comment">// 中文编码</span></span><br><span class="line">  <span class="string">'Content-Type'</span>: <span class="string">'text/plain; charset=utf-8'</span>,</span><br><span class="line">  <span class="string">'LiangLiang'</span>: <span class="string">'cute'</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<hr>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ul>
+<li><p>应用场景：通过命令打开任意可执行文件</p>
+</li>
+<li><p>默认情况下，如果想要通过命令来启动 可执行文件（.exe） ，只在程序所属目录起作用</p>
+</li>
+<li>通过配置 环境变量，可以使得这个命令在任何目录中都有效</li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">找到环境变量：计算机 --右键--> 属性 --> 高级系统设置 --> 高级 --> 环境变量</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="环境变量添加的两种方式"><a href="#环境变量添加的两种方式" class="headerlink" title="环境变量添加的两种方式"></a>环境变量添加的两种方式</h3><ul>
+<li><a href="http://elf8848.iteye.com/blog/1582137" target="_blank" rel="noopener">MAC 环境变量</a></li>
+<li>1 直接将可执行程序所在目录配置到PATH中<ul>
+<li><code>F:\devFiles\Git</code></li>
+</ul>
+</li>
+<li>2 新建（用户）环境变量 <code>FEIQ_HOME</code>，使用 <code>%FEIQ_HOME%</code> 配置到PATH中<ul>
+<li>变量名：<code>FEIQ_HOME</code> 变量值：<code>F:\devFiles\Git</code>（不带分号）</li>
+</ul>
+</li>
+</ul>
+<h3 id="输入命令执行过程"><a href="#输入命令执行过程" class="headerlink" title="输入命令执行过程"></a>输入命令执行过程</h3><ul>
+<li>1 首先在当前路径目录中查找和改字符串匹配的可执行文件</li>
+<li>2 进入用户 path 环境变量查找</li>
+<li>3 进入系统 path 环境变量查找</li>
+</ul>
+<hr>
+<h2 id="REPL介绍"><a href="#REPL介绍" class="headerlink" title="REPL介绍"></a>REPL介绍</h2><ul>
+<li><p>REPL 全称: Read-Eval-Print-Loop（交互式解释器）</p>
+<ul>
+<li>R 读取 - 读取用户输入，解析输入的 Javascript数据结构并存储在内存中</li>
+<li>E 执行 - 执行输入的数据结构</li>
+<li>P 打印 - 输出结果</li>
+<li>L 循环 - 循环操作以上步骤直到用户两次按下 <code>ctrl + C</code> 退出</li>
+</ul>
+</li>
+<li><p>在REPL中编写程序（类似于浏览器开发人员工具中的控制台功能）</p>
+</li>
+<li>进入：直接在控制台输入 <code>node</code> 命令进入 REPL 环境</li>
+<li>退出：按两次 <code>ctrl + C</code> 退出REPL界面 或者 输入 <code>.exit</code> 退出</li>
+<li>注意：<strong>进入Node的REPL后，只能写JavaScript代码</strong></li>
+</ul>
+<hr>
+<h3 id="Buffer和字符编码"><a href="#Buffer和字符编码" class="headerlink" title="Buffer和字符编码"></a>Buffer和字符编码</h3><p>Node.js 目前支持的字符编码包括：</p>
+<ul>
+<li><code>ascii</code> 仅支持 7位 ASCII 数据。如果设置去掉高位的话，这种编码方法是非常快的。</li>
+<li><code>utf8</code> 多字节编码的Unicode字符。许多网页和其他文档格式使用 UTF-8 。</li>
+<li><code>utf16le</code> 2或4个字节，小端编码的Unicode字符。支持代理对（U+10000 to U+10FFFF）。</li>
+<li><code>ucs2</code> 是 <code>utf16le</code> 的别名。</li>
+<li><code>base64</code> Base64 字符串编码。当从一个字符串创建一个 buffer 时，按照 RFC 4648, Section 5 里的规定，这种编码也将接受正确的“URL和文件名安全字母”。</li>
+<li><code>binary</code> 一种把 buffer 编码成一字节（latin-1）编码字符串的方式。目前不支持 <code>latin-1</code> 字符串。通过 <code>binary</code> 来代替 <code>latin-1</code> 使用 <code>latin-1</code> 编码。</li>
+<li><code>hex</code> 将每个字节编码为两个十六进制字符。</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用:</span></span><br><span class="line"><span class="keyword">var</span> buf = Buffer.from(<span class="string">'hello world'</span>, <span class="string">'ascii'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(buf.toString(<span class="string">'hex'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认情况: buf.toString() 相当于</span></span><br><span class="line">buf.toString(<span class="string">'utf8'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="根据不同请求输出不同响应数据"><a href="#根据不同请求输出不同响应数据" class="headerlink" title="根据不同请求输出不同响应数据"></a>根据不同请求输出不同响应数据</h2><ul>
+<li><a href="http://nodejs.cn/api/http.html#http_message_url" target="_blank" rel="noopener">request.url</a></li>
+<li><code>req.url</code>：获取请求路径<ul>
+<li>例如：请求<code>http://127.0.0.1:3000/index</code> 获取到的是：<code>/index</code></li>
+<li>例如：请求<code>http://127.0.0.1:3000/</code> 获取到的是：<code>/</code></li>
+<li>例如：请求<code>http://127.0.0.1:3000</code> 获取到的是：<code>/</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="服务器响应文件"><a href="#服务器响应文件" class="headerlink" title="服务器响应文件"></a>服务器响应文件</h2><ul>
+<li>注意：浏览器中输入的URL地址，仅仅是一个标识，不与服务器中的目录一致。也就是说：返回什么内容是由服务端的逻辑决定</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>{</span><br><span class="line">  <span class="keyword">var</span> url = req.url</span><br><span class="line">  <span class="keyword">if</span>(url === <span class="string">'/'</span>) {</span><br><span class="line">    fs.readFile(<span class="string">'./index.html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>{</span><br><span class="line">      <span class="keyword">if</span>(err) {</span><br><span class="line">        <span class="keyword">return</span> res.end(<span class="string">'您访问的资源不存在~'</span>)</span><br><span class="line">      }</span><br><span class="line"></span><br><span class="line">      res.end(data)</span><br><span class="line">    })</span><br><span class="line">  }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="模拟Apache服务器"><a href="#模拟Apache服务器" class="headerlink" title="模拟Apache服务器"></a>模拟Apache服务器</h2><ul>
+<li>根据 <code>req.url</code> 读取不同的页面内容，返回给浏览器</li>
+</ul>
+<h2 id="MIME类型"><a href="#MIME类型" class="headerlink" title="MIME类型"></a>MIME类型</h2><ul>
+<li>MIME(Multipurpose Internet Mail Extensions)多用途Internet邮件扩展类型 是一种表示文档性质和格式的标准化方式</li>
+<li>浏览器通常使用MIME类型（而不是文件扩展名）来确定如何处理文档；因此服务器将正确的MIME类型附加到响应对象的头部是非常重要的</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_Types" target="_blank" rel="noopener">MIME 类型</a></li>
+</ul>
+<h3 id="mime模块"><a href="#mime模块" class="headerlink" title="mime模块"></a>mime模块</h3><ul>
+<li>作用：获取文件的MIME类型</li>
+<li>安装：<code>npm i mime</code></li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mime = <span class="built_in">require</span>(<span class="string">'mime'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取路径对应的MIME类型</span></span><br><span class="line">mime.getType(<span class="string">'txt'</span>)                    <span class="comment">// ⇨ 'text/plain'</span></span><br><span class="line"><span class="comment">// 根据MIME获取到文件后缀名</span></span><br><span class="line">mime.getExtension(<span class="string">'text/plain'</span>)        <span class="comment">// ⇨ 'txt'</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="url模块"><a href="#url模块" class="headerlink" title="url模块"></a>url模块</h2><ul>
+<li>说明：用于 URL 处理与解析</li>
+<li>注意：通过url拿到的查询参数都是字符串格式</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入url模块</span></span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析 URL 字符串并返回一个 URL 对象</span></span><br><span class="line"><span class="comment">// 第一个参数：表示要解析的URL字符串</span></span><br><span class="line"><span class="comment">// 第二个参数：是否将query属性（查询参数）解析为一个对象，如果为：true，则query是一个对象</span></span><br><span class="line"><span class="keyword">var</span> ret = url.parse(<span class="string">'http://localhost:3000/details?id=1&name=jack'</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="built_in">console</span>.log(ret.query) <span class="comment">// { id: '1', name: 'jack' }</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="querystring模块"><a href="#querystring模块" class="headerlink" title="querystring模块"></a>querystring模块</h2><ul>
+<li>用于解析与格式化 URL 查询字符串</li>
+<li>注意：只在专门处理查询字符串时使用</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foo=bar&abc=xyz&abc=123</span></span><br><span class="line"><span class="keyword">var</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将查询参数转化为对象</span></span><br><span class="line"><span class="comment">// 第一个参数: 要解析的 URL 查询字符串</span></span><br><span class="line">querystring.parse(<span class="string">'foo=bar&abc=xyz'</span>) <span class="comment">// { foo: 'bar', abc: 'xyz' }</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="服务端重定向"><a href="#服务端重定向" class="headerlink" title="服务端重定向"></a>服务端重定向</h2><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status" target="_blank" rel="noopener">HTTP 状态码说明</a></li>
+<li><a href="http://shuai.be/archives/301-302-redirection/" target="_blank" rel="noopener">301 和 302</a></li>
+<li>说明：服务端可以通过HTTP状态码让浏览器中的页面重定向</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res.writeHead(<span class="number">302</span>, {</span><br><span class="line">  <span class="string">'Location'</span>: <span class="string">'/'</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="POST请求参数的处理"><a href="#POST请求参数的处理" class="headerlink" title="POST请求参数的处理"></a>POST请求参数的处理</h2><ul>
+<li>说明：POST请求可以发送大量数据，没有大小限制</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接受POST参数</span></span><br><span class="line"><span class="keyword">var</span> postData = []</span><br><span class="line"></span><br><span class="line"><span class="comment">// data事件：用来接受客户端发送过来的POST请求数据</span></span><br><span class="line">req.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>{</span><br><span class="line">  postData.push(chunk)</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="comment">// end事件：当POST数据接收完毕时，触发</span></span><br><span class="line">req.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span><br><span class="line">  <span class="keyword">var</span> result = Buffer.concat(postData)</span><br><span class="line">  <span class="built_in">console</span>.log(result.toString())</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="其他模板引擎"><a href="#其他模板引擎" class="headerlink" title="其他模板引擎"></a>其他模板引擎</h2><ul>
+<li><a href="https://github.com/mde/ejs" target="_blank" rel="noopener">ejs</a></li>
+<li><a href="http://www.css88.com/doc/underscore/" target="_blank" rel="noopener">underscore</a></li>
+<li><a href="https://github.com/pugjs/pug" target="_blank" rel="noopener">jade/pug</a></li>
+<li><p><a href="https://github.com/pugjs/pug" target="_blank" rel="noopener">art-template</a></p>
+</li>
+<li><p>安装：<code>npm i ejs</code></p>
+</li>
+<li>安装：<code>npm i underscore</code></li>
+<li>安装：<code>npm i pug</code></li>
+<li>安装：<code>npm i art-template</code></li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// art-template 示例：</span></span><br><span class="line"><span class="comment">// 1. 使用模板文件</span></span><br><span class="line"><span class="keyword">var</span> html = template(<span class="string">'模板文件路径'</span>, {</span><br><span class="line">  name: <span class="string">'rose'</span>,</span><br><span class="line">  food: <span class="string">'西红柿'</span></span><br><span class="line">})</span><br><span class="line"><span class="built_in">console</span>.log(html)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 使用模板字符串</span></span><br><span class="line"><span class="keyword">var</span> render = template.compile(<span class="string">"hello: <%= name %>"<!--%=--></span>)</span><br><span class="line"><span class="keyword">var</span> ret = render({ <span class="attr">name</span>: <span class="string">'moe'</span> })</span><br><span class="line"><span class="built_in">console</span>.log(ret)</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="node-中的模块化"><a href="#node-中的模块化" class="headerlink" title="node 中的模块化"></a>node 中的模块化</h2><ul>
+<li>一个js文件就是一个模块</li>
+<li>每个模块都是一个独立的作用域</li>
+</ul>
+<h3 id="模块分类"><a href="#模块分类" class="headerlink" title="模块分类"></a>模块分类</h3><ul>
+<li>1 核心模块<ul>
+<li>由 node 本身提供，不需要单独安装（npm），可直接引入使用</li>
+</ul>
+</li>
+<li>2 第三方模块<ul>
+<li>由社区或个人提供，需要通过npm安装后使用</li>
+</ul>
+</li>
+<li>3 自定义模块<ul>
+<li>由我们自己创建，比如：app.js</li>
+</ul>
+</li>
+</ul>
+<h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><ul>
+<li>fs：文件操作模块</li>
+<li>http：网络操作模块</li>
+<li>基本使用：1 先引入  2 再使用</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h3><ul>
+<li>第三方模块是由 社区或个人 提供的</li>
+<li>比如：mime模块/art-template/jquery…</li>
+<li>基本使用：1 先通过npm下载 2 再引入 3 最后使用</li>
+</ul>
+<h3 id="用户自定义模块"><a href="#用户自定义模块" class="headerlink" title="用户自定义模块"></a>用户自定义模块</h3><ul>
+<li>由开发人员创建的模块（JS文件）</li>
+<li>基本使用：1 创建模块 2 引入模块</li>
+<li>注意：自定义模块的路径必须以<code>./</code>开头</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载模块</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./a'</span>)     <span class="comment">// 推荐使用，省略.js后缀！</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./a.js'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="模块化规范的使用"><a href="#模块化规范的使用" class="headerlink" title="模块化规范的使用"></a>模块化规范的使用</h3><ul>
+<li>1 加载模块：<code>require('fs')</code></li>
+<li>2 导出模块：<code>module.exports</code> 或 <code>exports</code></li>
+</ul>
+<h3 id="module-exports-和-exports-的关系"><a href="#module-exports-和-exports-的关系" class="headerlink" title="module.exports 和 exports 的关系"></a>module.exports 和 exports 的关系</h3><ul>
+<li>模块中默认导出：<code>module.exports</code></li>
+<li><code>exports</code> 是 <code>module.exports</code> 的引用</li>
+<li>注意：给 <code>module.exports</code> 赋值会切断与 <code>exports</code> 之间的联系<ul>
+<li>1 直接添加属性两者皆可</li>
+<li>2 赋值操作时，只能使用 <code>module.exports</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="built_in">module</span>.exports === exports ) <span class="comment">// ==> true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价操作</span></span><br><span class="line"><span class="built_in">module</span>.exports.num = <span class="number">123</span></span><br><span class="line">exports.num = <span class="number">123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值操作：不要使用 exports = {}</span></span><br><span class="line"><span class="built_in">module</span>.exports = {}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="第三方模块（以mime包为例）"><a href="#第三方模块（以mime包为例）" class="headerlink" title="第三方模块（以mime包为例）"></a>第三方模块（以mime包为例）</h3><ul>
+<li>先基于当前文件模块所属目录找 node_modules 目录</li>
+<li>如果找到，则去该目录中找 mime 目录</li>
+<li>如果找到 mime 目录，则找该目录中的 package.json 文件</li>
+<li>如果找到 package.json 文件，则找该文件中的 main 属性</li>
+<li>如果找到 main 属性，则拿到该属性对应的文件路径</li>
+<li>如果找到 mime 目录之后<ul>
+<li>发现没有 package.json</li>
+<li>或者 有 package.json 没有 main 属性</li>
+<li>或者 有 main 属性，但是指向的路径不存在</li>
+<li>则 node 会默认去看一下 mime 目录中有没有 index.js index.node index.json 文件</li>
+</ul>
+</li>
+<li>如果找不到 index 或者找不到 mime 或者找不到 node_modules</li>
+<li>则进入上一级目录找 node_moudles 查找规则同上</li>
+<li>如果上一级还找不到，继续向上，一直到当前文件所属磁盘根目录</li>
+<li>如果最后到磁盘根目录还找不到，最后报错：<code>can not find module xxx</code></li>
+</ul>
+<h3 id="CommonJS-规范参考文档"><a href="#CommonJS-规范参考文档" class="headerlink" title="CommonJS 规范参考文档"></a>CommonJS 规范参考文档</h3><ul>
+<li><a href="http://nodejs.cn/api/modules.html" target="_blank" rel="noopener">module (模块)</a></li>
+<li><a href="http://javascript.ruanyifeng.com/nodejs/module.html" target="_blank" rel="noopener">CommonJS规范</a></li>
+<li><a href="http://www.jianshu.com/p/09ffac7a3b2c" target="_blank" rel="noopener">浅析JS模块规范：AMD，CMD，CommonJS</a></li>
+</ul>
+<h2 id="npm-Node包管理工具"><a href="#npm-Node包管理工具" class="headerlink" title="npm - Node包管理工具"></a>npm - Node包管理工具</h2><ul>
+<li>node package manager</li>
+<li><a href="https://npmjs.com" target="_blank" rel="noopener">npm官网</a></li>
+</ul>
+<blockquote>
+<p>npm is the package manager for JavaScript and the world’s largest software registry. Discover packages of reusable code — and assemble them in powerful new ways.</p>
+</blockquote>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm 是JavaScript的包管理工具，并且是全球最大的软件登记处</span><br><span class="line">发现可重用代码的包 - 并以强有力的新方式进行组装。</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>理解：通过<code>npm</code>来快速安装开发中使用的包</li>
+<li>只要安装了node.exe，那么就可以使用npm了</li>
+</ul>
+<h3 id="npm的基本使用"><a href="#npm的基本使用" class="headerlink" title="npm的基本使用"></a>npm的基本使用</h3><ul>
+<li>1 初始化package.json文件：<code>npm init -y</code></li>
+<li>2 安装项目中用到的包：<code>npm install 包名称 --save</code></li>
+</ul>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><ul>
+<li>概述：包（项目）描述文件，用来管理组织一个包（项目），它是一个纯JSON格式的<ul>
+<li>包描述文件：描述自己、描述自己对别人的依赖关系</li>
+</ul>
+</li>
+<li>初始化npm配置文件：<code>npm init</code> 或 <code>npm init -y</code>快速生成</li>
+<li><p>作用：不用拷贝项目依赖项，只需要使用<code>package.json</code>，通过<code>npm i</code>就可以安装项目所有依赖项</p>
+</li>
+<li><p>命令：<code>npm i</code>安装项目所有的依赖项（包括开发依赖）</p>
+</li>
+<li>命令：<code>npm i --production</code>安装项目依赖项（不包括开发依赖）</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li>安装包：<code>npm install 包名称</code>，简写：<code>npm i 包名称</code></li>
+<li>安装指定版本的包：<code>npm install 包名称@版本号</code></li>
+<li>全局安装：<code>npm i -g nodemon</code> （-g 是 –global的简写）</li>
+<li>项目依赖安装：<code>npm i -S jquery</code> （-S 是 –save的简写）<ul>
+<li><code>--save</code>或<code>-S</code>的作用: 往 package.json 中的dependencies里面添加包,但是现在已经不需要了, 只要安装包, 就会自动往 dependencies 写配置项</li>
+<li><code>npm i jquery</code> 相当于: <code>npm i -S jquery</code> 相当于: <code>npm install jquery --save</code></li>
+</ul>
+</li>
+<li>项目开发依赖安装：<code>npm i -D less</code>（仅在开发期间使用，上线的项目中不会用到）<ul>
+<li><code>-D</code>是：<code>--save-dev</code>的简写</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h3><ul>
+<li>查看版本：<code>npm -v</code></li>
+<li>删除包：<code>npm uni 包名称 -S</code></li>
+</ul>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">解决包下载错误问题的方式：</span><br><span class="line"></span><br><span class="line">1 将 C:\Users\当前登录用户\AppData\Roaming 目录中的 npm-cache 文件夹删除，然后，再重新下载包，一般就不会有问题了</span><br><span class="line">2 npm cache clean --force</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="本地安装和全局安装"><a href="#本地安装和全局安装" class="headerlink" title="本地安装和全局安装"></a>本地安装和全局安装</h3><ul>
+<li>全局安装的意义：只是为了可以当做命令行使用而已，即：在任意目录中都可以使用某个命令</li>
+</ul>
+<h3 id="npm的常用命令"><a href="#npm的常用命令" class="headerlink" title="npm的常用命令"></a>npm的常用命令</h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 全局安装( 只要安装一次 )</span><br><span class="line">  npm i -g less / npm i less -g</span><br><span class="line"></span><br><span class="line">2 本地安装( 随着项目走, 一个项目安装一次 )</span><br><span class="line">  npm i jquery    表示作为项目依赖安装, 不管开发期间还是线上代码, 都要用到这个包</span><br><span class="line">  npm i -D less   -D 表示这个包只在开发期间使用, 线上的代码是不会用到这个包的</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="npm下载加速"><a href="#npm下载加速" class="headerlink" title="npm下载加速"></a>npm下载加速</h2><h3 id="淘宝镜像和cnpm"><a href="#淘宝镜像和cnpm" class="headerlink" title="淘宝镜像和cnpm"></a>淘宝镜像和cnpm</h3><ul>
+<li><a href="http://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a></li>
+<li>安装：<code>npm i cnpm -g --registry=https://registry.npm.taobao.org</code></li>
+</ul>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置淘宝镜像</span></span><br><span class="line">npm config set registry https://registry.npm.taobao.org --global</span><br><span class="line">npm config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="前端渲染和后端渲染"><a href="#前端渲染和后端渲染" class="headerlink" title="前端渲染和后端渲染"></a>前端渲染和后端渲染</h2><ul>
+<li>前端渲染：前台页面ajax请求，获取后端数据，通过拼接字符串或者模板引擎将数据组装为HTML，并展示给用户</li>
+<li>后端渲染：也叫后端直出，由后台拿到数据并且渲染页面，然后，将拼接好的html结构返回给浏览器</li>
+</ul>
+<h3 id="前后端合作开发模式"><a href="#前后端合作开发模式" class="headerlink" title="前后端合作开发模式"></a>前后端合作开发模式</h3><ul>
+<li>1 前后端混合开发<ul>
+<li>套模板：前端写好静态页面，后端将静态页面修改为后端可以使用的模板页面，并渲染页面</li>
+<li>劣势：后端等前端把页面写好（后端依赖于前端）</li>
+</ul>
+</li>
+<li>2 前后端半混合开发<ul>
+<li>前端写好页面，一部分由后端渲染，一部分由前端渲染</li>
+<li>哪部分适合后端渲染？首页（ 首屏加载时间，衡量网站性能的重要标准，网络请求尽可能少 ）</li>
+<li>哪部分适合前端渲染？首页下面的列表页，当滚动到某个位置的时候，才会加载这块内容，所以，这些内容是适合做前端渲染的</li>
+</ul>
+</li>
+<li>3 前后端分离（职责的分离）<ul>
+<li>前端写好页面，并渲染数据，后端只提供数据接口</li>
+<li>也可以使用后端渲染</li>
+<li>mock 假数据</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我吃个糖果!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/weixin.png" alt="一昂杨丶 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zhifubao.png" alt="一昂杨丶 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nodeJS/" rel="tag"><i class="fa fa-tag"></i> nodeJS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/08/手机端常用知识/" rel="next" title="手机端常用知识">
+                <i class="fa fa-chevron-left"></i> 手机端常用知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/08/mongodb/" rel="prev" title="mongodb">
+                mongodb <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/touxiang.png" alt="一昂杨丶">
+            
+              <p class="site-author-name" itemprop="name">一昂杨丶</p>
+              <p class="site-description motion-element" itemprop="description">山中何事？松花酿酒，春水煎茶。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/GuoweiYangGitHub" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/weixin_43232488" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-address-book"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/yi-ang-yang-62-77/activities" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:blakeyang0707@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/bloke51891047" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/blake.yang.144" target="_blank" title="FB Page">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://lanmaom.com" title="lanmaom" target="_blank">lanmaom</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#官方介绍"><span class="nav-number">1.</span> <span class="nav-text">官方介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解Node"><span class="nav-number">1.1.</span> <span class="nav-text">理解Node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">1.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#能做什么"><span class="nav-number">1.3.</span> <span class="nav-text">能做什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他参考资料"><span class="nav-number">1.4.</span> <span class="nav-text">其他参考资料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web开发本质"><span class="nav-number">2.</span> <span class="nav-text">Web开发本质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node"><span class="nav-number">3.</span> <span class="nav-text">安装Node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-初体验"><span class="nav-number">4.</span> <span class="nav-text">nodejs 初体验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS-你好"><span class="nav-number">5.</span> <span class="nav-text">NodeJS 你好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS-文件操作"><span class="nav-number">6.</span> <span class="nav-text">NodeJS 文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路径说明"><span class="nav-number">7.</span> <span class="nav-text">路径说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#path-模块"><span class="nav-number">7.1.</span> <span class="nav-text">path 模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NodeJS-与-错误处理"><span class="nav-number">8.</span> <span class="nav-text">NodeJS 与 错误处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步API错误处理"><span class="nav-number">8.1.</span> <span class="nav-text">异步API错误处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建HTTP服务-请求处理响应"><span class="nav-number">9.</span> <span class="nav-text">构建HTTP服务 - 请求处理响应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本服务器"><span class="nav-number">9.1.</span> <span class="nav-text">基本服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建HTTP服务器说明"><span class="nav-number">9.2.</span> <span class="nav-text">创建HTTP服务器说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#response对象API"><span class="nav-number">9.3.</span> <span class="nav-text">response对象API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境变量"><span class="nav-number">10.</span> <span class="nav-text">环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量添加的两种方式"><span class="nav-number">10.1.</span> <span class="nav-text">环境变量添加的两种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入命令执行过程"><span class="nav-number">10.2.</span> <span class="nav-text">输入命令执行过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#REPL介绍"><span class="nav-number">11.</span> <span class="nav-text">REPL介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Buffer和字符编码"><span class="nav-number">11.1.</span> <span class="nav-text">Buffer和字符编码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据不同请求输出不同响应数据"><span class="nav-number">12.</span> <span class="nav-text">根据不同请求输出不同响应数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器响应文件"><span class="nav-number">13.</span> <span class="nav-text">服务器响应文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟Apache服务器"><span class="nav-number">14.</span> <span class="nav-text">模拟Apache服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MIME类型"><span class="nav-number">15.</span> <span class="nav-text">MIME类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mime模块"><span class="nav-number">15.1.</span> <span class="nav-text">mime模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url模块"><span class="nav-number">16.</span> <span class="nav-text">url模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#querystring模块"><span class="nav-number">17.</span> <span class="nav-text">querystring模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端重定向"><span class="nav-number">18.</span> <span class="nav-text">服务端重定向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POST请求参数的处理"><span class="nav-number">19.</span> <span class="nav-text">POST请求参数的处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他模板引擎"><span class="nav-number">20.</span> <span class="nav-text">其他模板引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node-中的模块化"><span class="nav-number">21.</span> <span class="nav-text">node 中的模块化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块分类"><span class="nav-number">21.1.</span> <span class="nav-text">模块分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心模块"><span class="nav-number">21.2.</span> <span class="nav-text">核心模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方模块"><span class="nav-number">21.3.</span> <span class="nav-text">第三方模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户自定义模块"><span class="nav-number">21.4.</span> <span class="nav-text">用户自定义模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块化规范的使用"><span class="nav-number">21.5.</span> <span class="nav-text">模块化规范的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#module-exports-和-exports-的关系"><span class="nav-number">21.6.</span> <span class="nav-text">module.exports 和 exports 的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方模块（以mime包为例）"><span class="nav-number">21.7.</span> <span class="nav-text">第三方模块（以mime包为例）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CommonJS-规范参考文档"><span class="nav-number">21.8.</span> <span class="nav-text">CommonJS 规范参考文档</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-Node包管理工具"><span class="nav-number">22.</span> <span class="nav-text">npm - Node包管理工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm的基本使用"><span class="nav-number">22.1.</span> <span class="nav-text">npm的基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json"><span class="nav-number">22.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">22.3.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他操作"><span class="nav-number">22.4.</span> <span class="nav-text">其他操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地安装和全局安装"><span class="nav-number">22.5.</span> <span class="nav-text">本地安装和全局安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm的常用命令"><span class="nav-number">22.6.</span> <span class="nav-text">npm的常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm下载加速"><span class="nav-number">23.</span> <span class="nav-text">npm下载加速</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#淘宝镜像和cnpm"><span class="nav-number">23.1.</span> <span class="nav-text">淘宝镜像和cnpm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端渲染和后端渲染"><span class="nav-number">24.</span> <span class="nav-text">前端渲染和后端渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前后端合作开发模式"><span class="nav-number">24.1.</span> <span class="nav-text">前后端合作开发模式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">© <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">copyright 2018-2019 一昂杨 All Rights Reserved</span>
+
+  
+    <br>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count:</span>
+    
+    <span title="Site words total count">73.4k</span>
+  
+  <div class="powered-by">
+    <i class="fa fa-user-md"></i>
+    <div id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span></div>
+  </div>
+  <div>
+    <a target="_blank" href="https://beian.miit.gov.cn/" id="busuanzi_container_site_uv">备案号:<span id="busuanzi_value_site_uv">鄂ICP备2022009490号</span></a>
+  </div>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'K16X3PL6vSaVKOIQPoDKrxNA-9Nh9j0Va',
+        appKey: 'Ilwkq39AXIYj0D3KlTeOGIgx',
+        placeholder: '各位道友,请举手发言',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("KANTsahXvPqO2PJEnY9sTxeo-9Nh9j0Va", "I8UOBt7crsmds5pLkGEmpeCj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
