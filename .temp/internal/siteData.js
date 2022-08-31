@@ -16,11 +16,54 @@ export const siteData = {
   ],
   "pages": [
     {
+      "title": "Home",
+      "frontmatter": {
+        "sidebar": false,
+        "subSidebar": false,
+        "home": true,
+        "bgImage": "https://clouds.guowei.link/blog/1.jpg",
+        "bgImageStyle": {
+          "color": "#fff",
+          "height": "950px"
+        },
+        "heroText": "不露声色丶",
+        "tagline": "山中何事？松花酿酒，春水煎茶。",
+        "features": [
+          {
+            "title": "笔记",
+            "details": "常用的一些笔记整理。"
+          },
+          {
+            "title": "面试题",
+            "details": "整理面试题。"
+          },
+          {
+            "title": "服务器",
+            "details": "服务器相关的一些配置。"
+          },
+          {
+            "title": "常用mac",
+            "details": "常见的mac"
+          },
+          {
+            "title": "typescript学习",
+            "details": "typescript学习笔记"
+          }
+        ]
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-0518d228",
+      "path": "/",
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
       "title": "快来记笔记咯~",
       "frontmatter": {},
       "regularPath": "/mac/command.html",
       "relativePath": "mac/command.md",
-      "key": "v-522e5e16",
+      "key": "v-0e098942",
       "path": "/mac/command.html",
       "headers": [
         {
@@ -74,137 +117,284 @@ export const siteData = {
           "slug": "证书无效的问题"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "Home",
-      "frontmatter": {
-        "sidebar": false,
-        "subSidebar": false,
-        "home": true,
-        "bgImage": "https://clouds.guowei.link/blog/1.jpg",
-        "bgImageStyle": {
-          "color": "#fff",
-          "height": "950px"
-        },
-        "heroText": "不露声色丶",
-        "tagline": "山中何事？松花酿酒，春水煎茶。",
-        "features": [
-          {
-            "title": "笔记",
-            "details": "常用的一些笔记整理。"
-          },
-          {
-            "title": "面试题",
-            "details": "整理面试题。"
-          },
-          {
-            "title": "服务器",
-            "details": "服务器相关的一些配置。"
-          },
-          {
-            "title": "常用mac",
-            "details": "常见的mac"
-          },
-          {
-            "title": "typescript学习",
-            "details": "typescript学习笔记"
-          }
-        ]
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-01c55ff6",
-      "path": "/",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "笔记",
       "frontmatter": {},
       "regularPath": "/notes/",
       "relativePath": "notes/README.md",
-      "key": "v-6781f1a1",
+      "key": "v-6293c796",
       "path": "/notes/",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "headers": [
+        {
+          "level": 2,
+          "title": "JavaScript有几种数据类型？",
+          "slug": "javascript有几种数据类型"
+        },
+        {
+          "level": 2,
+          "title": "深拷贝与浅拷贝的区别？",
+          "slug": "深拷贝与浅拷贝的区别"
+        },
+        {
+          "level": 2,
+          "title": "闭包是什么？",
+          "slug": "闭包是什么"
+        },
+        {
+          "level": 2,
+          "title": "什么是变量提升？函数提升？",
+          "slug": "什么是变量提升-函数提升"
+        },
+        {
+          "level": 2,
+          "title": "isNaN 与 Number.isNaN的区别?",
+          "slug": "isnan-与-number-isnan的区别"
+        },
+        {
+          "level": 2,
+          "title": "解决遍历对象时，把原型上的属性遍历出来了咋办？",
+          "slug": "解决遍历对象时-把原型上的属性遍历出来了咋办"
+        },
+        {
+          "level": 2,
+          "title": "valueOf 与 toString",
+          "slug": "valueof-与-tostring"
+        },
+        {
+          "level": 3,
+          "title": "调用valueOf",
+          "slug": "调用valueof"
+        },
+        {
+          "level": 3,
+          "title": "调用toString",
+          "slug": "调用tostring"
+        },
+        {
+          "level": 2,
+          "title": "JavaScript变量在内存中具体存储形式？",
+          "slug": "javascript变量在内存中具体存储形式"
+        },
+        {
+          "level": 2,
+          "title": "JavaScript的装箱和拆箱？",
+          "slug": "javascript的装箱和拆箱"
+        },
+        {
+          "level": 3,
+          "title": "装箱：把基本数据类型转化为对应的引用数据类型的操作",
+          "slug": "装箱-把基本数据类型转化为对应的引用数据类型的操作"
+        },
+        {
+          "level": 3,
+          "title": "拆箱：将引用数据类型转化为对应的基本数据类型的操作",
+          "slug": "拆箱-将引用数据类型转化为对应的基本数据类型的操作"
+        },
+        {
+          "level": 2,
+          "title": "null和undefined的异同点有哪些？",
+          "slug": "null和undefined的异同点有哪些"
+        },
+        {
+          "level": 2,
+          "title": "如何判断数据类型？",
+          "slug": "如何判断数据类型"
+        },
+        {
+          "level": 2,
+          "title": "为什么typeof null 是object？",
+          "slug": "为什么typeof-null-是object"
+        },
+        {
+          "level": 2,
+          "title": "== 与 === 的区别？",
+          "slug": "与-的区别"
+        },
+        {
+          "level": 2,
+          "title": "JavaScript的隐式转换规则？",
+          "slug": "javascript的隐式转换规则"
+        },
+        {
+          "level": 2,
+          "title": "双等号左右两边的转换规则？",
+          "slug": "双等号左右两边的转换规则"
+        },
+        {
+          "level": 2,
+          "title": "undefined >= undefined 为什么是 false ？",
+          "slug": "undefined-undefined-为什么是-false"
+        },
+        {
+          "level": 2,
+          "title": "null >= null 为什么是 true？",
+          "slug": "null-null-为什么是-true"
+        },
+        {
+          "level": 2,
+          "title": "[] == ![] 为什么是 true ？",
+          "slug": "为什么是-true"
+        },
+        {
+          "level": 2,
+          "title": "0.1 + 0.2 === 0.3，对吗？",
+          "slug": "_0-1-0-2-0-3-对吗"
+        },
+        {
+          "level": 2,
+          "title": "什么是匿名函数？",
+          "slug": "什么是匿名函数"
+        },
+        {
+          "level": 2,
+          "title": "绑定点击事件有几种方式？",
+          "slug": "绑定点击事件有几种方式"
+        },
+        {
+          "level": 3,
+          "title": "addEventListener的第三个参数是干嘛的？",
+          "slug": "addeventlistener的第三个参数是干嘛的"
+        },
+        {
+          "level": 2,
+          "title": "函数声明和函数表达式的区别？",
+          "slug": "函数声明和函数表达式的区别"
+        },
+        {
+          "level": 2,
+          "title": "JavaScript的事件流模型有哪些？",
+          "slug": "javascript的事件流模型有哪些"
+        },
+        {
+          "level": 2,
+          "title": "Ajax、Axios、Fetch有啥区别？",
+          "slug": "ajax、axios、fetch有啥区别"
+        },
+        {
+          "level": 2,
+          "title": "load、$(document).ready、DOMContentLoaded的区别？",
+          "slug": "load、-document-ready、domcontentloaded的区别"
+        },
+        {
+          "level": 2,
+          "title": "如何阻止事件冒泡？",
+          "slug": "如何阻止事件冒泡"
+        },
+        {
+          "level": 2,
+          "title": "如何阻止事件默认行为？",
+          "slug": "如何阻止事件默认行为"
+        },
+        {
+          "level": 2,
+          "title": "什么是事件委托？",
+          "slug": "什么是事件委托"
+        },
+        {
+          "level": 2,
+          "title": "如何实现数组去重？",
+          "slug": "如何实现数组去重"
+        },
+        {
+          "level": 2,
+          "title": "NaN是什么？有什么特点？",
+          "slug": "nan是什么-有什么特点"
+        },
+        {
+          "level": 2,
+          "title": "处理异步的方法有哪些？",
+          "slug": "处理异步的方法有哪些"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "快来记笔记咯~",
+      "frontmatter": {},
+      "regularPath": "/mac/",
+      "relativePath": "mac/README.md",
+      "key": "v-5e93add9",
+      "path": "/mac/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "快捷键",
+          "slug": "快捷键"
+        },
+        {
+          "level": 2,
+          "title": "使用 mac 的前端常见问题",
+          "slug": "使用-mac-的前端常见问题"
+        },
+        {
+          "level": 3,
+          "title": "node_modules 依赖 包下载不下来",
+          "slug": "node-modules-依赖-包下载不下来"
+        },
+        {
+          "level": 3,
+          "title": "拷贝别人的 node_modules 的时候代码提交不了",
+          "slug": "拷贝别人的-node-modules-的时候代码提交不了"
+        },
+        {
+          "level": 3,
+          "title": "报 node-sass 问题",
+          "slug": "报-node-sass-问题"
+        },
+        {
+          "level": 3,
+          "title": "使用的 vue-cli 版本太低，使用 vue 官方推荐桥接工具",
+          "slug": "使用的-vue-cli-版本太低-使用-vue-官方推荐桥接工具"
+        },
+        {
+          "level": 3,
+          "title": "别人已经删除的远程分支，还能在本地看到",
+          "slug": "别人已经删除的远程分支-还能在本地看到"
+        },
+        {
+          "level": 3,
+          "title": "Mac 全局命令",
+          "slug": "mac-全局命令"
+        },
+        {
+          "level": 3,
+          "title": "vuejs Mac 环境下 npm run serve 时报错 Permission denied",
+          "slug": "vuejs-mac-环境下-npm-run-serve-时报错-permission-denied"
+        },
+        {
+          "level": 3,
+          "title": "证书无效的问题",
+          "slug": "证书无效的问题"
+        },
+        {
+          "level": 3,
+          "title": "Mac下载gh命令",
+          "slug": "mac下载gh命令"
+        }
+      ],
+      "lastUpdated": "2022/8/31 21:08:19",
+      "lastUpdatedTimestamp": 1661951299000
     },
     {
       "title": "常用的css类",
       "frontmatter": {},
       "regularPath": "/notes/css/",
       "relativePath": "notes/css/README.md",
-      "key": "v-7a345a8e",
+      "key": "v-42795e0c",
       "path": "/notes/css/",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "移动端兼容性问题",
-      "frontmatter": {},
-      "regularPath": "/notes/css/compatibility.html",
-      "relativePath": "notes/css/compatibility.md",
-      "key": "v-327cff14",
-      "path": "/notes/css/compatibility.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "解决小程序图片闪动变形问题",
-          "slug": "解决小程序图片闪动变形问题"
-        },
-        {
-          "level": 2,
-          "title": "解决移动端 1px问题",
-          "slug": "解决移动端-1px问题"
-        },
-        {
-          "level": 2,
-          "title": "手机端表单元素的默认外观重置",
-          "slug": "手机端表单元素的默认外观重置"
-        }
-      ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
-    },
-    {
-      "title": "布局类",
-      "frontmatter": {},
-      "regularPath": "/notes/css/layout.html",
-      "relativePath": "notes/css/layout.md",
-      "key": "v-b63f54cc",
-      "path": "/notes/css/layout.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "两边固定中间自适应",
-          "slug": "两边固定中间自适应"
-        },
-        {
-          "level": 3,
-          "title": "使用flex布局",
-          "slug": "使用flex布局"
-        },
-        {
-          "level": 3,
-          "title": "使用定位",
-          "slug": "使用定位"
-        },
-        {
-          "level": 3,
-          "title": "使用浮动",
-          "slug": "使用浮动"
-        }
-      ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "开发中常用样式",
       "frontmatter": {},
       "regularPath": "/notes/css/commonUsed.html",
       "relativePath": "notes/css/commonUsed.md",
-      "key": "v-059000de",
+      "key": "v-dba59e06",
       "path": "/notes/css/commonUsed.html",
       "headers": [
         {
@@ -308,37 +498,42 @@ export const siteData = {
           "slug": "点击穿透"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "提交远程仓库的操作",
+      "title": "移动端兼容性问题",
       "frontmatter": {},
-      "regularPath": "/notes/git/git-range.html",
-      "relativePath": "notes/git/git-range.md",
-      "key": "v-7d3b16d4",
-      "path": "/notes/git/git-range.html",
+      "regularPath": "/notes/css/compatibility.html",
+      "relativePath": "notes/css/compatibility.md",
+      "key": "v-5c9bdd55",
+      "path": "/notes/css/compatibility.html",
       "headers": [
         {
-          "level": 3,
-          "title": "如果没有配置秘钥",
-          "slug": "如果没有配置秘钥"
+          "level": 2,
+          "title": "解决小程序图片闪动变形问题",
+          "slug": "解决小程序图片闪动变形问题"
         },
         {
-          "level": 3,
-          "title": "基础操作",
-          "slug": "基础操作"
+          "level": 2,
+          "title": "解决移动端 1px问题",
+          "slug": "解决移动端-1px问题"
+        },
+        {
+          "level": 2,
+          "title": "手机端表单元素的默认外观重置",
+          "slug": "手机端表单元素的默认外观重置"
         }
       ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "本地操作",
       "frontmatter": {},
       "regularPath": "/notes/git/git-local.html",
       "relativePath": "notes/git/git-local.md",
-      "key": "v-31ff3056",
+      "key": "v-6217dc35",
       "path": "/notes/git/git-local.html",
       "headers": [
         {
@@ -367,15 +562,69 @@ export const siteData = {
           "slug": "别人已经删除的远程分支-还能在本地看到时候"
         }
       ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "布局类",
+      "frontmatter": {},
+      "regularPath": "/notes/css/layout.html",
+      "relativePath": "notes/css/layout.md",
+      "key": "v-5f39d68e",
+      "path": "/notes/css/layout.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "两边固定中间自适应",
+          "slug": "两边固定中间自适应"
+        },
+        {
+          "level": 3,
+          "title": "使用flex布局",
+          "slug": "使用flex布局"
+        },
+        {
+          "level": 3,
+          "title": "使用定位",
+          "slug": "使用定位"
+        },
+        {
+          "level": 3,
+          "title": "使用浮动",
+          "slug": "使用浮动"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "提交远程仓库的操作",
+      "frontmatter": {},
+      "regularPath": "/notes/git/git-range.html",
+      "relativePath": "notes/git/git-range.md",
+      "key": "v-1d09bf16",
+      "path": "/notes/git/git-range.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "如果没有配置秘钥",
+          "slug": "如果没有配置秘钥"
+        },
+        {
+          "level": 3,
+          "title": "基础操作",
+          "slug": "基础操作"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "git配置ssh",
       "frontmatter": {},
       "regularPath": "/notes/git/git-ssh.html",
       "relativePath": "notes/git/git-ssh.md",
-      "key": "v-450a5176",
+      "key": "v-ca4c7656",
       "path": "/notes/git/git-ssh.html",
       "headers": [
         {
@@ -409,15 +658,123 @@ export const siteData = {
           "slug": "测试服务是否通"
         }
       ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "JS 引擎工作原理",
+      "frontmatter": {},
+      "regularPath": "/notes/js/designMode/model.html",
+      "relativePath": "notes/js/designMode/model.md",
+      "key": "v-7dd70c3c",
+      "path": "/notes/js/designMode/model.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "JS 引擎工作原理",
+          "slug": "js-引擎工作原理"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "Set",
+      "frontmatter": {},
+      "regularPath": "/notes/js/setmap.html",
+      "relativePath": "notes/js/setmap.md",
+      "key": "v-26010162",
+      "path": "/notes/js/setmap.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Set",
+          "slug": "set"
+        },
+        {
+          "level": 2,
+          "title": "Map",
+          "slug": "map"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "Git 不常用功能",
+      "frontmatter": {},
+      "regularPath": "/notes/git/git-other.html",
+      "relativePath": "notes/git/git-other.md",
+      "key": "v-e1c6bc56",
+      "path": "/notes/git/git-other.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "字符集编码设置(防止中文乱码)",
+          "slug": "字符集编码设置-防止中文乱码"
+        },
+        {
+          "level": 2,
+          "title": "git不自动转换换行符",
+          "slug": "git不自动转换换行符"
+        },
+        {
+          "level": 2,
+          "title": "git设置会检测文件名大小写",
+          "slug": "git设置会检测文件名大小写"
+        },
+        {
+          "level": 2,
+          "title": "更改git仓库访问用户名和密码",
+          "slug": "更改git仓库访问用户名和密码"
+        },
+        {
+          "level": 2,
+          "title": "git 右键突然消失解决办法",
+          "slug": "git-右键突然消失解决办法"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "npm 操作",
+      "frontmatter": {},
+      "regularPath": "/notes/others/npm.html",
+      "relativePath": "notes/others/npm.md",
+      "key": "v-6a91283e",
+      "path": "/notes/others/npm.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "清除npm缓存",
+          "slug": "清除npm缓存"
+        },
+        {
+          "level": 2,
+          "title": "全局命令查看",
+          "slug": "全局命令查看"
+        },
+        {
+          "level": 2,
+          "title": "npm源",
+          "slug": "npm源"
+        },
+        {
+          "level": 2,
+          "title": "发布npm包",
+          "slug": "发布npm包"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "JavaScript 中的设计模式",
       "frontmatter": {},
       "regularPath": "/notes/js/designMode/pattern.html",
       "relativePath": "notes/js/designMode/pattern.md",
-      "key": "v-ac31fc14",
+      "key": "v-55ce5002",
       "path": "/notes/js/designMode/pattern.html",
       "headers": [
         {
@@ -516,122 +873,114 @@ export const siteData = {
           "slug": "设计原则和技巧"
         }
       ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "JS 引擎工作原理",
-      "frontmatter": {},
-      "regularPath": "/notes/js/designMode/model.html",
-      "relativePath": "notes/js/designMode/model.md",
-      "key": "v-12c77454",
-      "path": "/notes/js/designMode/model.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "JS 引擎工作原理",
-          "slug": "js-引擎工作原理"
-        }
-      ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
-    },
-    {
+      "title": "vue3 笔记",
       "frontmatter": {},
       "regularPath": "/notes/vue/vue.html",
       "relativePath": "notes/vue/vue.md",
-      "key": "v-01ccbed6",
+      "key": "v-39990135",
       "path": "/notes/vue/vue.html",
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
-    },
-    {
-      "title": "Set",
-      "frontmatter": {},
-      "regularPath": "/notes/js/setmap.html",
-      "relativePath": "notes/js/setmap.md",
-      "key": "v-45587bf6",
-      "path": "/notes/js/setmap.html",
       "headers": [
         {
           "level": 2,
-          "title": "Set",
-          "slug": "set"
+          "title": "生命周期",
+          "slug": "生命周期"
         },
         {
           "level": 2,
-          "title": "Map",
-          "slug": "map"
+          "title": "reactive",
+          "slug": "reactive"
+        },
+        {
+          "level": 3,
+          "title": "赋值方式",
+          "slug": "赋值方式"
+        },
+        {
+          "level": 3,
+          "title": "删除属性",
+          "slug": "删除属性"
+        },
+        {
+          "level": 2,
+          "title": "ref",
+          "slug": "ref"
+        },
+        {
+          "level": 3,
+          "title": "赋值方式",
+          "slug": "赋值方式-2"
+        },
+        {
+          "level": 3,
+          "title": "删除属性",
+          "slug": "删除属性-2"
+        },
+        {
+          "level": 2,
+          "title": "style v-bind 形式",
+          "slug": "style-v-bind-形式"
+        },
+        {
+          "level": 2,
+          "title": "vue script-setup形式",
+          "slug": "vue-script-setup形式"
+        },
+        {
+          "level": 3,
+          "title": "为 props 提供默认值",
+          "slug": "为-props-提供默认值"
+        },
+        {
+          "level": 3,
+          "title": "配置全局自定义参数",
+          "slug": "配置全局自定义参数"
+        },
+        {
+          "level": 3,
+          "title": "v-model 变化",
+          "slug": "v-model-变化"
+        },
+        {
+          "level": 3,
+          "title": "script-setup 模式下获取路由参数",
+          "slug": "script-setup-模式下获取路由参数"
         }
       ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "表单传输类型",
+      "title": "小程序兼容性问题",
       "frontmatter": {},
-      "regularPath": "/notes/others/contentType.html",
-      "relativePath": "notes/others/contentType.md",
-      "key": "v-2c3afe78",
-      "path": "/notes/others/contentType.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "表单形式",
-          "slug": "表单形式"
-        },
-        {
-          "level": 3,
-          "title": "json形式",
-          "slug": "json形式"
-        },
-        {
-          "level": 3,
-          "title": "form-data形式",
-          "slug": "form-data形式"
-        }
-      ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
-    },
-    {
-      "title": "npm 操作",
-      "frontmatter": {},
-      "regularPath": "/notes/others/npm.html",
-      "relativePath": "notes/others/npm.md",
-      "key": "v-4ca4bc48",
-      "path": "/notes/others/npm.html",
+      "regularPath": "/notes/wxapp/compatibility.html",
+      "relativePath": "notes/wxapp/compatibility.md",
+      "key": "v-650fc7f5",
+      "path": "/notes/wxapp/compatibility.html",
       "headers": [
         {
           "level": 2,
-          "title": "清除npm缓存",
-          "slug": "清除npm缓存"
+          "title": "解决小程序图片闪动变形问题",
+          "slug": "解决小程序图片闪动变形问题"
         },
         {
           "level": 2,
-          "title": "全局命令查看",
-          "slug": "全局命令查看"
-        },
-        {
-          "level": 2,
-          "title": "npm源",
-          "slug": "npm源"
-        },
-        {
-          "level": 2,
-          "title": "发布npm包",
-          "slug": "发布npm包"
+          "title": "showLoading 展示问题",
+          "slug": "showloading-展示问题"
         }
       ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "基础",
       "frontmatter": {},
       "regularPath": "/notes/wxapp/basics.html",
       "relativePath": "notes/wxapp/basics.md",
-      "key": "v-2ed6c15e",
+      "key": "v-c3e12c86",
       "path": "/notes/wxapp/basics.html",
       "headers": [
         {
@@ -730,37 +1079,42 @@ export const siteData = {
           "slug": "小程序分栏模式"
         }
       ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "小程序兼容性问题",
+      "title": "表单传输类型",
       "frontmatter": {},
-      "regularPath": "/notes/wxapp/compatibility.html",
-      "relativePath": "notes/wxapp/compatibility.md",
-      "key": "v-bc9e9c54",
-      "path": "/notes/wxapp/compatibility.html",
+      "regularPath": "/notes/others/contentType.html",
+      "relativePath": "notes/others/contentType.md",
+      "key": "v-cad547de",
+      "path": "/notes/others/contentType.html",
       "headers": [
         {
-          "level": 2,
-          "title": "解决小程序图片闪动变形问题",
-          "slug": "解决小程序图片闪动变形问题"
+          "level": 3,
+          "title": "表单形式",
+          "slug": "表单形式"
         },
         {
-          "level": 2,
-          "title": "showLoading 展示问题",
-          "slug": "showloading-展示问题"
+          "level": 3,
+          "title": "json形式",
+          "slug": "json形式"
+        },
+        {
+          "level": 3,
+          "title": "form-data形式",
+          "slug": "form-data形式"
         }
       ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "小程序中的扫码",
       "frontmatter": {},
       "regularPath": "/notes/wxapp/scan.html",
       "relativePath": "notes/wxapp/scan.md",
-      "key": "v-88ec4b24",
+      "key": "v-14eb8a4d",
       "path": "/notes/wxapp/scan.html",
       "headers": [
         {
@@ -779,15 +1133,15 @@ export const siteData = {
           "slug": "扫码描述"
         }
       ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "常见问题",
       "frontmatter": {},
       "regularPath": "/notes/wxapp/scene.html",
       "relativePath": "notes/wxapp/scene.md",
-      "key": "v-79680b56",
+      "key": "v-011d3f75",
       "path": "/notes/wxapp/scene.html",
       "headers": [
         {
@@ -846,15 +1200,15 @@ export const siteData = {
           "slug": "_2-需要在根目录创建custom-tab-bar文件夹"
         }
       ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "使用taro开发微信小程序",
       "frontmatter": {},
       "regularPath": "/notes/wxapp/taroUsed.html",
       "relativePath": "notes/wxapp/taroUsed.md",
-      "key": "v-2ed91d5a",
+      "key": "v-f28f038e",
       "path": "/notes/wxapp/taroUsed.html",
       "headers": [
         {
@@ -878,52 +1232,15 @@ export const siteData = {
           "slug": "taro中使用nutui-375设计稿的问题"
         }
       ],
-      "lastUpdated": "2022/6/12 下午10:54:04",
-      "lastUpdatedTimestamp": 1655045644000
-    },
-    {
-      "title": "Git 不常用功能",
-      "frontmatter": {},
-      "regularPath": "/notes/git/git-other.html",
-      "relativePath": "notes/git/git-other.md",
-      "key": "v-5f03f5f6",
-      "path": "/notes/git/git-other.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "字符集编码设置(防止中文乱码)",
-          "slug": "字符集编码设置-防止中文乱码"
-        },
-        {
-          "level": 2,
-          "title": "git不自动转换换行符",
-          "slug": "git不自动转换换行符"
-        },
-        {
-          "level": 2,
-          "title": "git设置会检测文件名大小写",
-          "slug": "git设置会检测文件名大小写"
-        },
-        {
-          "level": 2,
-          "title": "更改git仓库访问用户名和密码",
-          "slug": "更改git仓库访问用户名和密码"
-        },
-        {
-          "level": 2,
-          "title": "git 右键突然消失解决办法",
-          "slug": "git-右键突然消失解决办法"
-        }
-      ],
-      "lastUpdated": "2022/6/11 上午11:45:20",
-      "lastUpdatedTimestamp": 1654919120000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "一、公司相关",
       "frontmatter": {},
       "regularPath": "/questions/2019%E9%9F%A9%E5%AD%A6%E5%BC%BA%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
       "relativePath": "questions/2019韩学强面试总结.md",
-      "key": "v-27eed8ab",
+      "key": "v-2a276417",
       "path": "/questions/2019%E9%9F%A9%E5%AD%A6%E5%BC%BA%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
       "headers": [
         {
@@ -1052,157 +1369,15 @@ export const siteData = {
           "slug": "四、备忘录"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "IE11 的兼容性问题",
-      "frontmatter": {},
-      "regularPath": "/questions/2021%E5%B9%B41%E6%9C%88%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
-      "relativePath": "questions/2021年1月面试总结.md",
-      "key": "v-02344cc4",
-      "path": "/questions/2021%E5%B9%B41%E6%9C%88%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "IE11 的兼容性问题",
-          "slug": "ie11-的兼容性问题"
-        },
-        {
-          "level": 3,
-          "title": "vue 优化",
-          "slug": "vue-优化"
-        },
-        {
-          "level": 3,
-          "title": "es6 新增",
-          "slug": "es6-新增"
-        },
-        {
-          "level": 3,
-          "title": "闭包函数与匿名函数的区别是什么?",
-          "slug": "闭包函数与匿名函数的区别是什么"
-        },
-        {
-          "level": 3,
-          "title": "new Set() 怎么用",
-          "slug": "new-set-怎么用"
-        },
-        {
-          "level": 3,
-          "title": "你知道有多少排序算法?",
-          "slug": "你知道有多少排序算法"
-        },
-        {
-          "level": 3,
-          "title": "冒泡排序,最好的情况下会排多少次,最差排多少次?",
-          "slug": "冒泡排序-最好的情况下会排多少次-最差排多少次"
-        },
-        {
-          "level": 3,
-          "title": "文档执行顺序?",
-          "slug": "文档执行顺序"
-        },
-        {
-          "level": 3,
-          "title": "computed 与 watch 的区别",
-          "slug": "computed-与-watch-的区别"
-        },
-        {
-          "level": 3,
-          "title": "router.beforeEach(to,from,next) 做权限验证的 router.afterEach()",
-          "slug": "router-beforeeach-to-from-next-做权限验证的-router-aftereach"
-        },
-        {
-          "level": 3,
-          "title": "const service = axios.create({baseURL: process.env.VUEAPPBASE_API, timeout: 12000}) 创建一个新的拦截器",
-          "slug": "const-service-axios-create-baseurl-process-env-vue-app-base-api-timeout-12000-创建一个新的拦截器"
-        },
-        {
-          "level": 3,
-          "title": "service.interceptors.request.use(config => {}) 请求拦截器(设置请求头)",
-          "slug": "service-interceptors-request-use-config-请求拦截器-设置请求头"
-        },
-        {
-          "level": 3,
-          "title": "service.interceptors.response.use(response => {}) 响应拦截器(根据不同的状态码做不同的操作)",
-          "slug": "service-interceptors-response-use-response-响应拦截器-根据不同的状态码做不同的操作"
-        },
-        {
-          "level": 3,
-          "title": "对优化方面的理解",
-          "slug": "对优化方面的理解"
-        },
-        {
-          "level": 3,
-          "title": "了解 async/await",
-          "slug": "了解-async-await"
-        },
-        {
-          "level": 3,
-          "title": "promise.all([a,b,c]) 中,如果一个失败,都不会走 then 方法",
-          "slug": "promise-all-a-b-c-中-如果一个失败-都不会走-then-方法"
-        },
-        {
-          "level": 3,
-          "title": "promise 三个状态, pending ,(resolved)完成 ,(rejected)失败",
-          "slug": "promise-三个状态-pending-resolved-完成-rejected-失败"
-        },
-        {
-          "level": 3,
-          "title": "怎么封装一个公共的登录组件 在多页面应用程序中使用",
-          "slug": "怎么封装一个公共的登录组件-在多页面应用程序中使用"
-        },
-        {
-          "level": 3,
-          "title": "在 vue 解析过程中是 vuex 先解析还是 app.vue 页面先解析",
-          "slug": "在-vue-解析过程中是-vuex-先解析还是-app-vue-页面先解析"
-        },
-        {
-          "level": 3,
-          "title": "单项数据流",
-          "slug": "单项数据流"
-        },
-        {
-          "level": 3,
-          "title": "递归",
-          "slug": "递归"
-        },
-        {
-          "level": 3,
-          "title": "闭包",
-          "slug": "闭包"
-        },
-        {
-          "level": 3,
-          "title": "使用过哪些 vue 的插件",
-          "slug": "使用过哪些-vue-的插件"
-        },
-        {
-          "level": 3,
-          "title": "为什么 vue 的插件有些需要 use 一下，有些不需要 use",
-          "slug": "为什么-vue-的插件有些需要-use-一下-有些不需要-use"
-        },
-        {
-          "level": 3,
-          "title": "你有哪些技术栈",
-          "slug": "你有哪些技术栈"
-        },
-        {
-          "level": 3,
-          "title": "你对未来的规划",
-          "slug": "你对未来的规划"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "面试题",
       "frontmatter": {},
       "regularPath": "/questions/2020%E5%B9%B412%E6%9C%88%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
       "relativePath": "questions/2020年12月面试总结.md",
-      "key": "v-d8fbd62c",
+      "key": "v-bf9abd54",
       "path": "/questions/2020%E5%B9%B412%E6%9C%88%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
       "headers": [
         {
@@ -1441,23 +1616,156 @@ export const siteData = {
           "slug": "四级tab切换事件"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
+      "title": "IE11 的兼容性问题",
       "frontmatter": {},
-      "regularPath": "/questions/docker%E9%9D%A2%E8%AF%95.html",
-      "relativePath": "questions/docker面试.md",
-      "key": "v-3d8805db",
-      "path": "/questions/docker%E9%9D%A2%E8%AF%95.html",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "regularPath": "/questions/2021%E5%B9%B41%E6%9C%88%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
+      "relativePath": "questions/2021年1月面试总结.md",
+      "key": "v-ee32ddec",
+      "path": "/questions/2021%E5%B9%B41%E6%9C%88%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "IE11 的兼容性问题",
+          "slug": "ie11-的兼容性问题"
+        },
+        {
+          "level": 3,
+          "title": "vue 优化",
+          "slug": "vue-优化"
+        },
+        {
+          "level": 3,
+          "title": "es6 新增",
+          "slug": "es6-新增"
+        },
+        {
+          "level": 3,
+          "title": "闭包函数与匿名函数的区别是什么?",
+          "slug": "闭包函数与匿名函数的区别是什么"
+        },
+        {
+          "level": 3,
+          "title": "new Set() 怎么用",
+          "slug": "new-set-怎么用"
+        },
+        {
+          "level": 3,
+          "title": "你知道有多少排序算法?",
+          "slug": "你知道有多少排序算法"
+        },
+        {
+          "level": 3,
+          "title": "冒泡排序,最好的情况下会排多少次,最差排多少次?",
+          "slug": "冒泡排序-最好的情况下会排多少次-最差排多少次"
+        },
+        {
+          "level": 3,
+          "title": "文档执行顺序?",
+          "slug": "文档执行顺序"
+        },
+        {
+          "level": 3,
+          "title": "computed 与 watch 的区别",
+          "slug": "computed-与-watch-的区别"
+        },
+        {
+          "level": 3,
+          "title": "router.beforeEach(to,from,next) 做权限验证的 router.afterEach()",
+          "slug": "router-beforeeach-to-from-next-做权限验证的-router-aftereach"
+        },
+        {
+          "level": 3,
+          "title": "const service = axios.create({baseURL: process.env.VUEAPPBASE_API, timeout: 12000}) 创建一个新的拦截器",
+          "slug": "const-service-axios-create-baseurl-process-env-vue-app-base-api-timeout-12000-创建一个新的拦截器"
+        },
+        {
+          "level": 3,
+          "title": "service.interceptors.request.use(config => {}) 请求拦截器(设置请求头)",
+          "slug": "service-interceptors-request-use-config-请求拦截器-设置请求头"
+        },
+        {
+          "level": 3,
+          "title": "service.interceptors.response.use(response => {}) 响应拦截器(根据不同的状态码做不同的操作)",
+          "slug": "service-interceptors-response-use-response-响应拦截器-根据不同的状态码做不同的操作"
+        },
+        {
+          "level": 3,
+          "title": "对优化方面的理解",
+          "slug": "对优化方面的理解"
+        },
+        {
+          "level": 3,
+          "title": "了解 async/await",
+          "slug": "了解-async-await"
+        },
+        {
+          "level": 3,
+          "title": "promise.all([a,b,c]) 中,如果一个失败,都不会走 then 方法",
+          "slug": "promise-all-a-b-c-中-如果一个失败-都不会走-then-方法"
+        },
+        {
+          "level": 3,
+          "title": "promise 三个状态, pending ,(resolved)完成 ,(rejected)失败",
+          "slug": "promise-三个状态-pending-resolved-完成-rejected-失败"
+        },
+        {
+          "level": 3,
+          "title": "怎么封装一个公共的登录组件 在多页面应用程序中使用",
+          "slug": "怎么封装一个公共的登录组件-在多页面应用程序中使用"
+        },
+        {
+          "level": 3,
+          "title": "在 vue 解析过程中是 vuex 先解析还是 app.vue 页面先解析",
+          "slug": "在-vue-解析过程中是-vuex-先解析还是-app-vue-页面先解析"
+        },
+        {
+          "level": 3,
+          "title": "单项数据流",
+          "slug": "单项数据流"
+        },
+        {
+          "level": 3,
+          "title": "递归",
+          "slug": "递归"
+        },
+        {
+          "level": 3,
+          "title": "闭包",
+          "slug": "闭包"
+        },
+        {
+          "level": 3,
+          "title": "使用过哪些 vue 的插件",
+          "slug": "使用过哪些-vue-的插件"
+        },
+        {
+          "level": 3,
+          "title": "为什么 vue 的插件有些需要 use 一下，有些不需要 use",
+          "slug": "为什么-vue-的插件有些需要-use-一下-有些不需要-use"
+        },
+        {
+          "level": 3,
+          "title": "你有哪些技术栈",
+          "slug": "你有哪些技术栈"
+        },
+        {
+          "level": 3,
+          "title": "你对未来的规划",
+          "slug": "你对未来的规划"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "frontmatter": {},
       "regularPath": "/questions/2021%E5%B9%B44%E6%9C%88%E9%9F%A9%E5%AD%A6%E5%BC%BA%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
       "relativePath": "questions/2021年4月韩学强面试总结.md",
-      "key": "v-6fbd8839",
+      "key": "v-99cf0ab6",
       "path": "/questions/2021%E5%B9%B44%E6%9C%88%E9%9F%A9%E5%AD%A6%E5%BC%BA%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html",
       "headers": [
         {
@@ -1686,35 +1994,15 @@ export const siteData = {
           "slug": "_50、webview优化"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "面试题常用",
-      "frontmatter": {},
-      "regularPath": "/questions/",
-      "relativePath": "questions/README.md",
-      "key": "v-3ea83d89",
-      "path": "/questions/",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "webpack优化",
-      "frontmatter": {},
-      "regularPath": "/questions/webpack%E4%BC%98%E5%8C%96.html",
-      "relativePath": "questions/webpack优化.md",
-      "key": "v-3284d882",
-      "path": "/questions/webpack%E4%BC%98%E5%8C%96.html",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "CSS 常用",
       "frontmatter": {},
       "regularPath": "/questions/CSS.html",
       "relativePath": "questions/CSS.md",
-      "key": "v-66c6c496",
+      "key": "v-ff8e47fc",
       "path": "/questions/CSS.html",
       "headers": [
         {
@@ -1778,98 +2066,51 @@ export const siteData = {
           "slug": "弹性布局"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "CSS",
+      "title": "面试题常用",
       "frontmatter": {},
-      "regularPath": "/questions/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3.html",
-      "relativePath": "questions/性能优化相关.md",
-      "key": "v-5fa1304a",
-      "path": "/questions/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3.html",
+      "regularPath": "/questions/",
+      "relativePath": "questions/README.md",
+      "key": "v-1e08329d",
+      "path": "/questions/",
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "小程序面试题",
+      "frontmatter": {},
+      "regularPath": "/questions/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%9D%A2%E8%AF%95.html",
+      "relativePath": "questions/小程序面试.md",
+      "key": "v-dc711cae",
+      "path": "/questions/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%9D%A2%E8%AF%95.html",
       "headers": [
         {
           "level": 2,
-          "title": "CSS",
-          "slug": "css"
+          "title": "小程序的双向绑定和vue哪里不一样？",
+          "slug": "小程序的双向绑定和vue哪里不一样"
         },
         {
           "level": 2,
-          "title": "JS",
-          "slug": "js"
-        },
-        {
-          "level": 2,
-          "title": "Vue 相关性能优化",
-          "slug": "vue-相关性能优化"
-        },
-        {
-          "level": 2,
-          "title": "webpack 优化",
-          "slug": "webpack-优化"
+          "title": "小程序页面间有哪些传递数据的方法?",
+          "slug": "小程序页面间有哪些传递数据的方法"
         },
         {
           "level": 3,
-          "title": "开启 gzip 压缩 ( compression-webpack-plugin)",
-          "slug": "开启-gzip-压缩-compression-webpack-plugin"
-        },
-        {
-          "level": 3,
-          "title": "通过 splitchunk 切割大文件",
-          "slug": "通过-splitchunk-切割大文件"
-        },
-        {
-          "level": 3,
-          "title": "js 文件最小化处理",
-          "slug": "js-文件最小化处理"
-        },
-        {
-          "level": 3,
-          "title": "图片资源压缩 (image-webpack-loader)",
-          "slug": "图片资源压缩-image-webpack-loader"
-        },
-        {
-          "level": 2,
-          "title": "其他优化",
-          "slug": "其他优化"
-        },
-        {
-          "level": 2,
-          "title": "为什么 Vue.use 要在 new Vue()之前调用",
-          "slug": "为什么-vue-use-要在-new-vue-之前调用"
+          "title": "使用全局变量实现数据传递",
+          "slug": "使用全局变量实现数据传递"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "手写Promise",
-      "frontmatter": {},
-      "regularPath": "/questions/%E6%89%8B%E5%86%99Promise.html",
-      "relativePath": "questions/手写Promise.md",
-      "key": "v-a658a400",
-      "path": "/questions/%E6%89%8B%E5%86%99Promise.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "手写Promise",
-          "slug": "手写promise"
-        },
-        {
-          "level": 3,
-          "title": "测试写的方法",
-          "slug": "测试写的方法"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "frontmatter": {},
       "regularPath": "/questions/html.html",
       "relativePath": "questions/html.md",
-      "key": "v-54c02248",
+      "key": "v-4bebe298",
       "path": "/questions/html.html",
       "headers": [
         {
@@ -1973,15 +2214,25 @@ export const siteData = {
           "slug": "_20、title与h1的区别、b与strong的区别、i与em的区别"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "webpack优化",
+      "frontmatter": {},
+      "regularPath": "/questions/webpack%E4%BC%98%E5%8C%96.html",
+      "relativePath": "questions/webpack优化.md",
+      "key": "v-4728ddaa",
+      "path": "/questions/webpack%E4%BC%98%E5%8C%96.html",
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "手写Axios",
       "frontmatter": {},
       "regularPath": "/questions/%E6%89%8B%E5%86%99Axios.html",
       "relativePath": "questions/手写Axios.md",
-      "key": "v-6aec9260",
+      "key": "v-2cabb468",
       "path": "/questions/%E6%89%8B%E5%86%99Axios.html",
       "headers": [
         {
@@ -1990,15 +2241,77 @@ export const siteData = {
           "slug": "手写axios"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "CSS",
+      "frontmatter": {},
+      "regularPath": "/questions/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3.html",
+      "relativePath": "questions/性能优化相关.md",
+      "key": "v-9a600294",
+      "path": "/questions/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "CSS",
+          "slug": "css"
+        },
+        {
+          "level": 2,
+          "title": "JS",
+          "slug": "js"
+        },
+        {
+          "level": 2,
+          "title": "Vue 相关性能优化",
+          "slug": "vue-相关性能优化"
+        },
+        {
+          "level": 2,
+          "title": "webpack 优化",
+          "slug": "webpack-优化"
+        },
+        {
+          "level": 3,
+          "title": "开启 gzip 压缩 ( compression-webpack-plugin)",
+          "slug": "开启-gzip-压缩-compression-webpack-plugin"
+        },
+        {
+          "level": 3,
+          "title": "通过 splitchunk 切割大文件",
+          "slug": "通过-splitchunk-切割大文件"
+        },
+        {
+          "level": 3,
+          "title": "js 文件最小化处理",
+          "slug": "js-文件最小化处理"
+        },
+        {
+          "level": 3,
+          "title": "图片资源压缩 (image-webpack-loader)",
+          "slug": "图片资源压缩-image-webpack-loader"
+        },
+        {
+          "level": 2,
+          "title": "其他优化",
+          "slug": "其他优化"
+        },
+        {
+          "level": 2,
+          "title": "为什么 Vue.use 要在 new Vue()之前调用",
+          "slug": "为什么-vue-use-要在-new-vue-之前调用"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "vue面试",
       "frontmatter": {},
       "regularPath": "/questions/vue.html",
       "relativePath": "questions/vue.md",
-      "key": "v-433ee636",
+      "key": "v-5cb0fda2",
       "path": "/questions/vue.html",
       "headers": [
         {
@@ -2012,42 +2325,59 @@ export const siteData = {
           "slug": "vue3版本"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "小程序面试题",
+      "title": "手写Promise",
       "frontmatter": {},
-      "regularPath": "/questions/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%9D%A2%E8%AF%95.html",
-      "relativePath": "questions/小程序面试.md",
-      "key": "v-a3ec6786",
-      "path": "/questions/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%9D%A2%E8%AF%95.html",
+      "regularPath": "/questions/%E6%89%8B%E5%86%99Promise.html",
+      "relativePath": "questions/手写Promise.md",
+      "key": "v-bafca928",
+      "path": "/questions/%E6%89%8B%E5%86%99Promise.html",
       "headers": [
         {
           "level": 2,
-          "title": "小程序的双向绑定和vue哪里不一样？",
-          "slug": "小程序的双向绑定和vue哪里不一样"
-        },
-        {
-          "level": 2,
-          "title": "小程序页面间有哪些传递数据的方法?",
-          "slug": "小程序页面间有哪些传递数据的方法"
+          "title": "手写Promise",
+          "slug": "手写promise"
         },
         {
           "level": 3,
-          "title": "使用全局变量实现数据传递",
-          "slug": "使用全局变量实现数据传递"
+          "title": "测试写的方法",
+          "slug": "测试写的方法"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "手写深拷贝",
+      "frontmatter": {},
+      "regularPath": "/questions/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D.html",
+      "relativePath": "questions/手写深拷贝.md",
+      "key": "v-36e520a3",
+      "path": "/questions/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "浅拷贝",
+          "slug": "浅拷贝"
+        },
+        {
+          "level": 2,
+          "title": "深拷贝",
+          "slug": "深拷贝"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "常见手写面试题",
       "frontmatter": {},
       "regularPath": "/questions/%E6%89%8B%E6%92%B8%E9%9D%A2%E8%AF%95%E9%A2%98.html",
       "relativePath": "questions/手撸面试题.md",
-      "key": "v-84b8d2ea",
+      "key": "v-bd3d8812",
       "path": "/questions/%E6%89%8B%E6%92%B8%E9%9D%A2%E8%AF%95%E9%A2%98.html",
       "headers": [
         {
@@ -2121,15 +2451,15 @@ export const siteData = {
           "slug": "函数节流"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "手机端问题",
       "frontmatter": {},
       "regularPath": "/questions/%E6%89%8B%E6%9C%BA%E7%AB%AF.html",
       "relativePath": "questions/手机端.md",
-      "key": "v-cbec05b2",
+      "key": "v-18c79093",
       "path": "/questions/%E6%89%8B%E6%9C%BA%E7%AB%AF.html",
       "headers": [
         {
@@ -2158,15 +2488,226 @@ export const siteData = {
           "slug": "compile-编译"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/questions/docker%E9%9D%A2%E8%AF%95.html",
+      "relativePath": "questions/docker面试.md",
+      "key": "v-032e6e47",
+      "path": "/questions/docker%E9%9D%A2%E8%AF%95.html",
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "算法题",
+      "frontmatter": {},
+      "regularPath": "/questions/%E7%AE%97%E6%B3%95.html",
+      "relativePath": "questions/算法.md",
+      "key": "v-43a0b0fc",
+      "path": "/questions/%E7%AE%97%E6%B3%95.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "数组去重的多种方式",
+          "slug": "数组去重的多种方式"
+        },
+        {
+          "level": 3,
+          "title": "第一种方法：ES6 - 直接用Set",
+          "slug": "第一种方法-es6-直接用set"
+        },
+        {
+          "level": 3,
+          "title": "第二种方法：拿出当前项和后续进行比较（会新增堆内存）",
+          "slug": "第二种方法-拿出当前项和后续进行比较-会新增堆内存"
+        },
+        {
+          "level": 2,
+          "title": "2.数组扁平化的N种实现方案",
+          "slug": "_2-数组扁平化的n种实现方案"
+        },
+        {
+          "level": 3,
+          "title": "第一种方法：使用ES6中flat方法",
+          "slug": "第一种方法-使用es6中flat方法"
+        },
+        {
+          "level": 3,
+          "title": "第二种方法：使用toString()然后将字符串转化数字",
+          "slug": "第二种方法-使用tostring-然后将字符串转化数字"
+        },
+        {
+          "level": 3,
+          "title": "第三种方法：转化JSON格式字符串 然后用正则替换所有的[]（比上一种方法多了一步，加了正则）",
+          "slug": "第三种方法-转化json格式字符串-然后用正则替换所有的-比上一种方法多了一步-加了正则"
+        },
+        {
+          "level": 3,
+          "title": "第四种方法：循环验证是否为数组",
+          "slug": "第四种方法-循环验证是否为数组"
+        },
+        {
+          "level": 2,
+          "title": "斐波那契数列",
+          "slug": "斐波那契数列"
+        },
+        {
+          "level": 2,
+          "title": "字节经典算法题目",
+          "slug": "字节经典算法题目"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "手撸系列",
+      "frontmatter": {
+        "theme": "juejin",
+        "highlight": null
+      },
+      "regularPath": "/questions/%E8%BF%98%E5%9C%A8%E6%AD%BB%E8%AE%B0%E6%89%8B%E5%86%99%E9%9D%A2%E8%AF%95%E9%A2%98%E5%90%97.html",
+      "relativePath": "questions/还在死记手写面试题吗.md",
+      "key": "v-5a7751ca",
+      "path": "/questions/%E8%BF%98%E5%9C%A8%E6%AD%BB%E8%AE%B0%E6%89%8B%E5%86%99%E9%9D%A2%E8%AF%95%E9%A2%98%E5%90%97.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "new 操作符",
+          "slug": "new-操作符"
+        },
+        {
+          "level": 3,
+          "title": "首先要明白 new 到底做了哪几步操作？",
+          "slug": "首先要明白-new-到底做了哪几步操作"
+        },
+        {
+          "level": 3,
+          "title": "对应的写法",
+          "slug": "对应的写法"
+        },
+        {
+          "level": 3,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 3,
+          "title": "需要注意的点",
+          "slug": "需要注意的点"
+        },
+        {
+          "level": 2,
+          "title": "Function.prototype.call()",
+          "slug": "function-prototype-call"
+        },
+        {
+          "level": 3,
+          "title": "对应的写法",
+          "slug": "对应的写法-2"
+        },
+        {
+          "level": 3,
+          "title": "使用",
+          "slug": "使用-2"
+        },
+        {
+          "level": 3,
+          "title": "需要注意的点",
+          "slug": "需要注意的点-2"
+        },
+        {
+          "level": 2,
+          "title": "Function.prototype.apply()",
+          "slug": "function-prototype-apply"
+        },
+        {
+          "level": 3,
+          "title": "对应的写法",
+          "slug": "对应的写法-3"
+        },
+        {
+          "level": 3,
+          "title": "使用",
+          "slug": "使用-3"
+        },
+        {
+          "level": 3,
+          "title": "需要注意的点",
+          "slug": "需要注意的点-3"
+        },
+        {
+          "level": 2,
+          "title": "Function.prototype.bind()",
+          "slug": "function-prototype-bind"
+        },
+        {
+          "level": 3,
+          "title": "对应的写法",
+          "slug": "对应的写法-4"
+        },
+        {
+          "level": 3,
+          "title": "使用",
+          "slug": "使用-4"
+        },
+        {
+          "level": 3,
+          "title": "需要注意的点",
+          "slug": "需要注意的点-4"
+        },
+        {
+          "level": 2,
+          "title": "Object.create()",
+          "slug": "object-create"
+        },
+        {
+          "level": 3,
+          "title": "对应的写法",
+          "slug": "对应的写法-5"
+        },
+        {
+          "level": 3,
+          "title": "使用",
+          "slug": "使用-5"
+        },
+        {
+          "level": 2,
+          "title": "什么是 AOP 函数？",
+          "slug": "什么是-aop-函数"
+        },
+        {
+          "level": 3,
+          "title": "对应的写法",
+          "slug": "对应的写法-6"
+        },
+        {
+          "level": 3,
+          "title": "使用",
+          "slug": "使用-6"
+        },
+        {
+          "level": 3,
+          "title": "需要注意的点",
+          "slug": "需要注意的点-5"
+        },
+        {
+          "level": 2,
+          "title": "写在最后",
+          "slug": "写在最后"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "排序算法",
       "frontmatter": {},
       "regularPath": "/questions/%E6%8E%92%E5%BA%8F.html",
       "relativePath": "questions/排序.md",
-      "key": "v-6efe9f82",
+      "key": "v-118f5aab",
       "path": "/questions/%E6%8E%92%E5%BA%8F.html",
       "headers": [
         {
@@ -2315,446 +2856,15 @@ export const siteData = {
           "slug": "执行结果-6"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "手撸系列",
-      "frontmatter": {
-        "theme": "juejin",
-        "highlight": null
-      },
-      "regularPath": "/questions/%E8%BF%98%E5%9C%A8%E6%AD%BB%E8%AE%B0%E6%89%8B%E5%86%99%E9%9D%A2%E8%AF%95%E9%A2%98%E5%90%97.html",
-      "relativePath": "questions/还在死记手写面试题吗.md",
-      "key": "v-171c5f5e",
-      "path": "/questions/%E8%BF%98%E5%9C%A8%E6%AD%BB%E8%AE%B0%E6%89%8B%E5%86%99%E9%9D%A2%E8%AF%95%E9%A2%98%E5%90%97.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "new 操作符",
-          "slug": "new-操作符"
-        },
-        {
-          "level": 3,
-          "title": "首先要明白 new 到底做了哪几步操作？",
-          "slug": "首先要明白-new-到底做了哪几步操作"
-        },
-        {
-          "level": 3,
-          "title": "对应的写法",
-          "slug": "对应的写法"
-        },
-        {
-          "level": 3,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 3,
-          "title": "需要注意的点",
-          "slug": "需要注意的点"
-        },
-        {
-          "level": 2,
-          "title": "Function.prototype.call()",
-          "slug": "function-prototype-call"
-        },
-        {
-          "level": 3,
-          "title": "对应的写法",
-          "slug": "对应的写法-2"
-        },
-        {
-          "level": 3,
-          "title": "使用",
-          "slug": "使用-2"
-        },
-        {
-          "level": 3,
-          "title": "需要注意的点",
-          "slug": "需要注意的点-2"
-        },
-        {
-          "level": 2,
-          "title": "Function.prototype.apply()",
-          "slug": "function-prototype-apply"
-        },
-        {
-          "level": 3,
-          "title": "对应的写法",
-          "slug": "对应的写法-3"
-        },
-        {
-          "level": 3,
-          "title": "使用",
-          "slug": "使用-3"
-        },
-        {
-          "level": 3,
-          "title": "需要注意的点",
-          "slug": "需要注意的点-3"
-        },
-        {
-          "level": 2,
-          "title": "Function.prototype.bind()",
-          "slug": "function-prototype-bind"
-        },
-        {
-          "level": 3,
-          "title": "对应的写法",
-          "slug": "对应的写法-4"
-        },
-        {
-          "level": 3,
-          "title": "使用",
-          "slug": "使用-4"
-        },
-        {
-          "level": 3,
-          "title": "需要注意的点",
-          "slug": "需要注意的点-4"
-        },
-        {
-          "level": 2,
-          "title": "Object.create()",
-          "slug": "object-create"
-        },
-        {
-          "level": 3,
-          "title": "对应的写法",
-          "slug": "对应的写法-5"
-        },
-        {
-          "level": 3,
-          "title": "使用",
-          "slug": "使用-5"
-        },
-        {
-          "level": 2,
-          "title": "什么是 AOP 函数？",
-          "slug": "什么是-aop-函数"
-        },
-        {
-          "level": 3,
-          "title": "对应的写法",
-          "slug": "对应的写法-6"
-        },
-        {
-          "level": 3,
-          "title": "使用",
-          "slug": "使用-6"
-        },
-        {
-          "level": 3,
-          "title": "需要注意的点",
-          "slug": "需要注意的点-5"
-        },
-        {
-          "level": 2,
-          "title": "写在最后",
-          "slug": "写在最后"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "手写深拷贝",
-      "frontmatter": {},
-      "regularPath": "/questions/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D.html",
-      "relativePath": "questions/手写深拷贝.md",
-      "key": "v-53277b37",
-      "path": "/questions/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "浅拷贝",
-          "slug": "浅拷贝"
-        },
-        {
-          "level": 2,
-          "title": "深拷贝",
-          "slug": "深拷贝"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "算法题",
-      "frontmatter": {},
-      "regularPath": "/questions/%E7%AE%97%E6%B3%95.html",
-      "relativePath": "questions/算法.md",
-      "key": "v-0adbf2e0",
-      "path": "/questions/%E7%AE%97%E6%B3%95.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "数组去重的多种方式",
-          "slug": "数组去重的多种方式"
-        },
-        {
-          "level": 3,
-          "title": "第一种方法：ES6 - 直接用Set",
-          "slug": "第一种方法-es6-直接用set"
-        },
-        {
-          "level": 3,
-          "title": "第二种方法：拿出当前项和后续进行比较（会新增堆内存）",
-          "slug": "第二种方法-拿出当前项和后续进行比较-会新增堆内存"
-        },
-        {
-          "level": 2,
-          "title": "2.数组扁平化的N种实现方案",
-          "slug": "_2-数组扁平化的n种实现方案"
-        },
-        {
-          "level": 3,
-          "title": "第一种方法：使用ES6中flat方法",
-          "slug": "第一种方法-使用es6中flat方法"
-        },
-        {
-          "level": 3,
-          "title": "第二种方法：使用toString()然后将字符串转化数字",
-          "slug": "第二种方法-使用tostring-然后将字符串转化数字"
-        },
-        {
-          "level": 3,
-          "title": "第三种方法：转化JSON格式字符串 然后用正则替换所有的[]（比上一种方法多了一步，加了正则）",
-          "slug": "第三种方法-转化json格式字符串-然后用正则替换所有的-比上一种方法多了一步-加了正则"
-        },
-        {
-          "level": 3,
-          "title": "第四种方法：循环验证是否为数组",
-          "slug": "第四种方法-循环验证是否为数组"
-        },
-        {
-          "level": 2,
-          "title": "斐波那契数列",
-          "slug": "斐波那契数列"
-        },
-        {
-          "level": 2,
-          "title": "字节经典算法题目",
-          "slug": "字节经典算法题目"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "服务器相关配置",
-      "frontmatter": {},
-      "regularPath": "/service/",
-      "relativePath": "service/README.md",
-      "key": "v-af51288e",
-      "path": "/service/",
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "opacity:0, visibility:hidden,display:none 的区别？",
-      "frontmatter": {},
-      "regularPath": "/questions/%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E9%97%AE%E9%A2%98.html",
-      "relativePath": "questions/需要知道的问题.md",
-      "key": "v-0bccb9b3",
-      "path": "/questions/%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E9%97%AE%E9%A2%98.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "opacity:0, visibility:hidden,display:none 的区别？",
-          "slug": "opacity-0-visibility-hidden-display-none-的区别"
-        },
-        {
-          "level": 3,
-          "title": "import ，require 方式有什么区别？",
-          "slug": "import-require-方式有什么区别"
-        },
-        {
-          "level": 3,
-          "title": "defer，async 区别？",
-          "slug": "defer-async-区别"
-        },
-        {
-          "level": 3,
-          "title": "如何将一个伪数组变成一个真的数组？",
-          "slug": "如何将一个伪数组变成一个真的数组"
-        },
-        {
-          "level": 3,
-          "title": "http 缓存策略？",
-          "slug": "http-缓存策略"
-        },
-        {
-          "level": 3,
-          "title": "js 的引入方式有哪些？ 3 种引入方式",
-          "slug": "js-的引入方式有哪些-3-种引入方式"
-        },
-        {
-          "level": 3,
-          "title": "箭头函数与普通函数的区别？",
-          "slug": "箭头函数与普通函数的区别"
-        },
-        {
-          "level": 3,
-          "title": "深拷贝与浅拷贝的区别？",
-          "slug": "深拷贝与浅拷贝的区别"
-        },
-        {
-          "level": 3,
-          "title": "从浏览器地址栏输入 url 到页面显示的步骤",
-          "slug": "从浏览器地址栏输入-url-到页面显示的步骤"
-        },
-        {
-          "level": 3,
-          "title": "有些什么方式可以改变 this指针",
-          "slug": "有些什么方式可以改变-this指针"
-        },
-        {
-          "level": 3,
-          "title": "跨域的几种解决方案？",
-          "slug": "跨域的几种解决方案"
-        },
-        {
-          "level": 3,
-          "title": "iframe 通信",
-          "slug": "iframe-通信"
-        },
-        {
-          "level": 3,
-          "title": "了解闭包吗，闭包会导致什么问题？",
-          "slug": "了解闭包吗-闭包会导致什么问题"
-        },
-        {
-          "level": 3,
-          "title": "内存泄漏？",
-          "slug": "内存泄漏"
-        },
-        {
-          "level": 3,
-          "title": "虚拟 DOM？",
-          "slug": "虚拟-dom"
-        },
-        {
-          "level": 3,
-          "title": "Cookie SessionStorage localStorage 的区别？如何让前端无法读取 Cookie 防止 xss 攻击？有一个 HTTPOnly",
-          "slug": "cookie-sessionstorage-localstorage-的区别-如何让前端无法读取-cookie-防止-xss-攻击-有一个-httponly"
-        },
-        {
-          "level": 3,
-          "title": "WebWorker 和 WebSocket",
-          "slug": "webworker-和-websocket"
-        },
-        {
-          "level": 3,
-          "title": "promise.all()和 promise.race()的区别？",
-          "slug": "promise-all-和-promise-race-的区别"
-        },
-        {
-          "level": 3,
-          "title": "Map 和 Set ？",
-          "slug": "map-和-set"
-        },
-        {
-          "level": 3,
-          "title": "Map 和 WeakMap 的区别?",
-          "slug": "map-和-weakmap-的区别"
-        },
-        {
-          "level": 3,
-          "title": "http 协议和原理？",
-          "slug": "http-协议和原理"
-        },
-        {
-          "level": 3,
-          "title": "简诉 event loop 的理解？",
-          "slug": "简诉-event-loop-的理解"
-        },
-        {
-          "level": 3,
-          "title": "常见的攻击方式？XSS 和 CSRF",
-          "slug": "常见的攻击方式-xss-和-csrf"
-        },
-        {
-          "level": 3,
-          "title": "v-show 与 v-if 的区别",
-          "slug": "v-show-与-v-if-的区别"
-        },
-        {
-          "level": 3,
-          "title": "template 中能否使用 v-show?",
-          "slug": "template-中能否使用-v-show"
-        },
-        {
-          "level": 3,
-          "title": "watch 与 computed 的区别？之前看源码的时候发现 computed 会比 watch 先被初始化",
-          "slug": "watch-与-computed-的区别-之前看源码的时候发现-computed-会比-watch-先被初始化"
-        },
-        {
-          "level": 3,
-          "title": "怎么理解单项数据流？",
-          "slug": "怎么理解单项数据流"
-        },
-        {
-          "level": 3,
-          "title": "vue 响应式原理? 或者为什么 vm.data 里的数据都是双向绑定的？**",
-          "slug": "vue-响应式原理-或者为什么-vm-data-里的数据都是双向绑定的"
-        },
-        {
-          "level": 3,
-          "title": "MVC 和 MVVM 的区别？",
-          "slug": "mvc-和-mvvm-的区别"
-        },
-        {
-          "level": 3,
-          "title": "前端性能优化，vue 性能优化",
-          "slug": "前端性能优化-vue-性能优化"
-        },
-        {
-          "level": 3,
-          "title": "组件封装？涉及全局组件封装和局部组件封装，install 方法",
-          "slug": "组件封装-涉及全局组件封装和局部组件封装-install-方法"
-        },
-        {
-          "level": 3,
-          "title": "介绍一下 webpack 中配置入口，构建结果，性能优化？",
-          "slug": "介绍一下-webpack-中配置入口-构建结果-性能优化"
-        },
-        {
-          "level": 3,
-          "title": "移动端兼容性问题？",
-          "slug": "移动端兼容性问题"
-        },
-        {
-          "level": 3,
-          "title": "移动端 1px 的问题",
-          "slug": "移动端-1px-的问题"
-        },
-        {
-          "level": 3,
-          "title": "开发中有没有遇到过痛点？",
-          "slug": "开发中有没有遇到过痛点"
-        },
-        {
-          "level": 3,
-          "title": "node 的使用",
-          "slug": "node-的使用"
-        },
-        {
-          "level": 3,
-          "title": "个人职业规划",
-          "slug": "个人职业规划"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "速背知识",
       "frontmatter": {},
       "regularPath": "/questions/%E9%80%9F%E8%83%8C%E7%9F%A5%E8%AF%86%E7%82%B9.html",
       "relativePath": "questions/速背知识点.md",
-      "key": "v-c035068c",
+      "key": "v-f8b9bbb4",
       "path": "/questions/%E9%80%9F%E8%83%8C%E7%9F%A5%E8%AF%86%E7%82%B9.html",
       "headers": [
         {
@@ -3048,15 +3158,254 @@ export const siteData = {
           "slug": "json-parse-json-stringify-深拷贝的问题"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "opacity:0, visibility:hidden,display:none 的区别？",
+      "frontmatter": {},
+      "regularPath": "/questions/%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E9%97%AE%E9%A2%98.html",
+      "relativePath": "questions/需要知道的问题.md",
+      "key": "v-d4651dc2",
+      "path": "/questions/%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E9%97%AE%E9%A2%98.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "opacity:0, visibility:hidden,display:none 的区别？",
+          "slug": "opacity-0-visibility-hidden-display-none-的区别"
+        },
+        {
+          "level": 3,
+          "title": "import ，require 方式有什么区别？",
+          "slug": "import-require-方式有什么区别"
+        },
+        {
+          "level": 3,
+          "title": "defer，async 区别？",
+          "slug": "defer-async-区别"
+        },
+        {
+          "level": 3,
+          "title": "如何将一个伪数组变成一个真的数组？",
+          "slug": "如何将一个伪数组变成一个真的数组"
+        },
+        {
+          "level": 3,
+          "title": "http 缓存策略？",
+          "slug": "http-缓存策略"
+        },
+        {
+          "level": 3,
+          "title": "js 的引入方式有哪些？ 3 种引入方式",
+          "slug": "js-的引入方式有哪些-3-种引入方式"
+        },
+        {
+          "level": 3,
+          "title": "箭头函数与普通函数的区别？",
+          "slug": "箭头函数与普通函数的区别"
+        },
+        {
+          "level": 3,
+          "title": "深拷贝与浅拷贝的区别？",
+          "slug": "深拷贝与浅拷贝的区别"
+        },
+        {
+          "level": 3,
+          "title": "从浏览器地址栏输入 url 到页面显示的步骤",
+          "slug": "从浏览器地址栏输入-url-到页面显示的步骤"
+        },
+        {
+          "level": 3,
+          "title": "有些什么方式可以改变 this指针",
+          "slug": "有些什么方式可以改变-this指针"
+        },
+        {
+          "level": 3,
+          "title": "跨域的几种解决方案？",
+          "slug": "跨域的几种解决方案"
+        },
+        {
+          "level": 3,
+          "title": "iframe 通信",
+          "slug": "iframe-通信"
+        },
+        {
+          "level": 3,
+          "title": "了解闭包吗，闭包会导致什么问题？",
+          "slug": "了解闭包吗-闭包会导致什么问题"
+        },
+        {
+          "level": 3,
+          "title": "内存泄漏？",
+          "slug": "内存泄漏"
+        },
+        {
+          "level": 3,
+          "title": "虚拟 DOM？",
+          "slug": "虚拟-dom"
+        },
+        {
+          "level": 3,
+          "title": "Cookie SessionStorage localStorage 的区别？如何让前端无法读取 Cookie 防止 xss 攻击？有一个 HTTPOnly",
+          "slug": "cookie-sessionstorage-localstorage-的区别-如何让前端无法读取-cookie-防止-xss-攻击-有一个-httponly"
+        },
+        {
+          "level": 3,
+          "title": "WebWorker 和 WebSocket",
+          "slug": "webworker-和-websocket"
+        },
+        {
+          "level": 3,
+          "title": "promise.all()和 promise.race()的区别？",
+          "slug": "promise-all-和-promise-race-的区别"
+        },
+        {
+          "level": 3,
+          "title": "Map 和 Set ？",
+          "slug": "map-和-set"
+        },
+        {
+          "level": 3,
+          "title": "Map 和 WeakMap 的区别?",
+          "slug": "map-和-weakmap-的区别"
+        },
+        {
+          "level": 3,
+          "title": "http 协议和原理？",
+          "slug": "http-协议和原理"
+        },
+        {
+          "level": 3,
+          "title": "简诉 event loop 的理解？",
+          "slug": "简诉-event-loop-的理解"
+        },
+        {
+          "level": 3,
+          "title": "常见的攻击方式？XSS 和 CSRF",
+          "slug": "常见的攻击方式-xss-和-csrf"
+        },
+        {
+          "level": 3,
+          "title": "v-show 与 v-if 的区别",
+          "slug": "v-show-与-v-if-的区别"
+        },
+        {
+          "level": 3,
+          "title": "template 中能否使用 v-show?",
+          "slug": "template-中能否使用-v-show"
+        },
+        {
+          "level": 3,
+          "title": "watch 与 computed 的区别？之前看源码的时候发现 computed 会比 watch 先被初始化",
+          "slug": "watch-与-computed-的区别-之前看源码的时候发现-computed-会比-watch-先被初始化"
+        },
+        {
+          "level": 3,
+          "title": "怎么理解单项数据流？",
+          "slug": "怎么理解单项数据流"
+        },
+        {
+          "level": 3,
+          "title": "vue 响应式原理? 或者为什么 vm.data 里的数据都是双向绑定的？**",
+          "slug": "vue-响应式原理-或者为什么-vm-data-里的数据都是双向绑定的"
+        },
+        {
+          "level": 3,
+          "title": "MVC 和 MVVM 的区别？",
+          "slug": "mvc-和-mvvm-的区别"
+        },
+        {
+          "level": 3,
+          "title": "前端性能优化，vue 性能优化",
+          "slug": "前端性能优化-vue-性能优化"
+        },
+        {
+          "level": 3,
+          "title": "组件封装？涉及全局组件封装和局部组件封装，install 方法",
+          "slug": "组件封装-涉及全局组件封装和局部组件封装-install-方法"
+        },
+        {
+          "level": 3,
+          "title": "介绍一下 webpack 中配置入口，构建结果，性能优化？",
+          "slug": "介绍一下-webpack-中配置入口-构建结果-性能优化"
+        },
+        {
+          "level": 3,
+          "title": "移动端兼容性问题？",
+          "slug": "移动端兼容性问题"
+        },
+        {
+          "level": 3,
+          "title": "移动端 1px 的问题",
+          "slug": "移动端-1px-的问题"
+        },
+        {
+          "level": 3,
+          "title": "开发中有没有遇到过痛点？",
+          "slug": "开发中有没有遇到过痛点"
+        },
+        {
+          "level": 3,
+          "title": "node 的使用",
+          "slug": "node-的使用"
+        },
+        {
+          "level": 3,
+          "title": "个人职业规划",
+          "slug": "个人职业规划"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "服务器相关配置",
+      "frontmatter": {},
+      "regularPath": "/service/",
+      "relativePath": "service/README.md",
+      "key": "v-c4c798e6",
+      "path": "/service/",
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "常用nginx配置",
+      "frontmatter": {},
+      "regularPath": "/service/nginx.html",
+      "relativePath": "service/nginx.md",
+      "key": "v-de32b53c",
+      "path": "/service/nginx.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "重定向",
+          "slug": "重定向"
+        },
+        {
+          "level": 3,
+          "title": "去除html文件缓存",
+          "slug": "去除html文件缓存"
+        },
+        {
+          "level": 3,
+          "title": "请求代理",
+          "slug": "请求代理"
+        },
+        {
+          "level": 3,
+          "title": "路由history模式",
+          "slug": "路由history模式"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "服务器",
       "frontmatter": {},
       "regularPath": "/service/own.html",
       "relativePath": "service/own.md",
-      "key": "v-83227f94",
+      "key": "v-71d1bce2",
       "path": "/service/own.html",
       "headers": [
         {
@@ -3100,15 +3449,15 @@ export const siteData = {
           "slug": "node-上使用pm2部署服务"
         }
       ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "条件类型（Conditional Types）",
       "frontmatter": {},
       "regularPath": "/tsNotes/ConditionalTypes.html",
       "relativePath": "tsNotes/ConditionalTypes.md",
-      "key": "v-395f12e2",
+      "key": "v-35935ee4",
       "path": "/tsNotes/ConditionalTypes.html",
       "headers": [
         {
@@ -3127,57 +3476,67 @@ export const siteData = {
           "slug": "分发条件类型-distributive-conditional-types"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
-      "title": "常用nginx配置",
+      "title": "泛型（Generics）",
       "frontmatter": {},
-      "regularPath": "/service/nginx.html",
-      "relativePath": "service/nginx.md",
-      "key": "v-75e9deb6",
-      "path": "/service/nginx.html",
+      "regularPath": "/tsNotes/Generics.html",
+      "relativePath": "tsNotes/Generics.md",
+      "key": "v-085cb47c",
+      "path": "/tsNotes/Generics.html",
       "headers": [
         {
-          "level": 3,
-          "title": "重定向",
-          "slug": "重定向"
+          "level": 2,
+          "title": "使用泛型类型变量（Working with Generic Type Variables）",
+          "slug": "使用泛型类型变量-working-with-generic-type-variables"
         },
         {
-          "level": 3,
-          "title": "去除html文件缓存",
-          "slug": "去除html文件缓存"
+          "level": 2,
+          "title": "泛型类型 (Generic Types)",
+          "slug": "泛型类型-generic-types"
         },
         {
-          "level": 3,
-          "title": "请求代理",
-          "slug": "请求代理"
+          "level": 2,
+          "title": "泛型类（Generic Classes）",
+          "slug": "泛型类-generic-classes"
         },
         {
-          "level": 3,
-          "title": "路由history模式",
-          "slug": "路由history模式"
+          "level": 2,
+          "title": "泛型约束（Generic Constraints）",
+          "slug": "泛型约束-generic-constraints"
+        },
+        {
+          "level": 2,
+          "title": "在泛型约束中使用类型参数（Using Type Parameters in Generic Constraints）",
+          "slug": "在泛型约束中使用类型参数-using-type-parameters-in-generic-constraints"
+        },
+        {
+          "level": 2,
+          "title": "在泛型中使用类类型（Using Class Types in Generics）",
+          "slug": "在泛型中使用类类型-using-class-types-in-generics"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "索引访问类型（Indexed Access Types）",
       "frontmatter": {},
       "regularPath": "/tsNotes/IndexAccess.html",
       "relativePath": "tsNotes/IndexAccess.md",
-      "key": "v-55437cd6",
+      "key": "v-6d4fa182",
       "path": "/tsNotes/IndexAccess.html",
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "keyof 类型操作符",
       "frontmatter": {},
       "regularPath": "/tsNotes/Keyof.html",
       "relativePath": "tsNotes/Keyof.md",
-      "key": "v-239d6796",
+      "key": "v-3e9a2e42",
       "path": "/tsNotes/Keyof.html",
       "headers": [
         {
@@ -3196,15 +3555,15 @@ export const siteData = {
           "slug": "实战"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "基础",
       "frontmatter": {},
       "regularPath": "/tsNotes/Normal.html",
       "relativePath": "tsNotes/Normal.md",
-      "key": "v-25865cba",
+      "key": "v-746c2866",
       "path": "/tsNotes/Normal.html",
       "headers": [
         {
@@ -3298,119 +3657,15 @@ export const siteData = {
           "slug": "剩余参数-rest-parameters-and-arguments"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
-    },
-    {
-      "title": "快来记笔记咯~",
-      "frontmatter": {},
-      "regularPath": "/mac/",
-      "relativePath": "mac/README.md",
-      "key": "v-6adcdef6",
-      "path": "/mac/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "快捷键",
-          "slug": "快捷键"
-        },
-        {
-          "level": 2,
-          "title": "使用 mac 的前端常见问题",
-          "slug": "使用-mac-的前端常见问题"
-        },
-        {
-          "level": 3,
-          "title": "node_modules 依赖 包下载不下来",
-          "slug": "node-modules-依赖-包下载不下来"
-        },
-        {
-          "level": 3,
-          "title": "拷贝别人的 node_modules 的时候代码提交不了",
-          "slug": "拷贝别人的-node-modules-的时候代码提交不了"
-        },
-        {
-          "level": 3,
-          "title": "报 node-sass 问题",
-          "slug": "报-node-sass-问题"
-        },
-        {
-          "level": 3,
-          "title": "使用的 vue-cli 版本太低，使用 vue 官方推荐桥接工具",
-          "slug": "使用的-vue-cli-版本太低-使用-vue-官方推荐桥接工具"
-        },
-        {
-          "level": 3,
-          "title": "别人已经删除的远程分支，还能在本地看到",
-          "slug": "别人已经删除的远程分支-还能在本地看到"
-        },
-        {
-          "level": 3,
-          "title": "Mac 全局命令",
-          "slug": "mac-全局命令"
-        },
-        {
-          "level": 3,
-          "title": "vuejs Mac 环境下 npm run serve 时报错 Permission denied",
-          "slug": "vuejs-mac-环境下-npm-run-serve-时报错-permission-denied"
-        },
-        {
-          "level": 3,
-          "title": "证书无效的问题",
-          "slug": "证书无效的问题"
-        }
-      ],
-      "lastUpdated": "2022/7/2 上午9:17:05",
-      "lastUpdatedTimestamp": 1656724625000
-    },
-    {
-      "title": "泛型（Generics）",
-      "frontmatter": {},
-      "regularPath": "/tsNotes/Generics.html",
-      "relativePath": "tsNotes/Generics.md",
-      "key": "v-7ddc9ed0",
-      "path": "/tsNotes/Generics.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用泛型类型变量（Working with Generic Type Variables）",
-          "slug": "使用泛型类型变量-working-with-generic-type-variables"
-        },
-        {
-          "level": 2,
-          "title": "泛型类型 (Generic Types)",
-          "slug": "泛型类型-generic-types"
-        },
-        {
-          "level": 2,
-          "title": "泛型类（Generic Classes）",
-          "slug": "泛型类-generic-classes"
-        },
-        {
-          "level": 2,
-          "title": "泛型约束（Generic Constraints）",
-          "slug": "泛型约束-generic-constraints"
-        },
-        {
-          "level": 2,
-          "title": "在泛型约束中使用类型参数（Using Type Parameters in Generic Constraints）",
-          "slug": "在泛型约束中使用类型参数-using-type-parameters-in-generic-constraints"
-        },
-        {
-          "level": 2,
-          "title": "在泛型中使用类类型（Using Class Types in Generics）",
-          "slug": "在泛型中使用类类型-using-class-types-in-generics"
-        }
-      ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "typeof 类型操作符（The typeof type operator）",
       "frontmatter": {},
       "regularPath": "/tsNotes/Typeof.html",
       "relativePath": "tsNotes/Typeof.md",
-      "key": "v-5c7eb734",
+      "key": "v-20a67012",
       "path": "/tsNotes/Typeof.html",
       "headers": [
         {
@@ -3434,15 +3689,62 @@ export const siteData = {
           "slug": "对-enum-使用-typeof"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
+    },
+    {
+      "title": "对象类型（Object types）",
+      "frontmatter": {},
+      "regularPath": "/tsNotes/ObjectType.html",
+      "relativePath": "tsNotes/ObjectType.md",
+      "key": "v-51a82102",
+      "path": "/tsNotes/ObjectType.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "索引签名（Index Signatures）",
+          "slug": "索引签名-index-signatures"
+        },
+        {
+          "level": 2,
+          "title": "属性继承（Extending Types）",
+          "slug": "属性继承-extending-types"
+        },
+        {
+          "level": 2,
+          "title": "交叉类型（Intersection Types）",
+          "slug": "交叉类型-intersection-types"
+        },
+        {
+          "level": 2,
+          "title": "接口继承与交叉类型（Interfaces vs Intersections）",
+          "slug": "接口继承与交叉类型-interfaces-vs-intersections"
+        },
+        {
+          "level": 2,
+          "title": "泛型对象类型（Generic Object Types）",
+          "slug": "泛型对象类型-generic-object-types"
+        },
+        {
+          "level": 2,
+          "title": "ReadonlyArray 类型（The ReadonlyArray Type）",
+          "slug": "readonlyarray-类型-the-readonlyarray-type"
+        },
+        {
+          "level": 2,
+          "title": "元组类型（Tuple Types）",
+          "slug": "元组类型-tuple-types"
+        }
+      ],
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "title": "关于typescript笔记",
       "frontmatter": {},
       "regularPath": "/tsNotes/",
       "relativePath": "tsNotes/README.md",
-      "key": "v-07b8ae9f",
+      "key": "v-0605131a",
       "path": "/tsNotes/",
       "headers": [
         {
@@ -3546,55 +3848,8 @@ export const siteData = {
           "slug": "thistype-type"
         }
       ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
-    },
-    {
-      "title": "对象类型（Object types）",
-      "frontmatter": {},
-      "regularPath": "/tsNotes/ObjectType.html",
-      "relativePath": "tsNotes/ObjectType.md",
-      "key": "v-547a7d54",
-      "path": "/tsNotes/ObjectType.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "索引签名（Index Signatures）",
-          "slug": "索引签名-index-signatures"
-        },
-        {
-          "level": 2,
-          "title": "属性继承（Extending Types）",
-          "slug": "属性继承-extending-types"
-        },
-        {
-          "level": 2,
-          "title": "交叉类型（Intersection Types）",
-          "slug": "交叉类型-intersection-types"
-        },
-        {
-          "level": 2,
-          "title": "接口继承与交叉类型（Interfaces vs Intersections）",
-          "slug": "接口继承与交叉类型-interfaces-vs-intersections"
-        },
-        {
-          "level": 2,
-          "title": "泛型对象类型（Generic Object Types）",
-          "slug": "泛型对象类型-generic-object-types"
-        },
-        {
-          "level": 2,
-          "title": "ReadonlyArray 类型（The ReadonlyArray Type）",
-          "slug": "readonlyarray-类型-the-readonlyarray-type"
-        },
-        {
-          "level": 2,
-          "title": "元组类型（Tuple Types）",
-          "slug": "元组类型-tuple-types"
-        }
-      ],
-      "lastUpdated": "2022/8/5 下午6:37:22",
-      "lastUpdatedTimestamp": 1659695842000
+      "lastUpdated": "2022/8/17 17:15:20",
+      "lastUpdatedTimestamp": 1660727720000
     },
     {
       "frontmatter": {
