@@ -85,3 +85,12 @@ npm install babel-eslint --save-dev
 // Apple Worldwide Developer Relations Certification Authority
 ```
 
+### Mac下载`gh`命令
+
+- `gh`是命令行上的 GitHub，现在可以在 beta 版中使用。它将拉取请求、问题和其他 GitHub 概念带到您已经使用的终端`git`和您的代码旁边。
+
+```js
+// 如果安装出错，多安装几次就好了。有时候会报404，它会转到另一个地址继续下载gh
+// brew install github/gh/gh
+```
+
