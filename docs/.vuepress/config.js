@@ -62,11 +62,11 @@ module.exports = {
           ],
         },
         {
-          path: "/notes/js/README",
+          path: "/notes/js/knowledge",
           title: "JS",
           collapsable: false,
           children: [
-            { title: "JS基础知识点", path: "/notes/README" },
+            { title: "JS基础知识点", path: "/notes/js/knowledge" },
             { title: "Map数据类型", path: "/notes/js/setmap" },
             { title: "设计模式", path: "/notes/js/designMode/pattern" },
             { title: "设计模型", path: "/notes/js/designMode/model" },
