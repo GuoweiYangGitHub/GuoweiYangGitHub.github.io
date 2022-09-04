@@ -120,9 +120,10 @@ module.exports = {
         },
         {
           title: "手写题",
-          path: "/questions/手写Axios",
+          path: "/questions/written",
           collapsable: false,
           children: [
+            { title: "笔试题", path: "/questions/written" },
             { title: "手写Axios", path: "/questions/手写Axios" },
             { title: "手写Promise", path: "/questions/手写Promise" },
             { title: "手写深拷贝", path: "/questions/手写深拷贝" },
