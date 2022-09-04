@@ -115,6 +115,7 @@ module.exports = {
             { title: "算法", path: "/questions/算法" },
             { title: "排序", path: "/questions/排序" },
             { title: "速背知识点", path: "/questions/速背知识点" },
+            // { title: "笔试题", path: "/questions/README" },
           ],
         },
         {
@@ -134,12 +135,12 @@ module.exports = {
           collapsable: false,
           children: [
             {
-              title: "2021年4月",
+              title: "面试题1",
               path: "/questions/2021年4月韩学强面试总结",
             },
-            { title: "2021年1月", path: "/questions/2021年1月面试总结" },
-            { title: "2020年12月", path: "/questions/2020年12月面试总结" },
-            { title: "2019年10月", path: "/questions/2019韩学强面试总结" },
+            { title: "面试题2", path: "/questions/2021年1月面试总结" },
+            { title: "面试题3", path: "/questions/2020年12月面试总结" },
+            { title: "面试题4", path: "/questions/2019韩学强面试总结" },
           ],
         },
       ],

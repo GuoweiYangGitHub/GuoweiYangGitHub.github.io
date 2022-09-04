@@ -23,8 +23,11 @@
 
 闭包是一个能读取其他函数内部变量的函数
 
-- 优点：使外部能访问到局部的东西
-- 缺点：使用不当容易造成内存泄漏的问题 例子：
+- 优点：
+  - 可以使用闭包模拟私有化方法
+- 缺点：
+  - 增加一定的内存消耗
+  - 使用不当容易造成内存泄漏的问题 例子：
 
 ```js
 function a () {
@@ -373,3 +376,214 @@ function quchong (arr) {
 - 事件监听
 - 发布订阅
 - async await
+
+## 数组常用的方法
+
+| 方法 | 作用 | 是否影响原数组 |
+| :-: | :-: | :-: |
+| `push` | 在数组后添加元素，返回数组长度 | ✅ |
+| `pop` | 删除数组最后一项，返回被删除项 | ✅ |
+| `shift` | 删除数组第一项，并返回被删除项 | ✅ |
+| `unshift` | 数组开头添加元素，返回数组长度 | ✅ |
+| `reserve` | 反转一个数组，返回修改后的数组 | ✅ |
+| `sort` | 排序一个数组，返回修改后的数组 | ✅ |
+| `splice` | 截取数组，返回被截取的区间 | ✅ |
+| `join` | 将一个数组所有元素连接成字符串并返回这个字符串 | ❌ |
+| `concat` | arr1.concat(arr2, arr3) 连接数组 | ❌ |
+| `map` | 操作数组每一项并返回一个新数组 | ❌ |
+| `forEach` | 遍历数组，没有返回值 | ❌ |
+| `filter` | 对数组所有项进行判断，返回符合规则的新数组 | ❌ |
+| `every` | 数组每一项都符合规则才返回true | ❌ |
+| `some` | 数组有符合规则的一项就返回true | ❌ |
+| `reduce` | 接收上一个return和数组的下一项 | ❌ |
+| `flat` | 数组扁平化 | ❌ |
+| `slice` | 截取数组，返回被截取的区间 | ❌ |
+
+## Math的常用方法有哪些？
+
+| 方法 | 作用 |
+| :-: | :-: |
+| `Math.max(...arr)` | 取arr中的最大值 |
+| `Math.min(...arr)` | 取arr中的最小值 |
+| `Math.ceil(小数)` | 小数向上取整 |
+| `Math.floor(小数)` | 小数向下取整 |
+| `Math.round(小数)` | 小数四舍五入 |
+| `Math.sqrt(num)` | 对num进行开方 |
+| `Math.pow(num, m)` | 对num取m次幂 |
+| `Math.random() * num` | 取0-num的随机数 |
+
+## 使用 `Object.prototype.toString.call()` 返回的结果
+
+| 类型 | toString | 结果 |
+| :-: | :-: | :-: |
+| `Map` | Object.prototype.toString.call(new Map()) | [object Map] |
+| `Set` | Object.prototype.toString.call(new Set()) | [object Set] |
+| `Array` | Object.prototype.toString.call([]) | [object Array] |
+| `Object` | Object.prototype.toString.call({})) | [object Object] |
+| `Symbol` | Object.prototype.toString.call(Symbol()) | [object Symbol] |
+| `RegExp` | Object.prototype.toString.call(new RegExp()) | [object RegExp] |
+| `Function` | Object.prototype.toString.call(function() {}) | [object Function] |
+| `Null` | Object.prototype.toString.call(null) | [object Null] |
+| `Undefined` | Object.prototype.toString.call(undefined) | [object Undefined] |
+| `NaN` | Object.prototype.toString.call(NaN) | [object Number] |
+
+## 讲讲JavaScript的垃圾回收机制
+
+- [垃圾回收](https://juejin.cn/post/6996828267068014600)
+
+## 哪些操作会造成内存泄漏？
+
+- 没有清理的DOM元素引用
+- 定时器没有清除
+- 事件侦听没有移除
+
+
+## JS中有哪些不同类型的弹出框？
+
+- 在JS中有三种类型的弹出框可用，分别是：
+  - Alert
+  - Confirm
+  - Prompt
+
+## 如何将 JS 日期转换为ISO标准
+
+`toISOString()`方法用于将js日期转换为ISO标准。 它使用ISO标准将js Date对象转换为字符串。如：
+
+```js
+var date = new Date();
+var n = date.toISOString();
+console.log(n);
+// YYYY-MM-DDTHH:mm:ss.sssZ
+```
+
+## 如何在JS中编码和解码 URL
+
+`encodeURI()` 函数用于在JS中对URL进行编码。它将url字符串作为参数并返回编码的字符串。
+
+注意: encodeURI()不会编码类似这样字符：`/ ? : @ & = + $ #`，如果需要编码这些字符，请使用encodeURIComponent()。 用法：
+
+```js
+var uri = "my profile.php?name=sammer&occupation=pāntiNG";
+var encoded_uri = encodeURI(uri);
+```
+
+`decodeURI()` 函数用于解码js中的URL。它将编码的url字符串作为参数并返回已解码的字符串，用法：
+
+```js
+var uri = "my profile.php?name=sammer&occupation=pāntiNG";
+var encoded_uri = encodeURI(uri);
+decodeURI(encoded_uri);
+```
+
+## 什么是BOM？有哪些api？
+
+- BOM就是`browser object model`，`浏览器对象模型`
+
+| api | 作用 | 代表方法或属性 |
+| :-: | :-: | :-: |
+| `window.history` | 操纵浏览器的记录 | history.back() history.go(-1) |
+| `window.innerHeight` | 获取浏览器窗口的高度 |  |
+| `shift` | 删除数组第一项，并返回被删除项 |  |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.host：获取域名和端口 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.hostname：获取主机名 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.port：获取端口号 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.pathname：获取url的路径 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.search：获取?开始的部分 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.href：获取整个url |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.hash：获取#开始的部分 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.origin：获取当前域名 |
+| `window.innerWidth` | 操作刷新按钮和地址栏 | location.navigator：获取当前浏览器信息 |
+
+## BOM 和 DOM 的关系
+
+`BOM`全称Browser Object Model，即浏览器对象模型，主要处理浏览器窗口和框架。
+
+DOM全称Document Object Model，即文档对象模型，是 HTML 和XML 的应用程序接口（API），遵循W3C 的标准，所有浏览器公共遵守的标准。
+
+JS是通过访问BOM（Browser Object Model）对象来访问、控制、修改客户端(浏览器)，由于BOM的window包含了document，window对象的属性和方法是直接可以使用而且被感知的，因此可以直接使用window对象的document属性，通过document属性就可以访问、检索、修改XHTML文档内容与结构。因为document对象又是DOM的根节点。
+
+可以说，BOM包含了DOM(对象)，浏览器提供出来给予访问的是BOM对象，从BOM对象再访问到DOM对象，从而js可以操作浏览器以及浏览器读取到的文档。
+
+## JS中的substr()和substring()函数有什么区别
+
+substr() 函数的形式为substr(startIndex,length)。 它从startIndex返回子字符串并返回'length'个字符数。
+
+```js
+var s = "hello";
+( s.substr(1,4) == "ello" ) // true
+```
+
+substring() 函数的形式为substring(startIndex,endIndex)。 它返回从startIndex到endIndex - 1的子字符串。
+
+```js
+var s = "hello";
+( s.substring(1,4) == "ell" ) // true
+```
+
+## 解释一下 "use strict" ?
+
+“use strict”是Es5中引入的js指令。 使用“use strict”指令的目的是强制执行严格模式下的代码。 在严格模式下，咱们不能在不声明变量的情况下使用变量。 早期版本的js忽略了“use strict”。
+
+## new 操作符做了什么
+
+- 创建了一个空对象
+- 通过this变量指代该对象
+- 给对象的属性赋值，并继承了构造函数的原型
+- 构造函数隐式地返回this
+
+## 箭头函数的特点
+
+- 没有原型属性
+- 不绑定this，会捕获其所在上下文的this，作为自己的this
+- 不绑定 arguments，用 reset参数代替。
+- 不能使用yield命令。
+- 不能作为构造函数，不能用new创建一个箭头函数的实例。
+
+## parseInt 与进制转化
+
+- parseInt() 函数可解析一个字符串，并返回一个整数。
+- 当参数 radix 的值为 0，或没有设置该参数时，parseInt() 会根据 string 来判断数字的基数。
+- 当忽略参数 radix , JavaScript 默认数字的基数如下:
+  - 如果 string 以 "0x" 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。
+  - 如果 string 以 0 开头，那么 ECMAScript v3 允许 parseInt() 的一个实现把其后的字符解析为八进制或十六进制的数字。
+  - 如果 string 以 1 ~ 9 的数字开头，parseInt() 将把它解析为十进制的整数。
+
+| 参数 | 描述 |
+| :-: | :-: |
+| `string` | 必需。要被解析的字符串。 |
+| `radix` | 可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。 |
+
+### 进制计算方式
+
+- `xyz(n) = x*n^2 + y*n^1 + z`
+- `abxyz(n) = a*n4 + b*n^3 +  x*n^2 + y*n^1 + z`
+
+```js
+// 举个例子
+
+paseInt('10',9) //解析： 1*9^1 + 0*9^0
+// 输出：9
+
+parseInt('fdfsdkl234', 16)
+// 解析：
+  // 1. 剔除无用信息， 因为s非16进制字母，则剔除s后面字符：有效字母为fdf
+  // 2. f对应16进制15; d 对应 16进制13, 则：
+  // 3. 15*16^2 + 13*16^1 + 15*16^0
+// 输出： 4063
+```
+
+### 面试题
+
+- `["0x1", "0x2", "0x3"].map(parseInt) 的结果`
+
+```js
+
+// 1.map默认会传入三个参数，分别是 item,index,self
+  // 则：对应的遍历的值分别是
+  parseInt('0x1',0) // redix默认为0，会转化为10进制： 值：1
+  parseInt('0x2',1) // 第二个参数为无效参数， 值： NaN
+  parseInt('0x3',2) // 代码输出为0；不太懂。。。
+
+// 4.所以返回的结果为：
+  // [1, NaN, 0]
+```
