@@ -94,3 +94,9 @@ npm install babel-eslint --save-dev
 // brew install github/gh/gh
 ```
 
+### 查看所有node版本
+
+```js
+ // npm view node versions 
+```
+
