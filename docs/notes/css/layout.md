@@ -108,3 +108,29 @@
   </div>
 </body>
 ```
+## 网格布局 grid
+
+- 显式网格属性 `grid-template-rows` 、`grid-template-columns`、`grid-template-areas`
+- 隐式网格属性： `grid-auto-rows`、`grid-auto-columns`、`grid-auto-flow`
+- 间距属性： `grid-column-gap`、`grid-row-gap`
+
+### 网格布局水平垂直居中
+
+```html
+
+<div class="wp">
+    <div class="box">123123</div>
+</div>
+
+
+<style>
+.wp {
+    display: grid;
+}
+.box {
+    align-self: center;
+    justify-self: center;
+}
+</style>
+ 
+```

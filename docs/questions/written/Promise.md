@@ -1,3 +1,29 @@
+# promise
+
+## 实现promise.all
+
+```js
+Promise.prototype.all = function (promises){
+  let results = []
+  let promiseCount = 0
+  let promisesLength = promises.length
+
+  return new Promise((resolve, reject) => {
+    for(let val of promises) {
+      Promise.resolve(val).then(function(res){
+        promiseCount++;
+        results[i] = res
+        if(promiseCount === promisesLength) {
+          return resolve(results) // 可以不用 return 出去
+        }
+      }, function (err){
+        return reject(err) // 可以不用 return 出去
+      })
+    }
+  })
+}
+```
+
 ## 手写Promise
 
 ```js

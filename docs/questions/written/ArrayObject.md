@@ -1,6 +1,27 @@
-# 算法题
+# 数组对象去重
 
-## 数组去重的多种方式
+## 使用 filter和map
+
+```js
+function uniqueFunc(arr, key){
+  const res = new Map()
+  return arr.filter((item) => !res.has(item[key]) && res.set(item[key], 1))
+}
+```
+
+## 使用 reduce
+
+```js
+function uniqueFunc(arr, key){
+  let hash = {}
+  return arr.reduce((prevValue,currentValue) => {
+    hash[currentValue[key]] ? '' : hash[currentValue[key]] = true && prevValue.push(currentValue)
+    return prevValue
+  },[])
+}
+```
+
+## 数组去重的方式
 
 ### 第一种方法：ES6 - 直接用Set
 
@@ -32,18 +53,12 @@ for(let i=0;i<arr.length;i++){
 console.log(c);
 ```
 
-**数组排序**
-
-冒泡排序
-
-插入排序
-
-快速排序
 ## 2.数组扁平化的N种实现方案
 
 - 即将多维数组变为一位数组
 
 ### 第一种方法：使用ES6中`flat`方法
+
 ```js
 /**数组扁平化 */
 let arr= [
@@ -63,6 +78,7 @@ console.log(arr);
 arr=arr.toString().split(',').map(item=>parseFloat(item));
 console.log(arr);
 ```
+
 ### 第三种方法：转化JSON格式字符串 然后用正则替换所有的[]（比上一种方法多了一步，加了正则）
 
 ```js
@@ -80,69 +96,3 @@ while(arr.some(item=>Array.isArray(item))){
 }
 console.log(arr);
 ```
-
-
-
-## 斐波那契数列
-
-```js
-function fibonacci(count){
-    function fn(count,curr=1,next=1){
-        if(count==0){
-            return curr;
-        }else{
-            return fn(count-1,next,curr+next);
-        }
-    };
-    return fn(count);
-}
-```
-
-
-
-## 字节经典算法题目
-
-```js
-/**
- * 输入一个正数N，输出所有和为N的连续正数序列
- * 例如:输入15
- * 结果:[[1,2,3,4,5],[4,5,6],[7,8]]
- */
-
-function createArr(n,len){
-    let arr=new Array(len).fill(null),
-        temp=[];
-    arr[0]=n;
-    arr=arr.map((item,index)=>{
-        if(item==null){
-            item=temp[index-1]+1;
-        }
-        temp.push(item);
-        return item;
-    });
-    return arr;
-}
-function fn(count){
-    let result=[];
-    //=>求出中间值
-    let middle=Math.ceil(count/2);
-    //从1开始累加
-    for(let i=1;i<=middle;i++){
-        //控制累加多少次
-        for(let j=2;;j++){
-            //求出累加多次的和
-            let total=(i+(i+j-1))*(j/2);
-            if(total>count){
-                break;
-            }else if(total==count){
-                result.push(createArr(i,j));
-                break;
-            }
-        }
-    }
-    return result;
-}
-console.log(fn(15));
-```
-
-![](https://img-blog.csdnimg.cn/20200319105351250.png)

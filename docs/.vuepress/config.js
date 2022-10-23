@@ -102,46 +102,82 @@ module.exports = {
       ],
       "/questions/": [
         {
-          title: "面试题",
-          path: "/questions/html",
+          title: "前端基础",
+          path: "/questions/fontEndBasic/html",
           collapsable: false,
           children: [
-            { title: "HTML相关", path: "/questions/html" },
-            { title: "CSS", path: "/questions/CSS" },
-            { title: "vue", path: "/questions/vue" },
-            { title: "小程序", path: "/questions/小程序面试" },
-            { title: "手机端", path: "/questions/手机端" },
-            { title: "webpack优化", path: "/questions/webpack优化" },
-            { title: "算法", path: "/questions/算法" },
-            { title: "排序", path: "/questions/排序" },
-            { title: "速背知识点", path: "/questions/速背知识点" },
-            // { title: "笔试题", path: "/questions/README" },
+            { title: "HTML", path: "/questions/fontEndBasic/HTML" },
+            { title: "CSS", path: "/questions/fontEndBasic/CSS" },
+            { title: "JS", path: "/questions/fontEndBasic/JS" },
+            { title: "Vue", path: "/questions/fontEndBasic/Vue" },
+            { title: "React", path: "/questions/fontEndBasic/React" },
+            { title: "小程序", path: "/questions/fontEndBasic/WXApp" },
+            { title: "Webpack", path: "/questions/fontEndBasic/Webpack" },
+            { title: "性能优化", path: "/questions/fontEndBasic/PerformanceOptimization" },
+            { title: "跨终端", path: "/questions/fontEndBasic/CrossTerminal" },
+            // { title: "速背知识点", path: "/questions/速背知识点" },
           ],
         },
         {
-          title: "手写题",
-          path: "/questions/written",
+          title: "计算机基础",
+          path: "/questions/computer/ComputerNetWork",
           collapsable: false,
           children: [
-            { title: "笔试题", path: "/questions/written" },
-            { title: "手写Axios", path: "/questions/手写Axios" },
-            { title: "手写Promise", path: "/questions/手写Promise" },
-            { title: "手写深拷贝", path: "/questions/手写深拷贝" },
-            { title: "手撸题", path: "/questions/手撸面试题" },
+            { title: "浏览器基础与http协议", path: "/questions/computer/ComputerNetWork" },
+            { title: "网络安全", path: "/questions/computer/SecurityNote" },
+          ]
+        },
+        {
+          title: "数据类型与算法",
+          path: "/questions/dataStructure/Concept",
+          collapsable: false,
+          children: [
+            { title: "数据结构", path: "/questions/dataStructure/Concept" },
+            { title: "常见排序算法", path: "/questions/dataStructure/Sort" },
+            { title: "算法题", path: "/questions/dataStructure/Algorithm" },
+
+          ]
+        },
+        {
+          title: "Typescript",
+          path: "/questions/typescript/TypeScript",
+          collapsable: false,
+          children: [
+            { title: "Typescript", path: "/questions/typescript/TypeScript" },
+          ]
+        },
+        {
+          title: "自动化测试",
+          path: "/questions/autoTesting/AutoTesting",
+          collapsable: false,
+          children: [
+            { title: "自动化测试", path: "/questions/autoTesting/AutoTesting" },
+          ]
+        },
+        {
+          title: "手写题",
+          path: "/questions/written/Written",
+          collapsable: false,
+          children: [
+            { title: "常见笔试题", path: "/questions/written/Written" },
+            { title: "Axios", path: "/questions/written/Axios" },
+            { title: "Promise", path: "/questions/written/Promise" },
+            { title: "深拷贝", path: "/questions/written/DeepClone" },
+            { title: "数组对象去重", path: "/questions/written/ArrayObject" },
+            { title: "判断程序输出的结果", path: "/questions/written/GetOutputResults" },
           ],
         },
         {
           title: "面试记录",
-          path: "/questions/2021年1月面试总结",
+          path: "/questions/questionHistory/2022.10",
           collapsable: false,
           children: [
-            {
-              title: "面试题1",
-              path: "/questions/2021年4月韩学强面试总结",
-            },
-            { title: "面试题2", path: "/questions/2021年1月面试总结" },
-            { title: "面试题3", path: "/questions/2020年12月面试总结" },
-            { title: "面试题4", path: "/questions/2019韩学强面试总结" },
+            { title: "2022.10", path: "/questions/questionHistory/2022.10" },
+            { title: "2021.04", path: "/questions/questionHistory/2021.04"},
+            { title: "2021.01", path: "/questions/questionHistory/2021.01" },
+            { title: "2020.12", path: "/questions/questionHistory/2020.12" },
+            { title: "2020.11", path: "/questions/questionHistory/2020.11" },
+            { title: "2019.06", path: "/questions/questionHistory/2019.06" },
           ],
         },
       ],

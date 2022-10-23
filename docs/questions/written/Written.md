@@ -1,6 +1,4 @@
-#  常见手写面试题
-
-
+# 常见手写面试题
 
 ## 实现一个new操作符
 
@@ -50,8 +48,6 @@ console.log(f);
 - new通过构造函数Test创建处理的实例可以访问构造函数中的属性也可以访问构造函数原型链上的属性，所以：通过new操作符，实例与构造函数通过原型链连接了起来
 - 构造函数如果返回原始值，那么这个返回值毫无意义
 - 构造函数如果返回对象，那么这个返回值会被正常的使用，导致new操作符没有作用
-
-
 
 ## 手写 call,  apply , bind
 
@@ -108,13 +104,10 @@ foo.myApply(obj, ['Chocolate', 18]);
 **注意**：当apply传入的第一个参数为null时，函数体内的this会指向window。
 
 
-
 ### 手写 bind
 
  ```js
  ```
-
-
 
 ## 实现函数科里化
 
@@ -139,6 +132,7 @@ let sum = (a, b, c, d) => {
 let newSum = currying(sum);
 newSum(1)(2)(3)(4);
 ```
+
 ### 反科里化
 
 ```js
@@ -412,4 +406,15 @@ const newArr = arr.filter((item,i) => arr.indexOf(item) === i)
 const newArr = arr.reduce((last,next,i) => {
   return [].concat(last, arr.indexOf(next) === i ? next : [])
 })
+```
+
+## js 中怎么使 if(aﾠ==1 && a== 2 && ﾠa==3) 返回 true？
+
+```js
+let a = {
+  i: 1,
+  toString: function () {
+    return a.i++;
+  }
+};
 ```

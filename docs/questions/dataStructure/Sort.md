@@ -4,16 +4,20 @@
 
 ### 基本思路
 
-><div>1.依次比较相邻的两个数，如果第一个比第二个小，不变。如果第一个比第二个大，调换顺序。一轮下来，最后一个是最大的数</div>
+> <div>1.依次比较相邻的两个数，如果第一个比第二个小，不变。如果第一个比第二个大，调换顺序。一轮下来，最后一个是最大的数</div>
 > <div>2.对除了最后一个之外的数重复第一步，直到只剩一个数</div>
 
 ### 图示
 
 ![](https://img-blog.csdnimg.cn/20200331111904150.png#pic_center)
 
+### 时间复杂度
+
+- `O(n*n)`
+
 ### 算法实现
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,21 +52,28 @@
 ```
 
 ### 执行结果
+
 ![](https://img-blog.csdnimg.cn/20200331112633479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQyOTcxOA==,size_16,color_FFFFFF,t_70)
 
 ## 2.选择排序
 
 ### 基本思路
 
-><div>1.找出最小的数，和第一个交换位置</div>
-><div>2.在剩下的数中，找出最二小的数，放在第二个</div>
-><div>3.依次类推，排出顺序</div>
+> <div>1.找出最小的数，和第一个交换位置</div>
+> <div>2.在剩下的数中，找出最二小的数，放在第二个</div>
+> <div>3.依次类推，排出顺序</div>
 
 ### 图示
+
 ![](https://img-blog.csdnimg.cn/20200331113054561.png#pic_center)
 
+### 时间复杂度
+
+- `O(n*n)`
+
 ### 算法实现
-```javascript
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,22 +111,27 @@
 ```
 
 ### 执行结果
+
 ![](https://img-blog.csdnimg.cn/20200331114113439.png)
 
 ## 3.插入排序
 
 ### 基本思路
 
-><div>1.把数组分为[已排序]和[未排序]两部分,第一个数为[已排序]，其余为[未排序]</div>
-><div>2.从[未排序]抽出第一个数，和[已排序]部分比较，插入到合适的位置</div>
+> <div>1.把数组分为[已排序]和[未排序]两部分,第一个数为[已排序]，其余为[未排序]</div>
+> <div>2.从[未排序]抽出第一个数，和[已排序]部分比较，插入到合适的位置</div>
 
 ### 图示
 
 ![](https://img-blog.csdnimg.cn/20200331115752579.png#pic_center)
 
+### 时间复杂度
+
+- `O(n*n)`
+
 ### 算法实现
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,7 +162,6 @@
 </html>
 ```
 
-
 ### 执行结果
 
 ![](https://img-blog.csdnimg.cn/20200331114113439.png)
@@ -155,74 +170,83 @@
 
 ### 基本思路
 
-><div>1.不断将数组对半分，直到每个数组只有一个</div>
-><div>2.将分出来的部分重新合并</div>
-><div>3.合并的时候按顺序排列</div>
+> <div>1.不断将数组对半分，直到每个数组只有一个</div>
+> <div>2.将分出来的部分重新合并</div>
+> <div>3.合并的时候按顺序排列</div>
 
 ### 图示
+
 ![](https://img-blog.csdnimg.cn/20200331131808651.png#pic_center)
 
 ### 算法实现
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        function merge(left,right){
-            var res=[],
-                i=0,j=0;
-            //合并两个数组（按照从小到大的顺序）
-            while(i<left.length&&j<right.length){
-                if(left[i]<right[j]){
-                    res.push(left[i++]);
-                }else{
-                    res.push(right[j++]);
-                }
-            }
-            //数组拼接
-            return res.concat(left.slice(i)).concat(right.slice(j));
+      function merge(left, right) {
+        var res = [],
+          i = 0,
+          j = 0;
+        //合并两个数组（按照从小到大的顺序）
+        while (i < left.length && j < right.length) {
+          if (left[i] < right[j]) {
+            res.push(left[i++]);
+          } else {
+            res.push(right[j++]);
+          }
         }
+        //数组拼接
+        return res.concat(left.slice(i)).concat(right.slice(j));
+      }
 
-        function mergeSort(arr){
-            var len=arr.length;
-            var i,j;
-            //不断拆分至只有一个数
-            if(len<=1) return arr;
-            var mid=Math.floor(len/2);
-            var left=arr.slice(0,mid),
-                right=arr.slice(mid);
-            return merge(mergeSort(left),mergeSort(right));
-        }
-        var arr=[1,12,6,3,5];
-        arr=mergeSort(arr);
-        console.log(arr);
+      function mergeSort(arr) {
+        var len = arr.length;
+        var i, j;
+        //不断拆分至只有一个数
+        if (len <= 1) return arr;
+        var mid = Math.floor(len / 2);
+        var left = arr.slice(0, mid),
+          right = arr.slice(mid);
+        return merge(mergeSort(left), mergeSort(right));
+      }
+      var arr = [1, 12, 6, 3, 5];
+      arr = mergeSort(arr);
+      console.log(arr);
     </script>
-</body>
+  </body>
 </html>
 ```
+
 ### 执行结果
+
 ![](https://img-blog.csdnimg.cn/20200331114113439.png)
 
 ## 5.快速排序
 
 ### 基本思路
 
-><div>1.以一个数为基准(中间的数)，比基准小的放到左边，比基准大的放到右边</div>
-><div>2.再按此方法对这两部分数据分别进行快速排序（递归进行）</div>
-><div>3.不能再分后退出递归，并重新将数组合并</div>
+> <div>1.以一个数为基准(中间的数)，比基准小的放到左边，比基准大的放到右边</div>
+> <div>2.再按此方法对这两部分数据分别进行快速排序（递归进行）</div>
+> <div>3.不能再分后退出递归，并重新将数组合并</div>
 
 ### 图示
+
 ![](https://img-blog.csdnimg.cn/20200331140023958.png#pic_center)
+
+### 时间复杂度
+
+- 平均是`O(n * logN)`，最坏是`O(n * n)`
 
 ### 算法实现
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -267,19 +291,21 @@
 ```
 
 ### 执行结果
+
 ![](https://img-blog.csdnimg.cn/20200331114113439.png)
 
 ## 6.随机化快速排序
 
 ### 基本思路
-><div>随机化快速排序只是在快排基础上将主元通过随机函数选取一下了。</div>
 
-**关于js中随机产生【n , m】随机数实例：**
+> <div>随机化快速排序只是在快排基础上将主元通过随机函数选取一下了。</div>
+
+**关于 js 中随机产生【n , m】随机数实例：**
 
 在本例中，我们将取得介于 1 到 10 之间的一个随机数：
 
 ```javascript
-Math.floor((Math.random()*10)+1);
+Math.floor(Math.random() * 10 + 1);
 ```
 
 **输出结果：**
@@ -288,7 +314,7 @@ Math.floor((Math.random()*10)+1);
 
 ### 算法实现
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -339,4 +365,5 @@ Math.floor((Math.random()*10)+1);
 ```
 
 ### 执行结果
+
 ![](https://img-blog.csdnimg.cn/20200331114113439.png)
