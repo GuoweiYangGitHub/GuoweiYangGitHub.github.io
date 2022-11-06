@@ -274,6 +274,27 @@ flex: 1;
 // 所以，ios有效，android无效
 ```
 
+## backdrop-filter css滤镜
+
+- 大部分浏览器都兼容（IE不考虑）
+
+```css
+.box {
+  backdrop-filter: url(commonfilters.svg#filter);
+
+  backdrop-filter: blur(10px); // 高斯模糊
+  backdrop-filter: brightness(2.2); // 亮度
+  backdrop-filter: contrast(2); // 对比度
+  backdrop-filter: drop-shadow(4px 4px 8px #fff); // 投影
+  backdrop-filter: grayscale(60%); // 灰度
+  backdrop-filter: hue-rotate(66deg); // 色调变化
+  backdrop-filter: invert(60%); // 反相
+  backdrop-filter: opacity(60%); // 透明度
+  backdrop-filter: saturate(250%); // 饱和度
+  backdrop-filter: sepia(70%); // 褐色
+}
+```
+
 ## css面试真题
 
 ### 面试题1

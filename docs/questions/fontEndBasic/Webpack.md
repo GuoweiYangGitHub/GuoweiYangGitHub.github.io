@@ -151,3 +151,59 @@ const components = registerComponent(files);
 
 export default components;
 ```
+
+## webpack 配置多入口
+
+```js
+module.exports = {
+  entry: {
+    'index': './src/view/index/index.js',
+    'login': './src/view/login/login.js',
+  },
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: './src/view/index/index.html',
+    inject: true,
+    chunks: ['index']
+   }),
+  new HtmlWebpackPlugin({
+    filename: 'login/login.html', //http访问路径
+    template: './src/view/login/login.html', //实际文件路径
+    inject: true,
+    chunks: ['login']
+  }),
+  output: {},
+  loader: {},
+  plugins: {}
+}
+```
+
+## webpack的执行流程
+
+[webpack执行流程](https://zhuanlan.zhihu.com/p/364310644)
+
+### 构建流程
+
+1. 初始化阶段
+   1. 解析 config 与 shell 中的配置项，合并参数
+   2. 创建Compiler
+   3. 初始化内置插件及Options配置
+   4. run
+2. 编译阶段
+   1. Compilation
+   2. make编译从入口文件开始，构建模块，知道所有模块创建结束
+   3. 生成modules
+   4. buildModule,执行module.build(),对应的是 NormalModule.build()，执行doBuild()方法，里面有个runLoaders方法，调用相应的Loaders,把我们的模块转成标准的JS模块。还会生成this._source对象，有name和value两个字段，name就是我们的文件路径，value就是编译后的JS代码；经过doBuild之后，我们的任何模块都被转成了标准的JS模块，接下来就是调用 Paeser.parse方法，将JS解析为AST，解析成AST最大作用就是收集模块依赖关系，webpack会遍历AST对象，遇到不同类型的节点执行对应的函数。webpack会记录下这些依赖项，并记录在module.dependencies数组中
+   5. make阶段结束后，会触发compliation.seal方法。compilation.seal，主要生成chunks，对chunks进行一系列的优化操作，并生成输出的代码。webpack中的chunk，可以理解为配置在entry中的模块，或者是动态引入的模块。
+3. 生成文件阶段
+   1. 生成 chunks，首先需要生成最终的代码，主要在compilation.seal中调用compilation.createChunkAssets方法
+   2. 生成文件，在 Compiler 开始生成文件前，钩子emit会被执行，这是我们修改最终文件的最后一个机会，生成的在此之后，我们的文件就不能改动了。
+   3. 生成所有文件，然后触发任务点done,结束构建流程
+
+## 有没有自己写过webpack 的插件或者loader？
+
+### 什么是loader？
+
+- loader是文件加载器，能够加载资源文件，并对这些文件进行一些处理，诸如编译、压缩等，最终一起打包到指定的文件中。
+  - 处理一个文件可以使用多个loader，loader的执行顺序是和本身的顺序是相反的，即最后一个loader最先执行，第一个loader最后执行。
+  - 第一个执行的loader接收源文件内容作为参数，其他loader接收前一个执行的loader的返回值作为参数。最后执行的loader会返回此模块的JavaScript源码

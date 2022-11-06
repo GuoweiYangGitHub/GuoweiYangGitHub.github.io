@@ -45,7 +45,7 @@ preload('1.png', '2.png', '3.png');
 
 ## 怎样理解单项数据流
 
-- 这个概念出现在组件通讯。父组件是通过 prop 把数据传递到子组件的，但是这个 prop 只能由父组件修改，子组件不能修改，否则会报错。子组件想修改时，只能通过 $emit 派发一个自定义事件，父组件接收后，由子组件修改。
+- 这个概念出现在组件通讯。父组件是通过 prop 把数据传递到子组件的，但是这个 prop 只能由父组件修改，子组件不能修改，否则会报错。子组件想修改时，只能通过 $emit 派发一个自定义事件，父组件接收后，由父组件修改。
 
 ## vue 生命周期
 
@@ -99,20 +99,15 @@ preload('1.png', '2.png', '3.png');
 ## 导航守卫
 
 - 全局守卫
-  - beforeEach
-  - beforeResolve
-  - afterEach
+  - beforeEach (全局前置守卫，路由跳转前触发)
+  - beforeResolve (全局解析守卫，在所有组件内守卫和异步组件被解析后触发)
+  - afterEach (路由跳转完成后触发)
 - 路由守卫
-  - beforeEnter
+  - beforeEnter (路由独享守卫)
 - 组件守卫
   - beforeRouteEnter
   - beforeRouteUpdate
   - beforeRouteLeave
-
-- router.beforeEach(to,from,next) 全局前置守卫，路由跳转前触发
-- router.beforeResolve() 全局解析守卫，在所有组件内守卫和异步组件被解析后触发
-- router.afterEach() 路由跳转完成后触发
-- beforeEnter 路由独享守卫
 
 - 参数
   - to 即将要进入的目标路由对象
@@ -124,7 +119,7 @@ preload('1.png', '2.png', '3.png');
 - A: beforeRouteLeave (组件守卫)
 - beforeEach （全局守卫）
 - beforeEnter （路由独享守卫）
-- beforeRouteEnter （组件守卫）
+- B: beforeRouteEnter （组件守卫）
 - beforeResolve （全局解析守卫）
 - afterEach （全局守卫）
 - B: beforeCreate
@@ -173,6 +168,10 @@ preload('1.png', '2.png', '3.png');
 
 - 计算属性是自动监听依赖值得变化，而动态返回内容，监听是一个过程，在监听的值变化时，可以触发一个回调，并做一些事情。
 - 所以区别来源于用法，只是需要动态值，那就用计算属性；需要知道值的改变后执行业务逻辑，采用 watch，用反或混用虽然可行，但都是不正确的用法。
+
+## mixins合并规则
+
+合并规则：data数据和methods之类的对象类型的值会遍历合并，冲突时以组件内优先；钩子函数合并时都会执行，先执行mixins里的。
 
 ## Vue.extend()
 
@@ -253,10 +252,251 @@ const stop = watchEffect(() => {})
 stop()
 
 ```
+## 父组件可不可以监听子组件的生命周期
+
+1. 使用$emit 去监听
+
+```html
+
+<!-- 父组件 -->
+<template>
+  <div>
+    <child-component @mounted="handleDoSomething"></child-component>
+  </div>
+</template>
+<script>
+export default Vue.component("HelloWorld", {
+ ...
+  methods:{
+    handleDoSomething(data){
+      console.log('监听到子组件生命周期钩子函数mounted时，触发该回调',data)
+    }
+  },
+  components:{
+    "child-component":ChildComponent
+  }
+});
+</script>
+
+<!-- 子组件 -->
+<script>
+export default {
+   ...
+    mounted(){
+        this.$emit('mounted','mounted 触发了')
+    },
+}
+</script>
+```
+
+2. 使用@hook （原理：就是父子组件通信的基础上（方法1），添加@hook，形成了对应生命周期函数的自动发布，方法1每次都是手动执行发布）
+	- @hook 使用场景：通过监听子组件的生命周期函数来处理业务，例如监听子组件loading，数据渲染到页面的之前让页面 loading。mounted 之后停止 loading。beforeUpdata 时开始 loading。updatad 之后停止 loading
+
+```html
+<!-- 父组件 -->
+<template>
+  <div>
+    <child-component @hook:mounted="handleDoSomething"></child-component>
+  </div>
+</template>
+<script>
+export default Vue.component("HelloWorld", {
+ ...
+  methods:{
+    handleDoSomething(data){
+      console.log('监听到子组件生命周期钩子函数mounted时，触发该回调',data)
+    }
+  },
+  components:{
+    "child-component":ChildComponent
+  }
+});
+</script>
+
+<!-- 子组件 -->
+<script>
+  export default {
+    mounted() {
+      const timer = setInterval(() => { ... }, 1000);
+      this.$once('hook:beforeDestroy', () => clearInterval(timer);)
+    }
+  };
+</script>
+```
+
+## vue 中的自定义指令
+
+### 指令的生命周期
+
+- created （在绑定元素的 attribute 前  或事件监听器应用前调用）
+- beforeMount （在元素被插入到 DOM 前调用）
+- mounted [vue3常用]（在绑定元素的父组件及他自己的所有子节点都挂载完成后调用）
+- beforeUpdate （绑定元素的父组件更新前调用）
+- updated （在绑定元素的父组件，及他自己的所有子节点都更新后调用）
+- beforeUnmount （绑定元素的父组件卸载前调用）
+- unmounted（绑定元素的父组件卸载后调用）
+
+### mounted或inserted参数
+- el （指令绑定到的元素。这可以用于直接操作 DOM）
+- binding 值
+	- value （传递给指令的值）
+	- oldValue （之前的值）
+	- arg（传递给指令的参数 (如果有的话)。例如在 v-my-directive:foo 中，参数是 "foo"。）
+- vnode （代表绑定元素的底层 VNode）
+
+### vue.directive('指令', {}) 使用场景
+- 输入框自动聚焦
+- 下拉菜单(点击下拉菜单区域外时，隐藏菜单)
+- 相对时间转换
+- 按钮级权限授权
+
+### 输入框自动聚焦
+
+```js
+// 注册一个全局自定义指令 `v-focus`
+Vue.directive('focus', {
+  // 当被绑定的元素插入到 DOM 中时
+  inserted: function (el) {
+    // 聚焦元素
+    el.focus()
+  }
+})
+<input v-focus>
+
+```
+
+### 下拉菜单
+
+> 点击下拉菜单本身不会隐藏菜单
+> 点击下拉菜单以外的区域隐藏菜单
+
+```js
+Vue.directive('clickoutside', {
+  bind(el, binding) {
+    function documentHandler(e) {
+      if (el.contains(e.target)) {
+       return false
+      }
+
+      if (binding.expression) {
+        binding.value(e)
+      }
+    }
+
+    el.__vueMenuHandler__ = documentHandler
+    document.addEventListener('click', el.__vueMenuHandler__)
+  },
+  unbind(el) {
+    document.removeEventListener('click', el.__vueMenuHandler__)
+    delete el.__vueMenuHandler__
+  }
+})
+
+new Vue({
+  el: '#app',
+  data: {
+    show: false
+  },
+  methods: {
+    handleHide() {
+      this.show = false
+    }
+  }
+})
+<div class="main" v-menu="handleHide">
+  <button @click="show = !show">点击显示下拉菜单</button>
+  <div class="dropdown" v-show="show">
+    <div class="item"><a href="#">选项 1</a></div>
+    <div class="item"><a href="#">选项 2</a></div>
+    <div class="item"><a href="#">选项 3</a></div>
+  </div>
+</div>
+
+```
+
+### 相对时间转换
+
+> 类似微博、朋友圈发布动态后的相对时间，比如刚刚、两分钟前等等
+
+```js
+<span v-relativeTime="time"></span>
+new Vue({
+  el: '#app',
+  data: {
+    time: 1565753400000
+  }
+})
+
+Vue.directive('relativeTime', {
+  bind(el, binding) {
+    // Time.getFormatTime() 方法，自行补充
+    el.innerHTML = Time.getFormatTime(binding.value)
+    el.__timeout__ = setInterval(() => {
+      el.innerHTML = Time.getFormatTime(binding.value)
+    }, 6000)
+  },
+  unbind(el) {
+    clearInterval(el.innerHTML)
+    delete el.__timeout__
+  }
+})
+
+```
+### vue按钮级权限怎么去做？
+
+- 可以使用 vue的自定义指令去做。
+
+>  封装 permissions.js 文件，设置全局的自定义指令
+```js
+// 封装 permissions.js 文件，设置全局的自定义指令
+import Vue from 'vue';
+// 检测是否有权限
+// 使用Vue.directive声明自定义指令btn-key
+export const buttonPermissions = Vue.directive('btn-key',{
+    /**
+     * inserted：被绑定元素插入父节点时调用
+     * el：指令所绑定的元素，可以用来直接操作 DOM
+     * binding.value：指令的绑定值，例如：v-my-directive="1 + 1" 中，绑定值为 2。
+     */
+    inserted(el,binding){
+        let buttonKey = binding.value;
+        // 代表某个元素需要通过权限验证
+        if(buttonKey){
+            let key = checkKey(buttonKey)
+            if(!key){//没有权限
+                el.remove()  //删除按钮
+            }
+        }else{
+            throw new Error('缺少唯一指令')
+        }
+    },
+})
+
+// 检测传入的元素key是否可以显示
+function checkKey(key) {
+    // 获取权限数组
+    let permissionData = sessionStorage.getItem("permissionData") ? sessionStorage.getItem("permissionData") : [] ;
+    //如果传入的元素key不在权限数组里，则不可显示
+    let index = permissionData.indexOf(key)
+    if(index > -1) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+```
+
+> 在main.js 中去挂载
+
+```js
+import {buttonPermissions} from './common/permissions'
+
+```
 
 ## 在 Vue 中怎么检测数组变化？
 
-- vue 重写了这几个方法， push pop shift unshift
+- vue 重写了这几个方法， push pop shift unshift sort reserve splice
 - this.$set
 
 ## 在什么场景下会用到 slot

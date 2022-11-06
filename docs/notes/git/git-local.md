@@ -52,13 +52,9 @@
   // 将 rebase分支上的所有修改都移动到a分支上
 ```
 
-![分支描述](https://img.cbg.pub/crm/files/31f4b89d-9863-1b94-2d05-7f376c431e861647919093.png)
-
 ### 别人已经删除的远程分支，还能在本地看到时候
 
 ```js
 // git remote prune origin
 ```
-
-
 

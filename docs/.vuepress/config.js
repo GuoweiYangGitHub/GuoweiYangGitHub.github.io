@@ -91,6 +91,17 @@ module.exports = {
           ],
         },
         {
+          path: "/notes/git/git-ssh",
+          title: "git笔记",
+          collapsable: false,
+          children: [
+            { title: "git-ssh配置", path: "/notes/git/git-ssh" },
+            { title: "git本地操作", path: "/notes/git/git-local" },
+            { title: "git远程操作", path: "/notes/git/git-range" },
+            { title: "git常用操作", path: "/notes/git/git-other" },
+          ],
+        },
+        {
           path: "/notes/others/npm",
           title: "其他",
           collapsable: false,
@@ -202,60 +213,28 @@ module.exports = {
       ],
       "/tsNotes/": [
         {
-          path: "/tsNotes/README",
-          title: "typescript笔记",
-          collapsable: false,
-          children:[
-            { title: "typescript笔记", path: "/tsNotes/README" },
-          ]
-        },
-        {
           path: "/tsNotes/Normal",
           title: "基础",
-          // collapsable: false,
-          // children:[
-          //   { title: "基础", path: "/tsNotes/Normal" },
-          // ]
         },
         {
           path: "/tsNotes/ObjectType",
           title: "对象类型",
-          // collapsable: false,
-          // children:[
-          //   { title: "对象类型", path: "/tsNotes/ObjectType" },
-          // ]
         },
         {
           path: "/tsNotes/Generics",
           title: "泛型",
-          // collapsable: false,
-          // children: [
-          //   { title: "泛型", path: "/tsNotes/Generics" },
-          // ]
         },
         {
           path: "/tsNotes/Keyof",
           title: "keyof操作符",
-          // collapsable: false,
-          // children:[
-          //   { title: "keyof操作符", path: "/tsNotes/Keyof" },
-          // ]
         },
         {
           path: "/tsNotes/IndexAccess",
           title: "索引访问类型",
-          // collapsable: false,
-          // children:[
-          //   { title: "索引访问类型", path: "/tsNotes/IndexAccess" },
-          // ]
         },
         {
           path: "/tsNotes/ConditionalTypes",
           title: "条件类型",
-          // collapsable: false,
-          // children:[
-          //   { title: "条件类型", path: "/tsNotes/ConditionalTypes" },
-          // ]
         }
       ],
     },

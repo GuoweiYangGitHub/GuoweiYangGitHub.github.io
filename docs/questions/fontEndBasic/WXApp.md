@@ -1,5 +1,19 @@
 # 小程序面试题
 
+## 小程序登录流程
+
+![登录流程](https://clouds.guowei.link/appLogin.png)
+
+1. 调用 `wx.login()` 获取 临时登录凭证 code，有效期为 5分钟；（临时登录凭证 code 只能使用一次）
+
+2. 将临时 code 传到我们的后端，后端调用 `auth.code2Session` 接口，换取用户唯一标识 `OpenID` 和 会话密钥 `session_key`；（ openid 是用户唯一标识; session_key 能保证当前用户进行会话操作的有效性）
+
+3. 注意：获取 session_key 出于安全性的考虑，要在后端调用。如果我们在前端通过 request 调用此接口，就不可避免的需要将我们小程序的appid 、secret 和服务端下发的 session_key 暴露在外部，会给我们的业务安全带来极大的风险。 **session_key 拥有一定的时效性。用户越久未使用小程序，用户登录态越有可能失效**。反之如果用户一直在使用小程序，则用户登录态一直保持有效。**具体时效逻辑由微信维护，对开发者透明**。开发者**需要调用 wx.checkSession 接口检测当前用户登录态是否有效**。
+
+4. 后端自定义新的密钥并关联返回的 session_key 和 openid，将新的密钥返给前端，前端将其存储在 storage 中。（会话密钥 session_key 是对用户数据进行 加密签名 的密钥。为了应用自身的数据安全，开发者服务器不应该把会话密钥下发到小程序，也不应该对外提供这个密钥，所以要定义新的密钥）。 之所以存在storage中，是因为小程序没有 cookie，相应的后端 set-cookie 在小程序中不起作用。
+
+5. 前端发送请求的时候，带着密钥，后端根据密钥识别用户身份，返回数据。
+
 ## 打开一个小程序到页面展示，经历了什么
 
 1. 启动小程序
@@ -29,7 +43,7 @@ this.setData({})
 - 控制图片大小以及比例
 - 避免wxml节点数过大
 - 滚动区域设置惯性滚动。`-webkit-overflow-scrolling: touch`
-- 避免短时间内发起太多请求
+- 避免短时间内发起太多请求（使用懒加载）
 - 合理的使用分包
 - 减少data的大小，非必要不 setData
 - 组件化
@@ -99,6 +113,31 @@ success:function (e) {
   - moved
   - detached
   - error
+
+## 小程序怎么阻止页面默认返回
+
+[wx.enableAlertBeforeUnload](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.enableAlertBeforeUnload.html)
+
+- `wx.enableAlertBeforeUnload(Object object)` 开启小程序页面询问对话框。
+  - 弹窗条件
+    - 当用户在小程序内非首页页面/最底层页
+    - 官方导航栏上的的返回
+    - 全屏模式下自绘返回键
+    - android 系统 back 键时
+  - 注意事项
+    - 手势滑动返回时不做拦截
+    - 在任何场景下，此功能都不应拦住用户退出小程序的行为
+
+- 使用 `wx.hideHomeButton` 消除页面左上角的返回按钮
+
+```js
+Page({
+  onShow: function () {
+    wx.hideHomeButton();
+
+  },
+})
+```
 
 ## 小程序绘制海报会出现的问题
 

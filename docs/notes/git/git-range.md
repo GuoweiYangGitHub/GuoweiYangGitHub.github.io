@@ -64,4 +64,3 @@
 
 **远程仓库副本** `可以理解为存在于本地的远程仓库缓存。如需更新，可通过git fetch/pull命令获取远程仓库内容。使用fech获取时，并未合并到本地仓库，此时可使用git merge实现远程仓库副本与本地仓库的合并。git pull 根据配置的不同，可为git fetch + git merge 或 git fetch + git rebase。rebase和merge的区别可以自己去网上找些资料了解下。`
 
-![fetch与pull对比](https://img.cbg.pub/crm/files/6da5c607-4c34-0161-cfbb-dac5502a8c1c1647919136.jpg)
