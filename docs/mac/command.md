@@ -85,3 +85,30 @@ npm install babel-eslint --save-dev
 // Apple Worldwide Developer Relations Certification Authority
 ```
 
+## 使用 nrm 管理镜像源仓库
+
+```js
+nrm -V 查看版本信息
+nrm ls  查看所有的镜像源仓库
+nrm current 显示当前源名称
+
+// cnpm --------- https://r.cnpmjs.org/
+// taobao ------- https://registry.npmmirror.com/
+
+nrm use taobao  使用这个仓库镜像地址
+nrm add <registry> <url> [home] 添加一个源
+nrm test [registry] 测试源速度
+```
+
+## 使用nvm管理node 版本
+
+```js
+nvm list 查看 node 版本信息
+nvm install 12.8.0  下载某一版本的node
+nvm use 12.8.0 使用某一版本的node
+```
+
+## 键盘快捷键
+```js
+shift + command + R  //强制刷新浏览器
+```

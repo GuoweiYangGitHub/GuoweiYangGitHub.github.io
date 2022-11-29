@@ -66,6 +66,7 @@ module.exports = {
           title: "JS",
           collapsable: false,
           children: [
+            { title: "JS常用知识", path: "/notes/js/common" },
             { title: "JS基础知识点", path: "/notes/js/knowledge" },
             { title: "Map数据类型", path: "/notes/js/setmap" },
             { title: "设计模式", path: "/notes/js/designMode/pattern" },

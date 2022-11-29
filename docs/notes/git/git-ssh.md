@@ -18,7 +18,7 @@
 
 ###  配置`github`或者`gitlab`的`ssh`
 
-- 找到 `gitlab`的设置`ssh` 将私钥粘贴上 然后点击`Add SSH Key`
+- 找到 `gitlab`的设置`ssh` 将`公钥(.pub后缀)`内容粘贴上 然后点击`Add SSH Key`
 
 ## 配置多个ssh
 
